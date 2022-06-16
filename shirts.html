@@ -11,21 +11,13 @@
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
-            font-family: sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
-        body{
-            
-            width: 100%;
-            /* height: 100vh; */
-           
-            
-        }
+        
 		
 		#moreText {
-
-			
-			display: none;
+            display: none;
 		}
 
         #textButton {
@@ -33,7 +25,6 @@
             border: none;
             font-weight: 500;
             font-size: 15px;
-            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             padding: 16px 0px 20px;
            
            
@@ -49,7 +40,6 @@
         }
         #top>p,span,h1{
             font-weight: lighter;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             margin-top: 20px;
             
         }
@@ -79,77 +69,6 @@
             background-color: rgb(216, 204, 204);
             cursor: pointer;
         }
-
-        #products{
-            display: grid;
-            grid-template-columns: repeat(4,280px);
-            grid-template-rows: auto;
-            margin: auto;
-            justify-content: center;
-            width: 100%;
-            gap: 1%;
-            margin-top: 20px;
-            height: 100vh;
-            border: 1px solid black;
-        }
-        #products>div{
-            display: grid;
-            margin: auto;
-            /* width: ; */
-            height: 100%;
-           
-            justify-content: center;
-            align-self: center;
-            border: 1px solid red;
-            position: relative;
-        }
-
-        #products>div>img{
-            width: 100%;
-            /* position: absolute; */
-            /* min min-width: 300px; */
-            
-        }
-        #products>div>p{
-            margin-top: 10px;
-            font-weight: 100;
-            font-size: 14px ;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        #products>div>h3{
-            color: #db4f5c;
-            margin-top: 20px;
-            font-size: 15px;
-        }
-
-        #products>div>p~p{
-            background-color: white;
-            font-size: 12px;
-            color: #db4f5c;
-            position:absolute; 
-            left:0px; top: 4px; 
-            width: 33px; 
-            height:16px
-            
-        }
-
-        /* #products>div>p+img{
-            
-            background-color: white;
-            font-size: 35px;
-            color: black;
-            position:absolute; 
-            right:5px; bottom: 100px; 
-            height: 0px;
-            border-radius: 100%;
-            
-            
-        } */
-
-        /* #products>div>img:hover{
-            cursor: pointer;
-            background-color: darkgrey;
-        } */
 
         #forselect{
             background-color: rgb(238,238,238);
@@ -183,25 +102,213 @@
         }
         #forselect>select>option{
             
-    background-color: white;
-    
-    border: 1px solid #ddd;
-    padding:10px;
-    border-left: none;
-    border-radius: 0;
-    border-right: none;
-    color: #666;
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    height: 42px;
-    letter-spacing: .3px;
-    line-height: 1.12;
-    position:absolute;
-    text-align: left;
-    width: 100%;
-    flex-wrap: wrap;
+                background-color: white;
+                border: 1px solid #ddd;
+                padding:10px;
+                border-left: none;
+                border-radius: 0;
+                border-right: none;
+                color: #666;
+                font-family: sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                height: 42px;
+                letter-spacing: .3px;
+                line-height: 1.12;
+                position:absolute;
+                text-align: left;
+                width: 100%;
+                flex-wrap: wrap;
    
+        }
+
+        #products{
+            display: grid;
+            grid-template-columns: repeat(4 ,310px);
+            margin: auto;
+            justify-content: center;
+            width: 100%;
+            gap: 15px;
+            margin-top: 15px;
+        } 
+
+    #products>div{
+    display: grid;
+    margin: auto;
+    height: 500px;
+    justify-content: center;
+    position: relative;
+    
+    } 
+
+    #products>div:hover{
+        cursor: pointer;
+    }
+   
+
+#products>div>div>img{
+    width: 100%;
+    height: 100%;
+}
+
+#products>div>p{
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 14px ;
+    
+} 
+
+#products>div>p~p{
+    background-color: white;
+    font-size: 12px;
+    color: #db4f5c;
+    position:absolute; 
+    left:0px; top: 4px; 
+    width: 33px; 
+    height:16px
+    
+}
+
+#products>div>h1{
+    background-color: white;
+    font-size: 35px;
+    color: black;
+    position:absolute; 
+    right:5px; 
+    bottom: 110px; 
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    } 
+
+    #products>div>h1:hover{
+    cursor: pointer;
+    background-color: darkgrey;
+} 
+
+#products>div>div~div{
+    display: flex;
+    font-size: 15px;
+   margin-bottom: 10px;
+}
+
+#products>div>div~div>h3+h3{
+    color: #db4f5c;
+}
+#products>div>div~div>h3:nth-child(2){
+    margin-left: 6px;
+}
+
+#end{
+    display: grid;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#end>button{
+    height: 50px;
+    width: 350px;
+    background-color: transparent;
+    border: 2px solid rgb(182, 174, 174);
+    font-weight: bolder;
+    font-size: 16px;
+    margin-top: 20px;
+}
+#end>button:hover{
+    cursor: pointer;
+}
+
+#end>p{
+    font-size: 14px;
+}
+
+#headstart{
+    text-align: center;
+    margin-top: 15px;
+    color: rgb(53, 51, 51);
+    font-size: 14px;
+}
+
+    
+
+@media all and (min-width: 749px) and (max-width: 1051px){
+
+    #allbuttons{
+            display: none;
+            
+        }
+    
+    #forselect{
+            background-color: rgb(238,238,238);
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,20%);
+            grid-template-rows: auto;
+            justify-content: center;
+            margin: auto;
+            gap: 5px;
+            
+
+        }
+
+    #products{
+            
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            
+}
+
+}
+
+@media all and (min-width: 51px) and (max-width: 748px){
+
+#allbuttons{
+        display: none;
+        
+    }
+
+#forselect{
+        background-color: rgb(238,238,238);
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,20%);
+        grid-template-rows: auto;
+        justify-content: center;
+        margin: auto;
+        gap: 5px;
+        
+
+    }
+
+#products{
+        
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        
+        
+        
+        
+        
+       
+        
+}
+#products>div{
+    padding: 20px;
+    height: 100%;
+}
+
+#products>div>div>img{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            
+        }
+
 }
 
 
@@ -275,20 +382,21 @@
         </div>
 
         <div>
-            <select name="catagory" id="catagory">
+           
+            <select name="catagory" id="catagory" >
                 <option >Catagory</option>
                 <option value="All">All</option>
+                <option value="Outwear">Outwear</option>
+                <option value="Jeans & Trousers">Jeans & Trousers</option>
                 <option value="Accessories">Accessories</option>
                 <option value="All in ones">All in ones</option>
                 <option value="Dresses">Dresses</option>
-                <option value="Face + Body">Face + Body</option>
-                <option value="Footwear">Footwear</option>
-                <option value="Jeans & Trousers">Jeans & Trousers</option>
                 <option value="Jwellery & Watches">Jwellery & Watches</option>
-                <option value="Knitwear & Sweats">Knitwear & Sweats</option>
-                <option value="Living + Gifts">Living + Gifts</option>
-                <option value="Outwear">Outwear</option>
+                <option value="Footwear">Footwear</option>
                 <option value="Shorts">Shorts</option>
+                <option value="Living + Gifts">Living + Gifts</option>
+                <option value="Face + Body">Face + Body</option>
+                <option value="Knitwear & Sweats">Knitwear & Sweats</option>
                 <option value="Swimwear">Swimwear</option>
                 <option value="Underwear">Underwear</option>
                 
@@ -451,12 +559,24 @@
             </select>
         </div>
 
+        <div>
+            <select name="" id="price range">
+                <option value="">Price Range</option>
+            </select>
+        </div>
+
     </div>
+
+    <p id="headstart">24,394 styles found</p>
 
     <div id="products"></div>
 
 
-    
+    <div id="end">
+        <p><u>You've viewed 72 of 24,394 products</u></p>
+        <button >LOAD MORE</button>
+    </div>
+ 
 	
 </body>
 
@@ -507,7 +627,7 @@
    let productData =[
     {
         name: "Versace Jeans Couture baroque hoodie in multi",
-        price: "£453.75",
+        price: "453.75",
         color: "MULTI",
         size: "x,xl,xxl",
         productID:"jacket10",
@@ -521,7 +641,7 @@
 
     {
         name: "Versace Jeans Couture monogram reversible parka jacket in white/black",
-        price: "£382.20",
+        price: "382.20",
         color: "WHITE",
         size: "s,m,l",
         productID: "jacket10",
@@ -535,7 +655,7 @@
 
     {
         name: "Versace Jeans Couture slim fit ripped knee jeans in blue wash",
-        price: "£350.40",
+        price: "350.40",
         color: "BLUE",
         size: "l,xl,xxl",
         productID: "jeans10",
@@ -549,7 +669,7 @@
 
     {
         name: "Carhartt WIP vernon jacket with removable liner in black",
-        price: "£327.60",
+        price: "327.60",
         color: "BLACK",
         size: "x,xl,xxl",
         productID: "jacket10",
@@ -563,7 +683,7 @@
 
     {
         name: "Another Influence denim long sleeve pocket shirt",
-        price: "£11.75",
+        price: "11.75",
         color: "BLUE",
         size: "l,xl,xxl",
         productID: "shirt10",
@@ -577,7 +697,7 @@
 
     {
         name: "COLLUSION printed t-shirt in",
-        price: "£10.50",
+        price: "10.50",
         color: "WHITE",
         size: "l,xl,xxl",
         productID: "tshirt10",
@@ -591,7 +711,7 @@
 
     {
         name: "Hollister sliders in black/red with logo",
-        price: "£21.00",
+        price: "21.00",
         color: "BLACK",
         size: "s,m,l",
         productID: "slippers10",
@@ -605,7 +725,7 @@
 
     {
         name: "COLLUSION Unisex oversized t-shirt with high shine print in pique acid wash",
-        price: "£13.00",
+        price: "13.00",
         color: "BLACK",
         size: "l,xl,xxl",
         productID: "tshirt10",
@@ -619,7 +739,7 @@
 
     {
         name: "ASOS DESIGN linen slub co-ord in teal",
-        price: "£23.00",
+        price: "23.00",
         color: "TEAL",
         size: "l,xl,xxl",
         productID: "shoes10",
@@ -633,7 +753,7 @@
 
     {
         name: "Brave Soul chunky bracelet watch in silver",
-        price: "£20.00",
+        price: "20.00",
         color: "SILVER",
         size: "One Size",
         productID: "watch10",
@@ -648,7 +768,7 @@
     
     {
         name: "New Look relaxed fit pull on shorts with pintuck in lilac",
-        price: "£9.00",
+        price: "9.00",
         color: "WHITE",
         size: "l,xl,xxl",
         productID: "shorts10",
@@ -662,7 +782,7 @@
 
     {
         name: "ASOS DESIGN recycled oversized square sunglasses with yellow lens in brown tortoiseshell",
-        price: " £5.00",
+        price: " 5.00",
         color: "MULTI",
         size: "One Size",
         productID: "spex10",
@@ -677,7 +797,7 @@
 
     {
         name: "Versace Jeans Couture baroque hoodie in multi",
-        price: "£453.75",
+        price: "453.75",
         color: "MULTI",
         size: "x,xl,xxl",
         productID:"jacket10",
@@ -691,7 +811,7 @@
 
     {
         name: "Versace Jeans Couture monogram reversible parka jacket in white/black",
-        price: "£382.20",
+        price: "382.20",
         color: "WHITE",
         size: "s,m,l",
         productID: "jacket10",
@@ -705,7 +825,7 @@
 
     {
         name: "Versace Jeans Couture slim fit ripped knee jeans in blue wash",
-        price: "£350.40",
+        price: "350.40",
         color: "BLUE",
         size: "l,xl,xxl",
         productID: "jeans10",
@@ -719,7 +839,7 @@
 
     {
         name: "Carhartt WIP vernon jacket with removable liner in black",
-        price: "£327.60",
+        price: "327.60",
         color: "BLACK",
         size: "x,xl,xxl",
         productID: "jacket10",
@@ -733,7 +853,7 @@
 
     {
         name: "Another Influence denim long sleeve pocket shirt",
-        price: "£11.75",
+        price: "11.75",
         color: "BLUE",
         size: "l,xl,xxl",
         productID: "shirt10",
@@ -747,7 +867,7 @@
 
     {
         name: "COLLUSION printed t-shirt in",
-        price: "£10.50",
+        price: "10.50",
         color: "WHITE",
         size: "l,xl,xxl",
         productID: "tshirt10",
@@ -761,7 +881,7 @@
 
     {
         name: "Hollister sliders in black/red with logo",
-        price: "£21.00",
+        price: "21.00",
         color: "BLACK",
         size: "s,m,l",
         productID: "slippers10",
@@ -775,7 +895,7 @@
 
     {
         name: "COLLUSION Unisex oversized t-shirt with high shine print in pique acid wash",
-        price: "£13.00",
+        price: "13.00",
         color: "BLACK",
         size: "l,xl,xxl",
         productID: "tshirt10",
@@ -789,7 +909,7 @@
 
     {
         name: "ASOS DESIGN linen slub co-ord in teal",
-        price: "£23.00",
+        price: "23.00",
         color: "TEAL",
         size: "l,xl,xxl",
         productID: "shoes10",
@@ -803,7 +923,7 @@
 
     {
         name: "Brave Soul chunky bracelet watch in silver",
-        price: "£20.00",
+        price: "20.00",
         color: "SILVER",
         size: "One Size",
         productID: "watch10",
@@ -818,7 +938,7 @@
     
     {
         name: "New Look relaxed fit pull on shorts with pintuck in lilac",
-        price: "£9.00",
+        price: "9.00",
         color: "WHITE",
         size: "l,xl,xxl",
         productID: "shorts10",
@@ -832,7 +952,7 @@
 
     {
         name: "ASOS DESIGN recycled oversized square sunglasses with yellow lens in brown tortoiseshell",
-        price: " £5.00",
+        price: " 5.00",
         color: "MULTI",
         size: "One Size",
         productID: "spex10",
@@ -848,7 +968,7 @@
 
     {
         name: "Versace Jeans Couture baroque hoodie in multi",
-        price: "£453.75",
+        price: "453.75",
         color: "MULTI",
         size: "x,xl,xxl",
         productID:"jacket10",
@@ -862,7 +982,7 @@
 
     {
         name: "Versace Jeans Couture monogram reversible parka jacket in white/black",
-        price: "£382.20",
+        price: "382.20",
         color: "WHITE",
         size: "s,m,l",
         productID: "jacket10",
@@ -876,7 +996,7 @@
 
     {
         name: "Versace Jeans Couture slim fit ripped knee jeans in blue wash",
-        price: "£350.40",
+        price: "350.40",
         color: "BLUE",
         size: "l,xl,xxl",
         productID: "jeans10",
@@ -890,7 +1010,7 @@
 
     {
         name: "Carhartt WIP vernon jacket with removable liner in black",
-        price: "£327.60",
+        price: "327.60",
         color: "BLACK",
         size: "x,xl,xxl",
         productID: "jacket10",
@@ -904,7 +1024,7 @@
 
     {
         name: "Another Influence denim long sleeve pocket shirt",
-        price: "£11.75",
+        price: "11.75",
         color: "BLUE",
         size: "l,xl,xxl",
         productID: "shirt10",
@@ -918,7 +1038,7 @@
 
     {
         name: "COLLUSION printed t-shirt in",
-        price: "£10.50",
+        price: "10.50",
         color: "WHITE",
         size: "l,xl,xxl",
         productID: "tshirt10",
@@ -932,7 +1052,7 @@
 
     {
         name: "Hollister sliders in black/red with logo",
-        price: "£21.00",
+        price: "21.00",
         color: "BLACK",
         size: "s,m,l",
         productID: "slippers10",
@@ -946,7 +1066,7 @@
 
     {
         name: "COLLUSION Unisex oversized t-shirt with high shine print in pique acid wash",
-        price: "£13.00",
+        price: "13.00",
         color: "BLACK",
         size: "l,xl,xxl",
         productID: "tshirt10",
@@ -960,7 +1080,7 @@
 
     {
         name: "ASOS DESIGN linen slub co-ord in teal",
-        price: "£23.00",
+        price: "23.00",
         color: "TEAL",
         size: "l,xl,xxl",
         productID: "shoes10",
@@ -974,7 +1094,7 @@
 
     {
         name: "Brave Soul chunky bracelet watch in silver",
-        price: "£20.00",
+        price: "20.00",
         color: "SILVER",
         size: "One Size",
         productID: "watch10",
@@ -989,7 +1109,7 @@
     
     {
         name: "New Look relaxed fit pull on shorts with pintuck in lilac",
-        price: "£9.00",
+        price: "9.00",
         color: "WHITE",
         size: "l,xl,xxl",
         productID: "shorts10",
@@ -1003,179 +1123,7 @@
 
     {
         name: "ASOS DESIGN recycled oversized square sunglasses with yellow lens in brown tortoiseshell",
-        price: " £5.00",
-        color: "MULTI",
-        size: "One Size",
-        productID: "spex10",
-        brand: "RAYBAN",
-        discount: "-60%",
-        catagory: "Accessories",
-        responsible: "Sustainable Materials",
-        bodyfit: "Wide Fit",
-        img: "https://images.asos-media.com/products/asos-design-recycled-oversized-square-sunglasses-with-yellow-lens-in-brown-tortoiseshell/201687487-1-brown?$n_320w$&wid=317&fit=constrain",
-    },
-
-
-
-
-    {
-        name: "Versace Jeans Couture baroque hoodie in multi",
-        price: "£453.75",
-        color: "MULTI",
-        size: "x,xl,xxl",
-        productID:"jacket10",
-        brand:  "Versace Jeans Couture",
-        discount: "-20%",
-        catagory: "Outwear",
-        responsible: "recycled",
-        bodyfit: "Extra Wide Fit",
-        img: "https://images.asos-media.com/products/versace-jeans-couture-baroque-hoodie-in-multi/202101642-1-multi?$n_320w$&wid=317&fit=constrain",
-    },
-
-    {
-        name: "Versace Jeans Couture monogram reversible parka jacket in white/black",
-        price: "£382.20",
-        color: "WHITE",
-        size: "s,m,l",
-        productID: "jacket10",
-        brand: "Versace Jeans Couture",
-        discount: "-30%",
-        catagory: "Outwear",
-        responsible: "recycled",
-        bodyfit: "Plus Size",
-        img: "https://images.asos-media.com/products/versace-jeans-couture-monogram-reversible-parka-jacket-in-white-black/200482042-1-white?$n_320w$&wid=317&fit=constrain",
-    },
-
-    {
-        name: "Versace Jeans Couture slim fit ripped knee jeans in blue wash",
-        price: "£350.40",
-        color: "BLUE",
-        size: "l,xl,xxl",
-        productID: "jeans10",
-        brand: "Versace Jeans Couture",
-        discount: "-20%",
-        catagory: "Jeans & Trousers",
-        responsible: "Sustainable Materials",
-        bodyfit: "tall",
-        img: "https://images.asos-media.com/products/versace-jeans-couture-slim-fit-ripped-knee-jeans-in-blue-wash/200481194-1-blue?$n_320w$&wid=317&fit=constrain",
-    },
-
-    {
-        name: "Carhartt WIP vernon jacket with removable liner in black",
-        price: "£327.60",
-        color: "BLACK",
-        size: "x,xl,xxl",
-        productID: "jacket10",
-        brand: "Carhartt WIP",
-        discount: "-30%",
-        catagory: "Outwear",
-        responsible: "Sustainable Materials",
-        bodyfit: "Plus Size",
-        img: "https://images.asos-media.com/products/carhartt-wip-vernon-jacket-with-removable-liner-in-black/24093980-1-black?$n_320w$&wid=317&fit=constrain",
-    },
-
-    {
-        name: "Another Influence denim long sleeve pocket shirt",
-        price: "£11.75",
-        color: "BLUE",
-        size: "l,xl,xxl",
-        productID: "shirt10",
-        brand: "denim",
-        discount: "-60%",
-        catagory: "Dresses",
-        responsible: "recycled",
-        bodyfit: "Main Collection",
-        img: "https://images.asos-media.com/products/another-influence-denim-long-sleeve-pocket-shirt/201067728-1-blue?$n_320w$&wid=317&fit=constrain",
-    },
-
-    {
-        name: "COLLUSION printed t-shirt in",
-        price: "£10.50",
-        color: "WHITE",
-        size: "l,xl,xxl",
-        productID: "tshirt10",
-        brand: "COLLUSION",
-        discount: "-30%",
-        catagory: "All in ones",
-        responsible: "recycled",
-        bodyfit: "Wide Fit",
-        img: "https://images.asos-media.com/products/collusion-printed-t-shirt-in-white/202030396-1-white?$n_320w$&wid=317&fit=constrain",
-    },
-
-    {
-        name: "Hollister sliders in black/red with logo",
-        price: "£21.00",
-        color: "BLACK",
-        size: "s,m,l",
-        productID: "slippers10",
-        brand: "Hollister",
-        discount: "-20%",
-        catagory: "Footwear",
-        responsible: "Sustainable Materials",
-        bodyfit: "Plus Size",
-        img: "https://images.asos-media.com/products/hollister-sliders-in-black-red-with-logo/202517554-1-blackred?$n_320w$&wid=317&fit=constrain",
-    },
-
-    {
-        name: "COLLUSION Unisex oversized t-shirt with high shine print in pique acid wash",
-        price: "£13.00",
-        color: "BLACK",
-        size: "l,xl,xxl",
-        productID: "tshirt10",
-        brand: "COLLUSION",
-        discount: "-10%",
-        catagory: "All in ones",
-        responsible: "recycled",
-        bodyfit: "Wide Fit",
-        img: "https://images.asos-media.com/products/collusion-unisex-oversized-t-shirt-with-high-shine-print-in-pique-acid-wash/201211817-1-black?$n_320w$&wid=317&fit=constrain",
-    },
-
-    {
-        name: "ASOS DESIGN linen slub co-ord in teal",
-        price: "£23.00",
-        color: "TEAL",
-        size: "l,xl,xxl",
-        productID: "shoes10",
-        brand: "ASOS",
-        discount: "-40%",
-        catagory: "Footwear",
-        responsible: "recycled",
-        bodyfit: "Wide Fit",
-        img: "https://images.asos-media.com/groups/asos-design-linen-slub-co-ord-in-teal/80598-group-1?$n_320w$&wid=317&fit=constrain",
-    },
-
-    {
-        name: "Brave Soul chunky bracelet watch in silver",
-        price: "£20.00",
-        color: "SILVER",
-        size: "One Size",
-        productID: "watch10",
-        brand: "Brave Soul",
-        discount: "-60%",
-        catagory: "Jwellery & Watches",
-        responsible: "Sustainable Materials",
-        bodyfit: "Main Collection",
-        img: "https://images.asos-media.com/products/brave-soul-chunky-bracelet-watch-in-silver/201762804-1-silver?$n_320w$&wid=317&fit=constrain",
-    },
-
-    
-    {
-        name: "New Look relaxed fit pull on shorts with pintuck in lilac",
-        price: "£9.00",
-        color: "WHITE",
-        size: "l,xl,xxl",
-        productID: "shorts10",
-        brand: "ASOS",
-        discount: "-50%",
-        catagory: "Shorts",
-        responsible: "Sustainable Materials",
-        bodyfit: "Wide Fit",
-        img: "https://images.asos-media.com/products/new-look-relaxed-fit-pull-on-shorts-with-pintuck-in-lilac/202562544-1-lilac?$n_320w$&wid=317&fit=constrain",
-    },
-
-    {
-        name: "ASOS DESIGN recycled oversized square sunglasses with yellow lens in brown tortoiseshell",
-        price: " £5.00",
+        price: " 5.00",
         color: "MULTI",
         size: "One Size",
         productID: "spex10",
@@ -1192,7 +1140,7 @@
 
     {
         name: "Versace Jeans Couture baroque hoodie in multi",
-        price: "£453.75",
+        price: "453.75",
         color: "MULTI",
         size: "x,xl,xxl",
         productID:"jacket10",
@@ -1206,7 +1154,7 @@
 
     {
         name: "Versace Jeans Couture monogram reversible parka jacket in white/black",
-        price: "£382.20",
+        price: "382.20",
         color: "WHITE",
         size: "s,m,l",
         productID: "jacket10",
@@ -1220,7 +1168,7 @@
 
     {
         name: "Versace Jeans Couture slim fit ripped knee jeans in blue wash",
-        price: "£350.40",
+        price: "350.40",
         color: "BLUE",
         size: "l,xl,xxl",
         productID: "jeans10",
@@ -1234,7 +1182,7 @@
 
     {
         name: "Carhartt WIP vernon jacket with removable liner in black",
-        price: "£327.60",
+        price: "327.60",
         color: "BLACK",
         size: "x,xl,xxl",
         productID: "jacket10",
@@ -1248,7 +1196,7 @@
 
     {
         name: "Another Influence denim long sleeve pocket shirt",
-        price: "£11.75",
+        price: "11.75",
         color: "BLUE",
         size: "l,xl,xxl",
         productID: "shirt10",
@@ -1262,7 +1210,7 @@
 
     {
         name: "COLLUSION printed t-shirt in",
-        price: "£10.50",
+        price: "10.50",
         color: "WHITE",
         size: "l,xl,xxl",
         productID: "tshirt10",
@@ -1276,7 +1224,7 @@
 
     {
         name: "Hollister sliders in black/red with logo",
-        price: "£21.00",
+        price: "21.00",
         color: "BLACK",
         size: "s,m,l",
         productID: "slippers10",
@@ -1290,7 +1238,7 @@
 
     {
         name: "COLLUSION Unisex oversized t-shirt with high shine print in pique acid wash",
-        price: "£13.00",
+        price: "13.00",
         color: "BLACK",
         size: "l,xl,xxl",
         productID: "tshirt10",
@@ -1304,7 +1252,7 @@
 
     {
         name: "ASOS DESIGN linen slub co-ord in teal",
-        price: "£23.00",
+        price: "23.00",
         color: "TEAL",
         size: "l,xl,xxl",
         productID: "shoes10",
@@ -1318,7 +1266,7 @@
 
     {
         name: "Brave Soul chunky bracelet watch in silver",
-        price: "£20.00",
+        price: "20.00",
         color: "SILVER",
         size: "One Size",
         productID: "watch10",
@@ -1333,7 +1281,7 @@
     
     {
         name: "New Look relaxed fit pull on shorts with pintuck in lilac",
-        price: "£9.00",
+        price: "9.00",
         color: "WHITE",
         size: "l,xl,xxl",
         productID: "shorts10",
@@ -1347,7 +1295,179 @@
 
     {
         name: "ASOS DESIGN recycled oversized square sunglasses with yellow lens in brown tortoiseshell",
-        price: " £5.00",
+        price: " 5.00",
+        color: "MULTI",
+        size: "One Size",
+        productID: "spex10",
+        brand: "RAYBAN",
+        discount: "-60%",
+        catagory: "Accessories",
+        responsible: "Sustainable Materials",
+        bodyfit: "Wide Fit",
+        img: "https://images.asos-media.com/products/asos-design-recycled-oversized-square-sunglasses-with-yellow-lens-in-brown-tortoiseshell/201687487-1-brown?$n_320w$&wid=317&fit=constrain",
+    },
+
+
+
+
+    {
+        name: "Versace Jeans Couture baroque hoodie in multi",
+        price: "453.75",
+        color: "MULTI",
+        size: "x,xl,xxl",
+        productID:"jacket10",
+        brand:  "Versace Jeans Couture",
+        discount: "-20%",
+        catagory: "Outwear",
+        responsible: "recycled",
+        bodyfit: "Extra Wide Fit",
+        img: "https://images.asos-media.com/products/versace-jeans-couture-baroque-hoodie-in-multi/202101642-1-multi?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "Versace Jeans Couture monogram reversible parka jacket in white/black",
+        price: "382.20",
+        color: "WHITE",
+        size: "s,m,l",
+        productID: "jacket10",
+        brand: "Versace Jeans Couture",
+        discount: "-30%",
+        catagory: "Outwear",
+        responsible: "recycled",
+        bodyfit: "Plus Size",
+        img: "https://images.asos-media.com/products/versace-jeans-couture-monogram-reversible-parka-jacket-in-white-black/200482042-1-white?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "Versace Jeans Couture slim fit ripped knee jeans in blue wash",
+        price: "350.40",
+        color: "BLUE",
+        size: "l,xl,xxl",
+        productID: "jeans10",
+        brand: "Versace Jeans Couture",
+        discount: "-20%",
+        catagory: "Jeans & Trousers",
+        responsible: "Sustainable Materials",
+        bodyfit: "tall",
+        img: "https://images.asos-media.com/products/versace-jeans-couture-slim-fit-ripped-knee-jeans-in-blue-wash/200481194-1-blue?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "Carhartt WIP vernon jacket with removable liner in black",
+        price: "327.60",
+        color: "BLACK",
+        size: "x,xl,xxl",
+        productID: "jacket10",
+        brand: "Carhartt WIP",
+        discount: "-30%",
+        catagory: "Outwear",
+        responsible: "Sustainable Materials",
+        bodyfit: "Plus Size",
+        img: "https://images.asos-media.com/products/carhartt-wip-vernon-jacket-with-removable-liner-in-black/24093980-1-black?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "Another Influence denim long sleeve pocket shirt",
+        price: "11.75",
+        color: "BLUE",
+        size: "l,xl,xxl",
+        productID: "shirt10",
+        brand: "denim",
+        discount: "-60%",
+        catagory: "Dresses",
+        responsible: "recycled",
+        bodyfit: "Main Collection",
+        img: "https://images.asos-media.com/products/another-influence-denim-long-sleeve-pocket-shirt/201067728-1-blue?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "COLLUSION printed t-shirt in",
+        price: "10.50",
+        color: "WHITE",
+        size: "l,xl,xxl",
+        productID: "tshirt10",
+        brand: "COLLUSION",
+        discount: "-30%",
+        catagory: "All in ones",
+        responsible: "recycled",
+        bodyfit: "Wide Fit",
+        img: "https://images.asos-media.com/products/collusion-printed-t-shirt-in-white/202030396-1-white?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "Hollister sliders in black/red with logo",
+        price: "21.00",
+        color: "BLACK",
+        size: "s,m,l",
+        productID: "slippers10",
+        brand: "Hollister",
+        discount: "-20%",
+        catagory: "Footwear",
+        responsible: "Sustainable Materials",
+        bodyfit: "Plus Size",
+        img: "https://images.asos-media.com/products/hollister-sliders-in-black-red-with-logo/202517554-1-blackred?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "COLLUSION Unisex oversized t-shirt with high shine print in pique acid wash",
+        price: "13.00",
+        color: "BLACK",
+        size: "l,xl,xxl",
+        productID: "tshirt10",
+        brand: "COLLUSION",
+        discount: "-10%",
+        catagory: "All in ones",
+        responsible: "recycled",
+        bodyfit: "Wide Fit",
+        img: "https://images.asos-media.com/products/collusion-unisex-oversized-t-shirt-with-high-shine-print-in-pique-acid-wash/201211817-1-black?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "ASOS DESIGN linen slub co-ord in teal",
+        price: "23.00",
+        color: "TEAL",
+        size: "l,xl,xxl",
+        productID: "shoes10",
+        brand: "ASOS",
+        discount: "-40%",
+        catagory: "Footwear",
+        responsible: "recycled",
+        bodyfit: "Wide Fit",
+        img: "https://images.asos-media.com/groups/asos-design-linen-slub-co-ord-in-teal/80598-group-1?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "Brave Soul chunky bracelet watch in silver",
+        price: "20.00",
+        color: "SILVER",
+        size: "One Size",
+        productID: "watch10",
+        brand: "Brave Soul",
+        discount: "-60%",
+        catagory: "Jwellery & Watches",
+        responsible: "Sustainable Materials",
+        bodyfit: "Main Collection",
+        img: "https://images.asos-media.com/products/brave-soul-chunky-bracelet-watch-in-silver/201762804-1-silver?$n_320w$&wid=317&fit=constrain",
+    },
+
+    
+    {
+        name: "New Look relaxed fit pull on shorts with pintuck in lilac",
+        price: "9.00",
+        color: "WHITE",
+        size: "l,xl,xxl",
+        productID: "shorts10",
+        brand: "ASOS",
+        discount: "-50%",
+        catagory: "Shorts",
+        responsible: "Sustainable Materials",
+        bodyfit: "Wide Fit",
+        img: "https://images.asos-media.com/products/new-look-relaxed-fit-pull-on-shorts-with-pintuck-in-lilac/202562544-1-lilac?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "ASOS DESIGN recycled oversized square sunglasses with yellow lens in brown tortoiseshell",
+        price: " 5.00",
         color: "MULTI",
         size: "One Size",
         productID: "spex10",
@@ -1365,7 +1485,7 @@
 
     {
         name: "Versace Jeans Couture baroque hoodie in multi",
-        price: "£453.75",
+        price: "453.75",
         color: "MULTI",
         size: "x,xl,xxl",
         productID:"jacket10",
@@ -1379,7 +1499,7 @@
 
     {
         name: "Versace Jeans Couture monogram reversible parka jacket in white/black",
-        price: "£382.20",
+        price: "382.20",
         color: "WHITE",
         size: "s,m,l",
         productID: "jacket10",
@@ -1393,7 +1513,7 @@
 
     {
         name: "Versace Jeans Couture slim fit ripped knee jeans in blue wash",
-        price: "£350.40",
+        price: "350.40",
         color: "BLUE",
         size: "l,xl,xxl",
         productID: "jeans10",
@@ -1407,7 +1527,7 @@
 
     {
         name: "Carhartt WIP vernon jacket with removable liner in black",
-        price: "£327.60",
+        price: "327.60",
         color: "BLACK",
         size: "x,xl,xxl",
         productID: "jacket10",
@@ -1421,7 +1541,7 @@
 
     {
         name: "Another Influence denim long sleeve pocket shirt",
-        price: "£11.75",
+        price: "11.75",
         color: "BLUE",
         size: "l,xl,xxl",
         productID: "shirt10",
@@ -1435,7 +1555,7 @@
 
     {
         name: "COLLUSION printed t-shirt in",
-        price: "£10.50",
+        price: "10.50",
         color: "WHITE",
         size: "l,xl,xxl",
         productID: "tshirt10",
@@ -1449,7 +1569,7 @@
 
     {
         name: "Hollister sliders in black/red with logo",
-        price: "£21.00",
+        price: "21.00",
         color: "BLACK",
         size: "s,m,l",
         productID: "slippers10",
@@ -1463,7 +1583,7 @@
 
     {
         name: "COLLUSION Unisex oversized t-shirt with high shine print in pique acid wash",
-        price: "£13.00",
+        price: "13.00",
         color: "BLACK",
         size: "l,xl,xxl",
         productID: "tshirt10",
@@ -1477,7 +1597,7 @@
 
     {
         name: "ASOS DESIGN linen slub co-ord in teal",
-        price: "£23.00",
+        price: "23.00",
         color: "TEAL",
         size: "l,xl,xxl",
         productID: "shoes10",
@@ -1491,7 +1611,7 @@
 
     {
         name: "Brave Soul chunky bracelet watch in silver",
-        price: "£20.00",
+        price: "20.00",
         color: "SILVER",
         size: "One Size",
         productID: "watch10",
@@ -1506,7 +1626,7 @@
     
     {
         name: "New Look relaxed fit pull on shorts with pintuck in lilac",
-        price: "£9.00",
+        price: "9.00",
         color: "WHITE",
         size: "l,xl,xxl",
         productID: "shorts10",
@@ -1520,7 +1640,7 @@
 
     {
         name: "ASOS DESIGN recycled oversized square sunglasses with yellow lens in brown tortoiseshell",
-        price: " £5.00",
+        price: " 5.00",
         color: "MULTI",
         size: "One Size",
         productID: "spex10",
@@ -1544,6 +1664,8 @@
 
     let productcont= document.getElementById("products");
 
+    let whishlistLS =JSON.parse(localStorage.getItem("whishlistPage")) || []; 
+
     function displayproducts(productData){
 
         productcont.innerHTML="";
@@ -1552,12 +1674,21 @@
 
             let product = document.createElement("div");
 
+            let imgdiv = document.createElement("div")
+
             let img = document.createElement("img");
             img.src = elem.img;
 
             let name = document.createElement("p");
             name.textContent=elem.name
 
+            let pricediv =document.createElement("div");
+            let pri = document.createElement("h3");
+            let prevprice = document.createElement("s");
+            prevprice.textContent= "£375.00"
+
+            let euro= document.createElement("h3");
+            euro.textContent="£"
             let price = document.createElement("h3");
             price.textContent = elem.price
 
@@ -1565,10 +1696,25 @@
             discount.textContent = elem.discount
 
             
-            // let whishlist = document.createElement("img");
-            // img.src = "https://cdn-icons.flaticon.com/png/512/2961/premium/2961957.png?token=exp=1655315550~hmac=26ae12ac2d275b4fa22aa7cd2aad3b3c"
+            let whishlist = document.createElement("h1");
+            whishlist.textContent="♡";
+            whishlist.addEventListener("click",function(){
+                
+                if(whishlistfun(elem.productID)===true){
+                    alert("Product Added Successfully To Cart");
+                    whishlistLS.push(elem);
+                    localStorage.setItem("whishlistPage",JSON.stringify(whishlistLS));
+                }else{
+                    alert("Product Already In The Cart")
+                }
+                    whishlist.style.backgroundColor="grey";
+            })
 
-            product.append(img,name,price,discount);
+            pri.append(prevprice)
+            pricediv.append(pri,euro,price);
+            imgdiv.append(img);
+
+            product.append(imgdiv,name,pricediv,discount,whishlist);
 
             productcont.append(product);
             console.log(img,name)
@@ -1577,6 +1723,16 @@
     }
 
     displayproducts(productData);
+
+    function whishlistfun(id){
+
+        for(let i=0;i<whishlistLS.length;i++){
+            if(whishlistLS[i].productID == id){
+                return false;
+            }
+        }
+        return true;
+    }
 
     responsible.addEventListener("change",function(){
         if(responsible.value === "Responsible"){
@@ -1609,6 +1765,70 @@
         }
     })
 
+
+    catagory.addEventListener("change",function(){
+        if(catagory.value === "All"){
+            displayproducts(productData);
+        }else if(catagory.value === "Catagory"){
+            displayproducts(productData);
+        }
+        else{
+            let catagorised = productData.filter(function(elem){
+                return elem.catagory === catagory.value;
+                
+            })
+            displayproducts(catagorised);
+        }
+    })
+
+
+    brand.addEventListener("change",function(){
+        if(brand.value === ""){
+            displayproducts(productData);
+        }else{
+            let branded = productData.filter(function(elem){
+                return elem.brand === brand.value;
+                
+            })
+            displayproducts(branded);
+        }
+    })
+
+    Colour.addEventListener("change",function(){
+        if(Colour.value === ""){
+            displayproducts(productData);
+        }else{
+            let Coloured = productData.filter(function(elem){
+                return elem.color === Colour.value;
+                
+            })
+            displayproducts(Coloured);
+        }
+    })
+
+    Bodyfit.addEventListener("change",function(){
+        if(Bodyfit.value === ""){
+            displayproducts(productData);
+        }else{
+            let Bodyfited = productData.filter(function(elem){
+                return elem.bodyfit === Bodyfit.value;
+                
+            })
+            displayproducts(Bodyfited);
+        }
+    })
+
+    size.addEventListener("change",function(){
+        if(size.value === ""){
+            displayproducts(productData);
+        }else{
+            let sized = productData.filter(function(elem){
+                return elem.size === size.value;
+                
+            })
+            displayproducts(sized);
+        }
+    })
 
 
 	</script>
