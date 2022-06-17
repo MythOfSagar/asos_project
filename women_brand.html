@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women_brands</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #top{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #top>h1{
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        
+		
+		#moreText {
+            display: none;
+		}
+
+        #textButton {
+            background-color: transparent;
+            border: none;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 16px 0px 20px;
+           
+           
+        }
+        #top{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 20px 0px 0px;
+           
+        }
+        #top>p,span,h1{
+            font-weight: lighter;
+            margin-top: 20px;
+            
+        }
+        
+        #allbuttons{
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        #allbuttons>button{
+            background-color: #f8f8f8;
+            padding: 7px 10px 7px 11px   ;
+            border-radius: 30px;
+            width: auto;
+            border: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+        }
+        #allbuttons>button:hover{
+            background-color: rgb(216, 204, 204);
+            cursor: pointer;
+        }
+
+        #forselect{
+            background-color: rgb(238,238,238);
+            display: grid;
+            grid-template-columns: repeat(5,250px);
+            grid-template-rows: auto;
+            justify-content: center;
+            margin: auto;
+            gap: 5px;
+
+        }
+
+        #forselect>div>select{
+            background-color: rgb(238,238,238);
+            padding: 3px 20px 3px 6px;
+            color: #666;
+            height: 40px;
+            border: 1px  solid #ddd;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 200;
+            box-shadow: #ddd;
+            width: 230px;
+            margin-left: 14px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            
+        }
+        #forselect>div>select:hover{
+            color: rgb(57, 57, 211);
+        }
+        #forselect>select>option{
+            
+                background-color: white;
+                border: 1px solid #ddd;
+                padding:10px;
+                border-left: none;
+                border-radius: 0;
+                border-right: none;
+                color: #666;
+                font-family: sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                height: 42px;
+                letter-spacing: .3px;
+                line-height: 1.12;
+                position:absolute;
+                text-align: left;
+                width: 100%;
+                flex-wrap: wrap;
+   
+        }
+
+        #products{
+            display: grid;
+            grid-template-columns: repeat(4 ,310px);
+            margin: auto;
+            justify-content: center;
+            width: 100%;
+            gap: 15px;
+            margin-top: 15px;
+        } 
+
+    #products>div{
+    display: grid;
+    margin: auto;
+    height: 500px;
+    justify-content: center;
+    position: relative;
+    
+    } 
+
+    #products>div:hover{
+        cursor: pointer;
+    }
+   
+
+#products>div>div>img{
+    width: 100%;
+    height: 100%;
+}
+
+#products>div>p{
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 14px ;
+    
+} 
+
+#products>div>p~p{
+    background-color: white;
+    font-size: 12px;
+    color: #db4f5c;
+    position:absolute; 
+    left:0px; top: 4px; 
+    width: 33px; 
+    height:16px
+    
+}
+
+
+
+    #products>div>button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: white;
+        position:absolute; 
+        right:5px; 
+        bottom: 110px; 
+
+    }
+
+#products>div>button>img{
+    width: 25px;
+   border-radius: 100% 100% 200% 200%; 
+}
+#products>div>button>img:hover{
+    background-color: darkgrey;
+}
+
+    #products>div>h1:hover{
+    cursor: pointer;
+    background-color: darkgrey;
+} 
+
+#products>div>div~div{
+    display: flex;
+    font-size: 15px;
+   margin-bottom: 10px;
+}
+
+#products>div>div~div>h3+h3{
+    color: #db4f5c;
+}
+#products>div>div~div>h3:nth-child(2){
+    margin-left: 6px;
+}
+
+#end{
+    display: grid;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#end>button{
+    height: 50px;
+    width: 350px;
+    background-color: transparent;
+    border: 2px solid rgb(182, 174, 174);
+    font-weight: bolder;
+    font-size: 16px;
+    margin-top: 20px;
+}
+#end>button:hover{
+    cursor: pointer;
+}
+
+#end>p{
+    font-size: 14px;
+}
+
+#headstart{
+    text-align: center;
+    margin-top: 15px;
+    color: rgb(53, 51, 51);
+    font-size: 14px;
+}
+
+#smallscreen{
+    display: none;
+}
+
+    
+
+@media all and (min-width: 749px) and (max-width: 1051px){
+
+    #allbuttons{
+            display: none;
+            
+        }
+    
+    #forselect{
+            background-color: rgb(238,238,238);
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,20%);
+            grid-template-rows: auto;
+            justify-content: center;
+            margin: auto;
+            gap: 5px;
+            
+
+        }
+
+    #products{
+            
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            
+}
+
+}
+
+@media all and (min-width: 51px) and (max-width: 748px){
+
+#allbuttons{
+        display: none;
+        
+    }
+
+#forselect{
+        display: none;
+        }
+
+#smallscreen{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(238,238,238);
+    margin: auto;
+    height: 60px;
+}
+#smallscreen > select+button,select{
+    width: 50%;
+    text-align: center;
+    background-color: rgb(238,238,238);
+    border: 1px solid lightgray;
+}        
+
+#products{
+        
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        }
+#products>div{
+    padding: 20px;
+    height: 100%;
+}
+
+#products>div>div>img{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            
+}
+
+#products>div>p~p{
+     
+    left:20px; 
+    top: 24px; 
+    width: 30px; 
+    height:14px
+    
+}
+
+#products>div>button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: none;
+        background-color: white;
+        position:absolute; 
+        right:25px; 
+        bottom: 110px; 
+
+    }
+
+#products>div>button>img{
+    width: 15px;
+   border-radius: 100% 100% 200% 200%; 
+}
+
+}
+
+
+
+        
+
+</style>
+
+</head>
+
+<body>
+    
+    <div id="top">
+        <h1>Women's A Star Is Born</h1>
+    
+    </div>
+
+    
+	
+    <div id="forselect">
+
+        <div>
+            <select onchange="sortPrice()" name="sort" id="sort">
+                <option >Sort</option>
+                <option value="recommended">Recommended</option>
+                <option value="high to low">Price high to low</option>
+                <option value="low to high">Price low to high</option>
+            </select>
+        </div>
+
+        <div>
+            <select name="discount" id="discount">
+                <option value="discount">Discount %</option>
+                <option value="-10%">Up to 20%</option>
+                <option value="-20%">20% - 30%</option>
+                <option value="-30%">30% - 40%</option>
+                <option value="-40%">40% - 50%</option>
+                <option value="-50%">50% - 60%</option>
+                <option value="-60%">60% - 70%</option>
+                <option value="seventh">70% or more</option>
+    
+            </select>
+        </div>
+
+       
+
+        
+
+        <div>
+            <select name="style" id="style">
+                <option value="">Style</option>
+                <option value="">5-Panel</option>
+                <option value="">Across Body</option>
+                <option value="">Ankle</option>
+                <option value="">Ankle Strap</option>
+                <option value="">Aviator</option>
+                <option value="">Baker Boy</option>
+                <option value="">Barell</option>
+                <option value="">Baseball</option>
+                <option value="">Biker</option>
+                <option value="">Blankets</option>
+                <option value="">Boat Shoes</option>
+                <option value="">Bodycon</option>
+                <option value="">Bomber Coats</option>
+                <option value="">Bomber Jacket</option>
+                <option value="">Bootcut</option>
+                <option value="">Boyfriend</option>
+                <option value="">Brogue</option>
+                <option value="">Bucket Hat</option>
+                <option value="">Cable</option>
+                <option value="">Cagoule</option>
+                <option value="">Cargo Shorts</option>
+                <option value="">Cargo Trousers</option>
+                <option value="">Cat Eye</option>
+                <option value="">Clelsea</option>
+                <option value="">Chukka</option>
+                <option value="">Chunky</option>
+                <option value="">Cigrattee</option>
+                <option value="">Coach</option>
+                <option value="">Crew</option>
+                <option value="">Crop</option>
+                <option value="">Cropped</option>
+                <option value="">Cut Out</option>
+                <option value="">Denim</option>
+                <option value="">Derby</option>
+                <option value="">Denim Jacket</option>
+    
+            </select>
+        </div>
+
+        
+
+        
+        <div>
+            <select name="Colour" id="Colour">
+                <option value="">Colour</option>
+                <option value="MULTI">Multi</option>
+                <option value="WHITE">White</option>
+                <option value="BLUE">Blue</option>
+                <option value="BLACK">Black</option>
+                <option value="TEAL">Teal</option>
+                <option value="SILVER">Silver</option>
+                <option value="Auburn">Auburn</option>
+                <option value="Blonde">Blonde</option>
+                <option value="Copper">Copper</option>
+                <option value="Gold">Gold</option>
+                <option value="Green">Grey</option>
+                <option value="Navy">Navy</option>
+                <option value="Orange">Orange</option>
+                <option value="Pink">Pink</option>
+                <option value="Red">Red</option>
+                <option value="Yellow">Yellow</option>
+            </select>
+        </div>
+
+
+        <div>
+            <select name="size" id="size">
+                <option value="">Size</option>
+                <option value="x,xl,xxl">x,xl,xxl</option>
+                <option value="s,m,l">s,m,l</option>
+                <option value="l,xl,xxl">l,xl,xxl</option>
+            </select>
+        </div>
+
+        <div>
+            <select name="" id="price range">
+                <option value="">Price Range</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div id="smallscreen">
+        <select name="" id="sort2">
+                <option >SORT</option>
+                <option value="recommended">Recommended</option>
+                <option value="high to low">Price high to low</option>
+                <option value="low to high">Price low to high</option>
+        </select>
+
+        <button>FILTER</button>
+    </div>
+
+    <p id="headstart">5 styles found</p>
+
+    <div id="products"></div>
+
+
+    <div id="end">
+        <p><u>You've viewed 5 of 5 products</u></p>
+    </div>
+ 
+	
+</body>
+
+</html>
+
+
+
+
+<script>
+
+		
+       
+   let productData =[
+    {
+        name: "A Star Is Born Bridal embellished skater dress in ecru",
+        price: 190.00,
+        color: "MULTI",
+        size: "x,xl,xxl",
+        productID:"113918912",
+        brand:  "A Star Is Born",
+        discount: "-40%",
+        catagory: "Outwear",
+        responsible: "recycled",
+        bodyfit: "Extra Wide Fit",
+        img: "https://images.asos-media.com/products/a-star-is-born-bridal-embellished-skater-dress-in-ecru/201581480-1-ecru?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "A Star Is Born v neck embellished maxi prom dress in red",
+        price: 382.20,
+        color: "RED",
+        size: "s,m,l",
+        productID: "jacket10",
+        brand: "A Star Is Born",
+        discount: "-30%",
+        catagory: "Outwear",
+        responsible: "recycled",
+        bodyfit: "Plus Size",
+        img: "https://images.asos-media.com/products/a-star-is-born-v-neck-embellished-maxi-prom-dress-in-red/201883695-1-red?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "A Star Is Born v neck embellished maxi prom dress in cobalt",
+        price: 350.40,
+        color: "BLUE",
+        size: "l,xl,xxl",
+        productID: "jeans10",
+        brand: "A Star Is Born",
+        discount: "-20%",
+        catagory: "Jeans & Trousers",
+        responsible: "Sustainable Materials",
+        bodyfit: "tall",
+        img: "https://images.asos-media.com/products/a-star-is-born-v-neck-embellished-maxi-prom-dress-in-cobalt/201883541-1-midblue?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "A Star Is Born tassel one shoulder embellished mini dress in black",
+        price: 327.60,
+        color: "BLACK",
+        size: "x,xl,xxl",
+        productID: "jacket10",
+        brand: "A Star Is Born",
+        discount: "-30%",
+        catagory: "Outwear",
+        responsible: "Sustainable Materials",
+        bodyfit: "Plus Size",
+        img: "https://images.asos-media.com/products/a-star-is-born-tassel-one-shoulder-embellished-mini-dress-in-black/22375477-1-black?$n_320w$&wid=317&fit=constrain",
+    },
+
+    {
+        name: "A Star is Born Bridal embellished maxi dress in ivory",
+        price: 11.75,
+        color: "WHITE",
+        size: "l,xl,xxl",
+        productID: "shirt10",
+        brand: "A Star Is Born",
+        discount: "-60%",
+        catagory: "Dresses",
+        responsible: "recycled",
+        bodyfit: "Main Collection",
+        img: "https://images.asos-media.com/products/a-star-is-born-bridal-embellished-maxi-dress-in-ivory/200768099-1-ivory?$n_320w$&wid=317&fit=constrain",
+    },
+
+]
+
+    
+        function sortPrice(){
+            let selected = document.querySelector("#sort").value;
+            if(selected == "high to low"){
+                productData.sort(function(a,b){
+                    if(a.price>b.price) return -1
+                    if(a.price<b.price) return 1
+                    return 0;
+                })
+            }
+            
+            if(selected == "low to high"){
+                productData.sort(function(a,b){
+                    if(a.price>b.price) return 1
+                    if(a.price<b.price) return -1
+                    return 0;
+                })
+            }
+            displayproducts(productData);
+        }
+    
+
+    let discount = document.getElementById("discount")
+
+    let productcont= document.getElementById("products");
+
+    let whishlistLS = JSON.parse(localStorage.getItem("whishlistPage")) || []; 
+
+    
+    let productLS =   JSON.parse(localStorage.getItem("productPage")) || [];
+
+    
+    function displayproducts(productData){
+
+        productcont.innerHTML="";
+
+        productData.forEach(function(elem){
+
+            
+            
+            let product = document.createElement("div");
+
+            product.addEventListener("click",function(){
+
+                if(productfun(elem.productID)===true){
+                   
+                   productLS.push(elem);  
+                   localStorage.setItem("productPage",JSON.stringify(productLS));
+               }
+            })
+
+
+
+            let imgdiv = document.createElement("div")
+
+            let img = document.createElement("img");
+            img.src = elem.img;
+
+            let name = document.createElement("p");
+            name.textContent=elem.name
+
+            let pricediv =document.createElement("div");
+            let pri = document.createElement("h3");
+            let prevprice = document.createElement("s");
+            prevprice.textContent= "£375.00"
+
+            let euro= document.createElement("h3");
+            euro.textContent="£"
+            let price = document.createElement("h3");
+            price.textContent = elem.price
+
+            let discount = document.createElement("p");
+            discount.textContent = elem.discount
+
+            
+            let whishlist = document.createElement("button");
+            let whishlistimg = document.createElement("img");
+           whishlistimg.src = "https://img.icons8.com/ios/2x/like--v1.png";
+
+           
+        
+
+            whishlist.addEventListener("click",function(){
+                
+                whishlistimg.style.backgroundColor="grey";
+                if(whishlistfun(elem.productID)===true){
+                   
+                    whishlistLS.push(elem);
+                    localStorage.setItem("whishlistPage",JSON.stringify(whishlistLS));
+                }else{
+                    
+                    whishlist.style.backgroundColor="white";
+                
+             }
+            })
+
+            pri.append(prevprice)
+            pricediv.append(pri,euro,price);
+            imgdiv.append(img);
+            whishlist.append(whishlistimg);
+            product.append(imgdiv,name,pricediv,discount,whishlist);
+
+            productcont.append(product);
+            console.log(img,name)
+        })
+        
+    }
+
+    displayproducts(productData);
+    
+
+     
+
+
+    function whishlistfun(id){
+
+            for(let i=0;i<whishlistLS.length;i++){
+                if(whishlistLS[i].productID == id){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+                
+        function productfun(id){
+
+                for(let i=0;i<productLS.length;i++){
+                    if(productLS[i].productID == id){
+                        return false;
+                    }
+                }
+                return true;
+                }
+
+
+            
+
+    
+    
+    discount.addEventListener("change",function(){
+        if(discount.value === "seventh"){
+         
+            alert("No Products Available");
+           
+            displayproducts();
+        }
+        else if(discount.value === "discount"){
+            displayproducts(productData);
+        }
+        else{
+            let discounted = productData.filter(function(elem){
+                return elem.discount === discount.value;
+                
+            })
+            displayproducts(discounted);
+        }
+    })
+
+
+    
+
+
+   
+    Colour.addEventListener("change",function(){
+        if(Colour.value === ""){
+            displayproducts(productData);
+        }else{
+            let Coloured = productData.filter(function(elem){
+                return elem.color === Colour.value;
+                
+            })
+            displayproducts(Coloured);
+        }
+    })
+
+   
+
+    size.addEventListener("change",function(){
+        if(size.value === ""){
+            displayproducts(productData);
+        }else{
+            let sized = productData.filter(function(elem){
+                return elem.size === size.value;
+                
+            })
+            displayproducts(sized);
+        }
+    })
+
+
+	</script>
+</script>
