@@ -6,4 +6,10 @@ Members:-
 3. Vijay Handal
 4. Pratyay Chakraborty
 5. Chinni Jagdeesh
+<<<<<<< HEAD
 6. Prateek Chauhan
+=======
+6. Prateek Chauhan
+
+   Extra member
+>>>>>>> 3a1c4815161b8df465aedb2d84eb89bdff3a1556
