@@ -132,3 +132,10 @@ button:hover{
 #signup>div>:nth-child(1)>p>a{
     color: #696767;
 }
+@media all and (max-width: 1000px) {
+    
+    #signup{
+      margin: 50px 0%;
+      width: 100%;
+    }
+  }
