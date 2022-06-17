@@ -15,15 +15,17 @@
 
 
     /* STYLE FOR NAVBAR */
+    #parent{
+      position: relative;
+    }
    .navbar{
-    position: sticky;
+  
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 56, 92);
-    top: 0;
 
    }
    .navbar>a{
@@ -59,14 +61,15 @@
 
    /* STYLE FOR BODY */
    #body{
-    border: 2px solid;
-    width: 90%;
+    
+    width: 95%;
     height: 700px;
-    margin: auto;
+    margin: 5px auto;
    }
    #body>div:first-child>img{
     width: 100%;
     height: 700px;
+    object-fit: cover;
    }
    #body>div:nth-child(2){
     position: absolute;
@@ -104,20 +107,21 @@
    #foot{
     position: absolute;
     bottom: 0px;
-    width: 90%;
+    width: 95%;
     margin: auto;
-    
     display: grid;
     grid-template-columns: repeat(2,30%);
     justify-content: space-around;
     background-color: #2d2d2d;
+    height: 70px;
    }
    #foot>a,p{
     text-align: center;
     display: grid;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
+    font-weight: 550;
+   
    }
    #foot>a{
     text-decoration: none;
@@ -129,6 +133,172 @@
    #foot>p{
     color: white;
    }
+   #foot>a>p{
+    padding: 0px;
+    width: fit-content;
+   }
+   /* style for logo */
+  #logo{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 40px auto;
+  }
+  #logo>div{
+   
+    display: grid;
+    align-items: center;
+  }
+  #logo>div:first-child{
+    display: grid;
+    grid-template-columns: repeat(3,30px);
+    grid-column-gap: 12%;
+    border-right: 1px solid grey;
+  }
+  #logo>div:first-child>a{
+  
+    height: 30px;
+    border-radius: 50%;
+  }
+  #logo>div:first-child>a:hover{
+    border: 1.5px  solid teal;
+  }
+  #logo>div:first-child>a>img{
+    width: 100%;
+  }
+  #logo>div:last-child{
+    display: grid;
+    grid-template-columns: repeat(5,30px);
+    grid-column-gap: 6%;
+    justify-content: right;
+    
+  }
+  #logo>div:last-child>img{
+    width: 100%;
+  }
+  #last{
+    height: 50px;
+    margin-bottom: 0px ;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    background-color: #ddd;
+  }
+  #last>div{
+    font-size: 9px;
+    letter-spacing: 1px;
+    display: grid;
+  }
+  #last>div:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(3,22%);
+    align-items: center;
+    justify-content: right;
+    padding-right: 5%;
+  }
+  #last>div:nth-child(2)>a{
+   display: grid;
+   text-decoration: none;
+   color: black;
+   justify-content: center;
+   align-items: center;
+   height: 50%;
+  }
+  #last>div:nth-child(2)>a:first-child{
+    border-right: 1px solid black;
+  }
+  #last>div:nth-child(2)>a:last-child{
+    border-left: 1px solid black;
+  }
+  #last>div>p{
+    width: 50%;
+  }
+  /* media query from 770px to 1000px */
+  /*  */
+  /*  */
+  /*  */
+  @media all and (max-width: 1000px) and (min-width:770px){
+    #body{
+    width: 100%;
+    margin-top: 0px;
+  }
+  #foot{
+    width: 100%;
+    grid-template-columns: repeat(2,30%);
+  }
+  #foot>a>p:first-child{
+    text-align: left;
+  }
+  #logo{
+    width: 60%;
+  }
+  
+  #last>div:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(2,35%);
+    padding-right: 0;
+  }
+  #last>div:nth-child(2)>a:last-child{
+    display: none;
+  }
+  
+  }
+
+  /* media query from 0px to 770px */
+ /*  */
+ /*  */
+ /*  */
+  @media all and (max-width: 770px){
+     
+  #body>div:nth-child(2)>h2{
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 30px;
+  }
+  #body>div:nth-child(2)>p{
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    margin-top: 20px;
+  }
+  #body>div:first-child>img{
+    
+     height: 100vh;
+  }
+  #body{
+    width: 100%;
+    margin-top: 0px;
+  }
+  #logo{
+    display: none;
+  }
+  #foot{
+    display: none;
+  }
+  #body>div:nth-child(2)>div{
+    margin-top: 20px;
+  }
+  #body>div:nth-child(2)>div>button{
+    width: 190px;
+  }
+  #body>div:nth-child(2)>div>:nth-child(1){
+    margin: 10px 10px -20px 10px;
+  }
+  #last>div:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(2,35%);
+    padding-right: 0;
+  }
+  #last{
+    grid-template-columns: 30% 70%;
+  }
+  #last>div:nth-child(2)>a:last-child{
+    display: none;
+  }
+  .navbar{
+    display: none;
+  }
+  }
   </style>
 </head>
 <body>
@@ -155,11 +325,33 @@
           <p>EASY WORLDWIDE DELIVERY</p>
           <p>*minimum spends apply</p>
           </a>
-        <p> 
-          ASOS DESIGN and 850+ brands</p>
+        <p>ASOS DESIGN and 850+ brands</p>
       </div>
   </div>
   </div>
-   
+  <div id="logo">
+    <div>
+      <a href=""><img src="https://cdn-icons-png.flaticon.com/128/145/145802.png" alt=""></a>
+      <a href=""><img src="https://cdn-icons.flaticon.com/png/128/3670/premium/3670274.png?token=exp=1655383699~hmac=5f03f0dad245d4dab45a6920b34080aa" alt=""></a>
+      <a href=""><img src="https://cdn-icons.flaticon.com/png/128/3669/premium/3669965.png?token=exp=1655383836~hmac=9925a1f8899b8759ae6a2344a34ad749" alt=""></a>
+    </div>
+    <div>
+      <img src="https://images.asos-media.com/navigation/visa-png" alt="ERROR">
+      <img src="https://images.asos-media.com/navigation/mastercard-png" alt="ERROR">
+      <img src="https://images.asos-media.com/navigation/pay-pal-png" alt="ERROR">
+      <img src="https://images.asos-media.com/navigation/american-express-png" alt="ERROR">
+      <img src="https://images.asos-media.com/navigation/visa-electron-png" alt="ERROR">
+      </div>
+ </div>
+    <div id="last">
+      <div>
+        <p>© 2022 ASOS</p>
+      </div>
+      <div>
+        <a href="">Privay & cookies</a>
+        <a href="">Ts & Cs</a>
+        <a href="">Accessibility</a>
+      </div>
+    </div>
 </body>
 </html>
