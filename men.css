@@ -164,8 +164,8 @@
     align-items: center;
 }
 #nav>div>div:nth-child(3)>div>img{
-    width: 90%;
-    height: 40%;
+    width: 65%;
+    height: 20%;
 }
 button{
     width: 20px;
