@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mens</title>
+    <title>men_shirts</title>
 
     <style>
         *{
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
         
@@ -192,6 +192,7 @@
 }
 #products>div>button>img:hover{
     background-color: darkgrey;
+    
 }
 
     #products>div>h1:hover{
@@ -1790,7 +1791,7 @@
 
             whishlist.addEventListener("click",function(){
                 
-                whishlistimg.style.backgroundColor="grey";
+                whishlistimg.src="https://img.icons8.com/ios-glyphs/2x/like.png";
                 if(whishlistfun(elem.productID)===true){
                    
                     whishlistLS.push(elem);
