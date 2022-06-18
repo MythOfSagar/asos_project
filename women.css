@@ -863,7 +863,7 @@ form{
     background-color: black;
 }
 
-@media all and (min-width:0px) and (max-width:1380px){
+@media all and (min-width:0px) and (max-width:1000px){
 
 
     #con{
