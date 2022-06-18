@@ -203,20 +203,26 @@
             display: grid;
             grid-template-columns:57% 37%;
             justify-content: center;
-            gap: 10px;
+            gap: 10px; 
         }
       }
       #savlatertxt{display: flex;}
-      #topmost{display: flex;
-    margin: auto;}
+      #topmost{
+        display: flex;
+        gap: 220px;
+        justify-content: center;
+        align-items: center;
+    }
+    #topmost img{width: 100px; height: 40px; margin-bottom: -20px;}
       *{font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
     </style>
 </head>
 <body>
+    
     <div id="topmost">
         <img src="https://assets.asosservices.com/checkout/2.0.1.8898/images/chrome/asos-logo/asos-logo.svg" alt="">
         <h1>CHECKOUT</h1>
-        <img src="https://seal.digicert.com/seals/cascade/?tag=dQkJvi0b&referer=secure.asos.com&format=png&lang=en&an=min" alt="">
+        <img src="https://i.ibb.co/YfTDbhc/digiii.png" alt="">
     </div>
     <div id="filledcart">
         <div id="otherbag">
@@ -337,7 +343,7 @@
                 <img src="https://assets.asosservices.com/asos-finance/images/marketing/single.png" alt="">
             </div>
             <div id="orderTerms" style="background-color:#eeeeee ;">
-                <button><h3>PLACE ORDER</h3></button>
+                <a id="placeOrderlink"><button id="placeOrder"><h3>PLACE ORDER</h3></button></a>
                 <p>By placing your order you agree to our <a href="https://www.asos.com/terms-and-conditions/">Terms & Conditions</a> , <a href="https://www.asos.com/privacy-policy/">privacy</a>  and <a href="https://www.asos.com/customer-care/returns-refunds/what-is-your-returns-policy/">returns policies</a> . You also consent to some of your data being stored by ASOS, which may be used to make future shopping experiences better for you.</p>
             </div>
         </div>
@@ -349,6 +355,11 @@
 </body>
 </html>
 <script>
+    let orderbtn=document.querySelector("#placeOrder")
+    orderbtn.addEventListener("click",orderPage)
+    function orderPage(){
+        document.querySelector("#placeOrderlink").setAttribute("href","orderplaced.html")
+    }
     let cForm=document.querySelector("#creditForm")
     let cC=document.querySelector("#creditCard")
     cC.addEventListener("click",apndForm)
