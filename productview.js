@@ -1,12 +1,17 @@
-// script for navbar---------------------------------------------------
+document.querySelector("#like").addEventListener("mouseenter",likeFunction);
+function likeFunction(event){
+    event.preventDefault();
+    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916769.svg?token=exp=1655354846~hmac=77d7b9ff21015aaa7d21f596f565df09";
+}
+document.querySelector("#like").addEventListener("mouseleave",likeleave);
+function likeleave(event){
+    event.preventDefault();
+    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916767.svg?token=exp=1655356392~hmac=9e9d5a5ada8bb686a74d0a31495ba871";
+}
+
 let logindatafrmls = JSON.parse(localStorage.getItem("loginData")) || [];
 if(logindatafrmls.length == 0){
-    document.querySelector("#signin").addEventListener("click",function(){
-        window.location.href = "login.html";
-    })
-    document.querySelector("#join").addEventListener("click",function(){
-        window.location.href = "signup.html";
-    })
+  
 }else{
     logindatafrmls.forEach(function(el){
         let name = el.name.split(" ");
@@ -30,9 +35,9 @@ if(logindatafrmls.length == 0){
 displayFunction();
 function displayFunction(){
    
-    let bigImage=JSON.parse(localStorage.getItem("cartSection"));
+    let bigImage=JSON.parse(localStorage.getItem("productPage"));
     bigImage.forEach(function(el){
-        console.log(el.cartName);
+        console.log(el);
     });
     
 }
@@ -254,5 +259,3 @@ buttons[1].addEventListener("click",function(){
     //       moreText.style.display = "inline";
     //     }
     //   }
-
-
