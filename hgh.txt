@@ -1,0 +1,30 @@
+  <div id="option_btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+
+
+                #nav>#con>div>#option_btn{
+        display: flex;
+        flex-direction: column;
+       background-color:black;
+       width: 50px;
+       height: 90%;
+       gap: 10px;
+       margin-right: -10px;
+       gap: 10px;
+       justify-content: center;
+       align-items: center;
+       display: none;
+       
+    }
+    #nav>#con>div>#option_btn>div{
+        
+        background-color:white ;
+        width: 40px;
+        height: 5px;
+        
+       
+    }
