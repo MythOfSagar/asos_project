@@ -1,4 +1,20 @@
 
+let logindatafrmls = JSON.parse(localStorage.getItem("loginData")) || [];
+if(logindatafrmls.length == 0){
+  
+}else{
+    logindatafrmls.forEach(function(el){
+        let name = el.name.split(" ");
+        document.querySelector("#signin").innerText = name[0];
+        document.querySelector("#join").innerText = "Sign Out";
+        document.querySelector("#join").addEventListener("click",function(){
+            localStorage.removeItem("loginData");
+            window.location.reload();
+            document.querySelector("#join").innerText = "Join";
+            document.querySelector("#signin").innerText = "Sign In"
+        })
+     });
+}
 displayFunction();
 function displayFunction(){
    
