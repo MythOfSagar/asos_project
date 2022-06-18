@@ -24,7 +24,10 @@ function displayFunction(){
     });
     
 }
-
+document.querySelector("#asos").addEventListener("click",openlnk)
+    function openlnk(){
+        window.location.href="index.html"
+    }
 
 document.querySelector("#Addcart").addEventListener("mouseenter",myFunction);
 function myFunction(event){

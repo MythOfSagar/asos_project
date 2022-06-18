@@ -109,6 +109,10 @@ let objData={
     carPrice:document.querySelector("#price").innerHTML,
     cartColor:document.querySelector("#color").innerHTML,
 }
+document.querySelector("#asos").addEventListener("click",openlnk)
+    function openlnk(){
+        window.location.href="index.html"
+    }
 cartData.push(objData);
 localStorage.setItem("cartSection",JSON.stringify(cartData));
 }
