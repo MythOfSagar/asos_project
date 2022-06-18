@@ -1,4 +1,5 @@
 // script for navbar
+<<<<<<< HEAD
 document.getElementById("payment").addEventListener("click",payment)
     
     function payment(){
@@ -16,6 +17,8 @@ document.querySelector("#btn2").addEventListener("click",function(){
 
 
 // script for home page
+=======
+>>>>>>> 85a5da9959496c0628f88fd731a0f4956499e27f
 let logindatafrmls = JSON.parse(localStorage.getItem("loginData")) || [];
 if(logindatafrmls.length == 0){
     document.querySelector("#signin").addEventListener("click",function(){
@@ -40,4 +43,24 @@ if(logindatafrmls.length == 0){
             document.querySelector("#signin").innerText = "Sign In"
         })
      })
+<<<<<<< HEAD
 }
+=======
+     
+}
+document.getElementById("signin").style.cursor="pointer"
+document.getElementById("join").style.cursor="pointer"
+
+
+
+document.querySelector("#btn1").addEventListener("click",function(){
+  window.location.href="wemenspage.html"
+})
+document.querySelector("#btn2").addEventListener("click",function(){
+    window.location.href="menspage.html"
+})
+document.getElementById("cart").addEventListener("click",CartFun)
+function CartFun(){
+    window.location.href="cart.html"
+    console.log("heLLO")}
+>>>>>>> 85a5da9959496c0628f88fd731a0f4956499e27f
