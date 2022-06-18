@@ -222,11 +222,20 @@ button>img:hover{border: 1px solid skyblue;border-radius: 50%;}
 }
 .sub-menu>ul>li>a:hover{
     color: skyblue;
+    
    
 }
 
 .sub-menu>ul>li>a{
+    color: transparent;
+    text-decoration: none ;
+    list-style-type: none;
+    font-size: 0px;
+    transition: all .6s ease-in .1s;
+}
+.sub-menu:hover>ul>li>a{
     color: gray;
+    font-size: 20px;
     text-decoration: none ;
     list-style-type: none;
 }

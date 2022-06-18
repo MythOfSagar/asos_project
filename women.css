@@ -192,7 +192,7 @@ button>img{
     height: 80%;
 }
 button>img:hover{border: 1px solid skyblue;border-radius: 50%;}
-.sub-menu{
+/* .sub-menu{
    
     display:none ;
     
@@ -212,14 +212,10 @@ button>img:hover{border: 1px solid skyblue;border-radius: 50%;}
        margin-right: 0px;
        padding: 20px;
        transition: all .5s ease-in .1s;
-     
+     font-size: 0px;
 
 }
-.sub-menu:hover{
-   height: 250px;
-   font-size: 20px
-    
-}
+
 .sub-menu>ul{
     display: flex;
   
@@ -234,6 +230,7 @@ button>img:hover{border: 1px solid skyblue;border-radius: 50%;}
    
     
 }
+
 .sub-menu>ul>li>a:hover{
     color: skyblue;
    
@@ -246,10 +243,19 @@ button>img:hover{border: 1px solid skyblue;border-radius: 50%;}
 }
 #nav>div>div:nth-child(3)>div:first-child:hover .sub-menu{
       
-        display: flex;    
-       
-        
+    display: flex;    
+    height: 250px;
+font-size: 20px
+    
 }
+#nav>div>div:nth-child(3)>div:first-child>.sub-menu{
+    height: 0px;
+    font-size: 0px;
+    transition: all;
+    transition-duration: 5s;
+     
+ } */
+
 
 #option{
     /* position:fixed; */
@@ -1607,7 +1613,73 @@ background-color:#ddd;
 }
 
 
+.sub-menu{
+   
+    display:none ;
+    
+    width: 350px;
+    height: 0px;
+    flex-direction: column;
+        position: absolute;
+        
+        background-color: white;
+        font-size: 0px;
+        
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       
+    line-height: 40px;
+       
+       margin-left: -100px;
+       margin-right: 0px;
+       padding: 20px;
+       transition: all .5s ease-in .1s;
+     
 
+}
+.sub-menu:hover{
+   height: 250px;
+   font-size: 20px
+    
+}
+.sub-menu>ul{
+    display: flex;
+  
+    
+    flex-direction: column;
+  
+}
+.sub-menu>ul>li{
+    text-decoration: none ;
+    list-style-type: none;
+
+   
+    
+}
+.sub-menu>ul>li>a:hover{
+    color: skyblue;
+    
+   
+}
+
+.sub-menu>ul>li>a{
+    color: transparent;
+    text-decoration: none ;
+    list-style-type: none;
+    font-size: 0px;
+    transition: all .6s ease-in .1s;
+}
+.sub-menu:hover>ul>li>a{
+    color: gray;
+    font-size: 20px;
+    text-decoration: none ;
+    list-style-type: none;
+}
+#nav>div>div:nth-child(3)>div:first-child:hover .sub-menu{
+      
+        display: flex;    
+       
+        
+}
 
 
 
