@@ -14,6 +14,1201 @@
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
+
+
+        #Main
+{
+   
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+   
+    bottom: 0px;
+    width: 100%;
+    line-height: 2;
+}
+#social
+{
+    width: 100%;
+    height: 60px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding:0%  30%;
+    background-color: white;
+    justify-content: space-evenly;
+    gap: 40px;
+    border: 1px solid #EEEEEE; 
+    
+
+}
+
+
+#social img
+{
+    width: 100%;
+    height: 100%;
+}
+
+#social div:nth-child(1)
+{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,32px);
+    grid-template-rows:  22px;
+    justify-content: space-between;
+    margin: auto;
+    text-align: center;
+    line-height: 30px;
+    gap: 50px;
+   
+}
+#social div:nth-child(2)
+{
+    margin: auto;
+}
+#social div:nth-child(3)
+{
+    width: 100%;
+    height: auto;
+    display: grid;
+     grid-template-columns: repeat(5,35px);
+    grid-template-rows:  22px;
+    justify-content: space-evenly;
+    margin: auto;
+    gap: 30px;
+}
+#social>.icons>a:nth-child(1)
+{       
+    color:white;
+    background-color: navy;
+    border-radius: 50%;
+    height: 32px;
+    border: 2px solid ;
+
+  
+}
+#social>.icons>a:nth-child(2)
+{
+    background-color:blueviolet ;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    border: 2px solid ;
+    height: 32px;
+  
+    
+}
+
+#social>.icons>a:nth-child(3)
+{
+    color: white; 
+     background-color: yellow;
+   border-radius: 50%;
+   border: none;
+    height: 32px;
+    border: 2px solid white ;
+    
+}
+#social>.icons>a:hover
+{
+  border: 2px solid blue;
+ 
+
+}
+a:hover
+{
+    color: rgb(0, 81, 255);
+}
+.container
+{
+    max-width: 100%;
+    height: auto;
+    margin: auto; 
+}
+ul
+{
+    list-style: none;
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;   
+}
+.footer
+{
+    background-color: #EEEEEE;  
+    padding: 30px;
+   
+}
+.footer-col
+{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4
+{
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 15px;
+    color:#666666;
+    padding: 0px 0px 10px;
+ 
+}        
+.footer-col li,ul a
+{
+    font-size: 13px;
+    text-decoration: none;
+    color: #666666;
+
+}
+.footer img{
+    width: 17px;
+    height: 17px;
+}
+.bottom-details
+{
+background-color:#ddd;
+padding: 15px;}
+
+.bottom-details .bottom-text
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 90px; 
+}
+ .bottom-details .bottom-text span,
+ .bottom-details .bottom-text a
+{
+    font-size: 12px;
+    color:black ;
+    opacity: 0.8;
+    text-decoration: none;
+}
+.vr
+{
+border-left: 1px solid;
+margin: 10px;
+color: #666666;
+}
+.vrt
+{
+border-left: 2px solid;
+height: 15px;
+margin: 5px 10px;
+color: #666666;
+
+}
+#country
+{
+ 
+    display: grid;
+    grid-template-columns: 50px 10px 10px 20px;
+    gap:10px;
+   text-decoration: none;
+}
+#last a
+{
+    text-decoration: none;
+}
+
+@media all and (min-width:720px) and (max-width:1024px)
+{   
+    .container
+{
+    max-width: 100%;
+    height: auto;
+    margin: auto; 
+} 
+
+
+.footer-col
+{
+    width: 33%;
+    padding: 0 15px;
+}
+.footer-col:last-child>h4
+{
+    color:#EEEEEE;
+}
+.footer-col:last-child
+{
+    width: 1024px;
+}
+#country
+{
+    width: 100;
+    border-top: 2px solid #ddd;
+    margin-bottom: -30px;
+    padding: 10px 0px 0px 10px;
+}
+}
+@media all and (min-width:480px) and (max-width:720px)
+{    
+  
+.bottom-details
+{
+background-color:#ddd;
+}
+
+.bottom-details .bottom-text
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 90px; 
+}
+ .bottom-details .bottom-text span,
+ .bottom-details .bottom-text a
+{
+    font-size: 12px;
+    color:black ;
+    opacity: 0.8;
+    text-decoration: none;
+}
+#social
+{
+   
+    display: grid;
+    grid-template-columns: repeat(3,30px);
+    padding:0% 10px;
+   border: 1px solid #EEEEEE; ;
+
+}
+}
+
+
+
+
+
+#nav{
+    /* position: fixed; */
+    top: 30px;
+    left: 0px;
+    display: flex;
+    margin: auto;
+    background-color: black;
+    width: 100%;
+    height: 62px;
+    gap: 0px;
+}
+#con{
+    display: flex;
+    margin: auto;
+    width: 1350px;
+    height: 100%;
+}
+#upper{
+    display: flex;
+   margin-top: 0px;
+    background-color:whitesmoke;
+    /*  */
+    width: 100%;
+    height: 30px;
+    /* border: .5px solid ; */
+    /* position: fixed; */
+    top: 0px;
+    left: 0px;
+    justify-content: right;
+    gap: 1px;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+   
+}
+#upper>div{
+    width: 180px;
+    height: 100%;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    
+    align-items: center; 
+    /* padding: 15px; */
+    justify-content: center;
+}
+#upper>div:hover{color: skyblue;}
+#upper>div>button{width: 40px; height: 100%;border:skyblue; padding: 5px;}
+
+#nav>div>div:nth-child(1){
+    display: flex;
+
+    width: 28%;
+    height: 100%;
+    margin: auto;
+}
+
+ #nav>#con>div:nth-child(1)>div:nth-child(2)
+{
+    background-color: black;
+    /* border: #525050; */
+} 
+
+
+#nav>div>div:nth-child(2){
+   
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    
+}
+#nav>div>div:nth-child(3){
+    
+    width: 15%;
+    height: 100%;
+    margin: auto;
+}
+/* #nav>div>div{
+    background-color: rad;
+} */
+#nav>div>div:nth-child(1)>div{
+    display: flex;
+    margin: auto;
+    width: 33.33%;
+    /* background-color: aliceblue; */
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 90%;
+    
+}
+#nav>div>div:nth-child(1)>div>img{
+    width: 60%;
+    /* height: 50%; */
+   
+}
+#con>div>a{
+    display: grid;
+    border: 1px solid gray; 
+     height: 50%;
+    color: white;
+    text-decoration: none;
+    width: 100px;
+    height: 100%;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+
+#con>div>a:hover{
+    background-color: #3f3d3d;
+    border: none;
+}
+
+
+  
+#con>div:nth-child(1)>div:nth-child(2):hover{background-color:  #525050;border: none;}
+#con>div:nth-child(2){
+  display: flex;
+ justify-content: center;
+    align-items: center;
+}
+/* #con>div:nth-child(2){background-color: white;} */
+#con>div:nth-child(2)>div{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 94%;
+    height: 65%;
+    border-radius: 30px;
+}
+#con>div:nth-child(2)>div:hover{border: 3px solid skyblue;}
+#con>div:nth-child(2)>div>input{
+    height: 90%;
+    width: 95%;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    border-style:hidden;
+    outline: none;
+}
+#con>div:nth-child(2)>div>input:hover{border: none;}
+#con>div:nth-child(2)>div>img{height: 60%;}
+#con>div{
+   display: flex;
+    /* margin: auto; */
+    width: 33.33%;
+    /* background-color: aliceblue; */
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#nav>div>div:nth-child(3)>div>img{
+    width: 65%;
+    height: 20%;
+}
+#upper>div>button{
+    
+    height: 100%;
+}
+button:hover{border: skyblue;}
+button>img{
+    width: 60%;
+    height: 80%;
+}
+button>img:hover{border: 1px solid skyblue;border-radius: 50%;}
+.sub-menu{
+   
+    display:none ;
+    
+    width: 350px;
+    height: 0px;
+    flex-direction: column;
+        position: absolute;
+        
+        background-color: white;
+        font-size: 0px;
+        
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       
+    line-height: 40px;
+       
+       margin-left: -100px;
+       margin-right: 0px;
+       padding: 20px;
+       transition: all .5s ease-in .1s;
+     
+
+}
+.sub-menu:hover{
+   height: 250px;
+   font-size: 20px
+    
+}
+.sub-menu>ul{
+    display: flex;
+  
+    
+    flex-direction: column;
+  
+}
+.sub-menu>ul>li{
+    text-decoration: none ;
+    list-style-type: none;
+
+   
+    
+}
+.sub-menu>ul>li>a:hover{
+    color: skyblue;
+   
+}
+
+.sub-menu>ul>li>a{
+    color: gray;
+    text-decoration: none ;
+    list-style-type: none;
+}
+#nav>div>div:nth-child(3)>div:first-child:hover .sub-menu{
+      
+        display: flex;    
+       
+        
+}
+
+#option{
+
+
+    display: flex;
+    margin: auto;
+    background-color:#525050;
+    height: 50px;
+    width: 100%;
+    left: 0px;
+ 
+    justify-content: space-around;
+   
+    
+}
+.trap{
+    
+    background-color: #d01345;
+    transform: skew(-15deg);
+    font-size: 15px;
+    font-weight: bold;
+}
+.trap2{
+    
+     background-color: #d01345;
+    transform:skewX(-15deg);
+    font-size: 15px;
+    font-weight: bold;
+   
+}
+#option>div{
+ 
+    width: 1300px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(14,70px);
+    grid-template-rows: repeat(1,1fr);
+    gap: 10px;
+    justify-content: left;
+   
+    font-size: 11px;
+   
+   
+  
+    
+}
+#option>div>div:hover{
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid skyblue;
+    width: auto;
+    transform: skew(0deg);
+}
+
+#option>div>div{
+    display: grid;
+    /* border: 1px solid; */
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    color: white;
+   
+    /* margin-right:0px; */
+    /* margin-right: 10px; */
+}
+.sub-menu2{
+    /* display: flex; */
+    display: none;
+    width: 1390px;
+    height:auto;
+  
+    margin-top: 36px;
+    gap: 100px;
+    text-align: left;
+    background-color: whitesmoke;
+    margin-left: -30px;
+    padding: 10px;
+    z-index: 100;
+    
+    
+   
+}
+li>a{
+
+color: black;
+/* font-style: none; */
+text-decoration: none;
+
+list-style-type: none;
+
+}
+li{
+    text-decoration: none ;
+    list-style-type: none;
+    line-height: 35px;
+
+}
+.shadow{
+    width: 300px;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 10px;
+}
+#circle-img1{
+    display: grid;
+    grid-template-columns: repeat(2,150px);
+    grid-template-rows: repeat(3,150px);
+   gap: 20px;
+   margin-top: 20px;
+  
+
+}
+#circle-img1>div{
+   
+    border-radius: 50%;
+}
+#circle-img1>div>img{
+    
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#circle-img1>div:hover img{
+    border: 1px solid skyblue;
+    color: skyblue;
+}
+#circle-img1>div:hover p{
+   
+    color: skyblue;
+}
+#option>div>#sale:hover .sub-menu2{
+    position: absolute;
+    top: 13px;
+    display: flex;
+    color: #525050;
+
+    transition:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+ 
+}
+img+p{
+    text-align: left;
+    margin-top: 10px;
+    line-height: 10px;
+    justify-content: center;
+}
+.sub-menu2>div>ul>li>a:hover{
+ color: skyblue
+
+}
+.sub-menu2>div>h4{
+    text-decoration: underline;
+}
+
+
+#option>div>#new:hover .sub-menu3{
+    position: absolute;
+    top: 13px;
+    display: flex;
+    color: #525050;
+
+    transition:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+ 
+}
+img+p{
+    text-align: left;
+    margin-top: 10px;
+    line-height: 10px;
+    justify-content: center;
+}
+.sub-menu3>div>ul>li>a:hover{
+ color: skyblue
+
+}
+.sub-menu3>div>h4{
+    text-decoration: underline;
+}
+.sub-menu3{
+    /* display: flex; */
+    display: none;
+    width: 1390px;
+    height:auto;
+  
+    margin-top: 36px;
+    gap: 100px;
+    margin-left: -100px;
+    text-align: left;
+    background-color: whitesmoke;
+    padding: 10px;
+    
+    
+   
+}
+
+#option>div>#new:hover .sub-menu3{
+    position: absolute;
+    top: 13px;
+    display: flex;
+    color: #525050;
+
+    transition:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+ 
+}
+img+p{
+    text-align: left;
+    margin-top: 10px;
+    line-height: 10px;
+    justify-content: center;
+}
+.sub-menu3>div>ul>li>a:hover{
+ color: skyblue
+
+}
+#offerbar{
+    display: flex;
+
+    width: 100%;
+    height: 40px;
+    background-color:#ff385c;
+   
+}
+#offerbar>div{
+   
+    width: 1400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+#offerbar>div>button{
+    margin: auto;
+    background-color: transparent;
+    width: 100px;
+    height: 20px;
+    border: .5px solid;
+    cursor: pointer;
+}
+#offerbar>div>#banner{
+    width: 70%;
+    height:100%;
+    text-align: center;
+    align-items: center;
+    border: none;
+    cursor: auto;
+    
+}
+.sub-menu3>div>h4{
+    text-decoration: underline;
+} 
+
+
+
+ .sub-menu4{
+    display: none; 
+    
+     width: 1380px;
+    height:500px;
+  
+    margin-top:36px;
+    gap: 100px;
+    text-align: left;
+    background-color:whitesmoke;
+    padding: 10px;
+    margin-left:-190px ;
+    
+
+ }  
+ #option>.sub-menu4>div{
+    width: 100%;
+    height: auto;
+    background-color: #525050;
+    height: 500px; 
+} 
+  .sub-menu4>div>img{
+    width: 100%;
+    height: 100%;}  
+  #option>div>#clothing:hover .sub-menu4{
+    position: absolute;
+    top: 13px;
+    display: flex;
+    color: #525050; 
+} 
+
+#blur{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999999;
+    top: 0px;
+    background:rgba(2, 2, 2, 0.2);
+    
+    display: none;
+    
+    }
+    #option_btn{
+        display: flex;
+        flex-direction: column;
+       background-color:black;
+       width: 50px;
+       height: 50px;
+       gap: 10px;
+       margin-right: -10px;
+       gap: 10px;
+       justify-content: center;
+       align-items: center;
+       display: none;
+       position: absolute;
+       top: 30px;
+       
+    }
+    #option_btn>div{
+     
+        background-color:white ;
+        width: 40px;
+        height: 5px;
+        
+       
+    }
+   
+
+    @media all and (min-width:0px) and (max-width:900px){
+
+        #option_btn{
+            display: flex;
+        }
+        
+        #con{
+            display: flex;
+            margin: auto;
+            width: 80%;
+            height: 100%;
+        }
+    
+    #option{
+        display: none;
+    }
+    #main1{
+        background-color: #fe5e80 ;
+        width: 100%;
+        height: auto;
+        margin-top: 1px;
+    }
+    #main1>div>ul{
+        display: grid;
+     width: 80%px;
+     height: 50%;
+    
+        margin: auto;
+        justify-content: center;
+        
+        
+    }
+    
+    
+    #main5{
+        display: flex;
+        margin: auto;
+        width: 100%;
+        margin-top: 50px;
+       text-align: center;
+    }
+    
+    #main5>ul{
+       
+        display:grid;
+        margin: auto;
+        width: 80%;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 50px;
+        
+    
+    } 
+     
+     #main6>div{
+        width: 80%;
+        height: auto;
+        margin: auto;
+       
+    } 
+    
+    #main6>div>ul{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+       
+       
+    }
+    
+    #main3{width: 80%;height: auto;margin-top: 40px;}
+    #main3>ul{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        margin: auto;
+        
+       
+    }
+    /* #con{width: 100%;} */
+    #nav>div>div:nth-child(1)>div>img{
+        width:60px;
+        /* height: 50%; */
+       
+    }
+    #nav>div>div:nth-child(3)>div>img{width: 25px;}
+    #offerbar>div{
+        width: 80%;
+    }
+    
+    
+    #con>div>a{display: none;}
+    #option{display: none;}
+    
+    
+    
+    
+    
+    
+    
+             
+        
+         
+         
+        #main2>div>h1{
+       margin: auto;
+       margin-top: 400px;
+            
+        }
+        #main2>div>h5{
+            margin: auto;
+        }
+        #main2>div{
+           
+            display: grid;
+            width: 600px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+           
+        }  
+        #main3{
+            display: flex;
+        }   
+     
+        #con{
+            display: flex;
+            margin: auto;
+            width: 80%;
+            height: 100%;
+        }
+    
+    #option{
+        display: none;
+    }
+    #main1{
+        background-color: #fe5e80 ;
+        width: 100%;
+        height: auto;
+        margin-top: 1px;
+    }
+    #main1>div>ul{
+        display: grid;
+     width: 80%px;
+     height: 50%;
+    
+        margin: auto;
+        justify-content: center;
+        
+        
+    }
+    
+    
+    #main5{
+        display: flex;
+        margin: auto;
+        width: 100%;
+        margin-top: 50px;
+       text-align: center;
+    }
+    
+    #main5>ul{
+       
+        display:grid;
+        margin: auto;
+        width: 80%;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 50px;
+        
+    
+    } 
+     
+     #main6>div{
+        width: 80%;
+        height: auto;
+        margin: auto;
+       
+    } 
+    
+    #main6>div>ul{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+       
+       
+    }
+    
+    #main3{width: 80%;height: auto;margin-top: 40px;}
+    #main3>ul{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        margin: auto;
+        
+       
+    }
+    /* #con{width: 100%;} */
+    #nav>div>div:nth-child(1)>div>img{
+        width:60px;
+        /* height: 50%; */
+       
+    }
+    #nav>div>div:nth-child(3)>div>img{width: 25px;}
+    #offerbar>div{
+        width: 80%;
+    }
+    
+    
+    #con>div>a{display: none;}
+    #option{display: none;}
+    
+    
+    
+    
+    
+    
+             
+        
+         
+         
+        #main2>div>h1{
+       margin: auto;
+       margin-top: 400px;
+            
+        }
+        #main2>div>h5{
+            margin: auto;
+        }
+        #main2>div{
+           
+            display: grid;
+            width: 600px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+           
+        }  
+        #main3{
+            display: flex;
+        }   
+     
+        #con{
+            display: flex;
+            margin: auto;
+            width: 80%;
+            height: 100%;
+        }
+    
+    #option{
+        display: none;
+    }
+    #main1{
+        background-color: #fe5e80 ;
+        width: 100%;
+        height: auto;
+        margin-top: 1px;
+    }
+    #main1>div>ul{
+        display: grid;
+     width: 80%px;
+     height: 50%;
+    
+        margin: auto;
+        justify-content: center;
+        
+        
+    }
+    
+    
+    #main5{
+        display: flex;
+        margin: auto;
+        width: 100%;
+        margin-top: 50px;
+       text-align: center;
+    }
+    
+    #main5>ul{
+       
+        display:grid;
+        margin: auto;
+        width: 80%;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 50px;
+        
+    
+    } 
+     
+     #main6>div{
+        width: 80%;
+        height: auto;
+        margin: auto;
+       
+    } 
+    
+    #main6>div>ul{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+       
+       
+    }
+    
+    #main3{width: 80%;height: auto;margin-top: 40px;}
+    #main3>ul{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        margin: auto;
+        
+       
+    }
+    /* #con{width: 100%;} */
+    #nav>div>div:nth-child(1)>div>img{
+        width:60px;
+        /* height: 50%; */
+       
+    }
+    #nav>div>div:nth-child(3)>div>img{width: 25px;}
+    #offerbar>div{
+        width: 80%;
+    }
+    
+    
+    #con>div>a{display: none;}
+    #option{display: none;}
+    
+    
+    
+    
+    
+   
+             
+        
+         
+         
+        #main2>div>h1{
+       margin: auto;
+       margin-top: 400px;
+            
+        }
+        #main2>div>h5{
+            margin: auto;
+        }
+        #main2>div{
+           
+            display: grid;
+            width: 600px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+           
+        }  
+        #main3{
+            display: flex;
+        }   
+     
+    
+        
+     
+    
+    }
+    
+
+
+
+
+
+
+
+
         
 		
 		#moreText {
@@ -361,6 +1556,302 @@
 </head>
 
 <body>
+
+
+    <div id="blur"></div>
+    <div id="upper">
+        <div>Marketplace</div>
+        <div>Help & FAQ's</div>
+        <div>
+            <!-- <select id="country"  class="_2CHxSwY _3ps0adE"><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BQ">Bonaire, Sint Eustatius and Saba</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei Darussalam</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island (Australia)</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="CI">Cote d'Ivoire</option><option value="HR">Croatia</option><option value="CW">Curacao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="CD">Democratic Republic of the Congo</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="SZ">Eswatini</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands (Malvinas)</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="VA">Holy See (Vatican City State)</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN" selected="">India</option><option value="ID">Indonesia</option><option value="IQ">Iraq</option><option value="IE">Ireland, Republic of</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KR">Korea, Republic of (South Korea)</option><option value="XK">Kosovo</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Lao People's Democratic Republic</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia, Federated States of</option><option value="MD">Moldova, Republic of</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MK">North Macedonia</option><option value="MP">Northern Mariana Islands</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestine</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthelemy</option><option value="SH">Saint Helena, Ascension and Tristan da Cunha</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="MF">Saint Martin (French part)</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SX">Sint Maarten (Dutch part)</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="ZA">South Africa</option><option value="GS">South Georgia and the South Sandwich Islands</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania, United Republic of</option><option value="TH">Thailand</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UM">United States Minor Outlying Islands</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands, British</option><option value="VI">Virgin Islands, U.S.</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select> -->
+            <button  id="payment"><img src="https://assets.asosservices.com/storesa/images/flags/in.png" alt=""></button>
+        </div>
+    </div>
+    <div id="option_btn">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+<div id="nav">
+    <div id="button">
+
+    </div>
+    <div id="con">
+        <div>
+            <div><img src="data:image/png;base64,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" alt=""></div>
+            <a href="wemenspage.html"><div>WOMEN</div></a>
+            <a href="menspage.html"><div>MEN</div></a>
+        </div>
+            <div><div><input type="text" placeholder="Search for items and brand"><img src="https://cdn-icons.flaticon.com/png/128/2801/premium/2801881.png?token=exp=1655200307~hmac=a1de287c0a5836d115b6c87356d43744" alt=""> </div></div>
+            
+        <div>
+            <div><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8cGF0aCBkPSJtMzc2IDBjLTQ5LjM3NSAwLTk4LjI3IDkuNzI2Ni0xNDMuODkgMjguNjIxLTQ1LjYyMSAxOC44OTUtODcuMDcgNDYuNTktMTIxLjk4IDgxLjUwOC0zNC45MTggMzQuOTE0LTYyLjYxMyA3Ni4zNjMtODEuNTA4IDEyMS45OC0xOC44OTUgNDUuNjE3LTI4LjYyMSA5NC41MTItMjguNjIxIDE0My44OSAwIDk5LjcyMyAzOS42MTcgMTk1LjM2IDExMC4xMyAyNjUuODcgNzAuNTE2IDcwLjUxNiAxNjYuMTUgMTEwLjEzIDI2NS44NyAxMTAuMTMgOTkuNzIzIDAgMTk1LjM2LTM5LjYxNyAyNjUuODctMTEwLjEzIDcwLjUxMi03MC41MTIgMTEwLjEzLTE2Ni4xNSAxMTAuMTMtMjY1Ljg3IDAtOTkuNzE5LTM5LjYxMy0xOTUuMzYtMTEwLjEyLTI2NS44Ny03MC41MTYtNzAuNTE2LTE2Ni4xNS0xMTAuMTMtMjY1Ljg4LTExMC4xM3ptMCA0Mi40NjVjNDMuMzE2IDAgODYuMjA3IDguNjI1IDEyNi4yMyAyNS4zODcgNDAuMDIgMTYuNzYyIDc2LjM3OSA0MS4zMzIgMTA3LjAxIDcyLjMwNXM1NC45MjYgNjcuNzM4IDcxLjUgMTA4LjIxYzE2LjU3OCA0MC40NjUgMjUuMTA1IDgzLjg0IDI1LjEwNSAxMjcuNjQgMCA4OC40NjEtMzQuNzUgMTczLjMtOTYuNjA1IDIzNS44NC02MS44NTkgNjIuNTUxLTE0NS43NSA5Ny42OTEtMjMzLjIzIDk3LjY5MS00My4zMTIgMC04Ni4yMDctOC42MjUtMTI2LjIyLTI1LjM4Ny00MC4wMi0xNi43NjItNzYuMzgzLTQxLjMzMi0xMDcuMDEtNzIuMzAxLTMwLjYyOS0zMC45NzMtNTQuOTI2LTY3Ljc0Mi03MS41MDQtMTA4LjIxLTE2LjU3NC00MC40NjktMjUuMTA1LTgzLjg0LTI1LjEwNS0xMjcuNjRzOC41MzEyLTg3LjE3MiAyNS4xMDUtMTI3LjY0YzE2LjU3OC00MC40NjkgNDAuODcxLTc3LjIzOCA3MS41LTEwOC4yMSAzMC42MjktMzAuOTY5IDY2Ljk5Mi01NS41MzkgMTA3LjAxLTcyLjMwMSA0MC4wMi0xNi43NjIgODIuOTE0LTI1LjM4NyAxMjYuMjMtMjUuMzg3eiIvPgogIDxwYXRoIGQ9Im00ODAuODkgMzI5LjM3YzguODUxNi0xNi42MjEgMTMuODk4LTM1LjUzNSAxMy44OTgtNTUuNjMzIDAtNjUuNTA0LTUzLjI5My0xMTguNzktMTE4Ljc4LTExOC43OS02NS41MTYgMC0xMTguODEgNTMuMjkzLTExOC44MSAxMTguNzkgMCAyMC4wOTggNS4wNjI1IDM5LjAyNyAxMy44OTggNTUuNjMzLTQ1LjY3MiA3LjEwNTUtNzEuNDk2IDQwLjM4Ny03MS40OTYgOTMuOTE4djExMC44MmMwIDM0LjcxOSAyOC4yMzggNjIuOTU3IDYyLjk1NyA2Mi45NTdoMjI2Ljg5YzYuMTI4OSAwIDExLjA5OC00Ljk3MjcgMTEuMDk4LTExLjA5OCAwLTYuMTI4OS00Ljk3MjctMTEuMDk4LTExLjA5OC0xMS4wOThsLTIyNi44OS0wLjAwMzkwNmMtMjIuNDggMC00MC43NTgtMTguMjc3LTQwLjc1OC00MC43NTh2LTExMC44MmMwLTQ2LjcyMyAyMS41MzEtNzEuMDUxIDYzLjYwOS03Mi44NzEgMjEuODEyIDI1LjcyMyA1NC4zMTIgNDIuMTE3IDkwLjYwMiA0Mi4xMTcgMzYuMjg5IDAgNjguNzczLTE2LjM5OCA5MC41ODYtNDIuMTE3IDQyLjA1OSAxLjgwNDcgNjMuNjA5IDI2LjE1MiA2My42MDkgNzIuODcxdjExMC44MmMwIDYuMTI4OSA0Ljk3MjcgMTEuMDk4IDExLjA5OCAxMS4wOTggNi4xMjg5IDAgMTEuMDk4LTQuOTcyNyAxMS4wOTgtMTEuMDk4di0xMTAuODJjMC01My41MjctMjUuODI0LTg2LjgxMi03MS41MDgtOTMuOTE4em0tMTA0Ljg5IDQwLjk2NWMtNTMuMjc3IDAtOTYuNjA5LTQzLjMzMi05Ni42MDktOTYuNTk4IDAtNTMuMjYyIDQzLjM0OC05Ni41OTQgOTYuNjA5LTk2LjU5NHM5Ni41ODIgNDMuMzMyIDk2LjU4MiA5Ni41OThjMCA1My4yNjItNDMuMzE2IDk2LjU5NC05Ni41ODIgOTYuNTk0eiIgZmlsbD0iI2ZmZiIvPgogPC9nPgo8L3N2Zz4K" alt="">
+             <div class="sub-menu">
+                <ul>
+                    <li> <span>Sign In</span> <span>|</span> <span>Join</span> </li>
+                    <li> <a href="">My Account</a> </li>
+                    <li> <a href="">My Order</a> </li>
+                    <li> <a href="">Returns Information</a> </li>
+                    <li> <a href="">Cotact Preference</a> </li>
+                </ul>
+            
+             
+             </div>
+            
+            </div>
+            <div><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8cGF0aCBkPSJtMzc2IDBjLTQ5LjM3NSAwLTk4LjI3IDkuNzI2Ni0xNDMuODkgMjguNjIxLTQ1LjYyMSAxOC44OTUtODcuMDcgNDYuNTktMTIxLjk4IDgxLjUwOC0zNC45MTggMzQuOTE0LTYyLjYxMyA3Ni4zNjMtODEuNTA4IDEyMS45OC0xOC44OTUgNDUuNjE3LTI4LjYyMSA5NC41MTItMjguNjIxIDE0My44OSAwIDk5LjcyMyAzOS42MTcgMTk1LjM2IDExMC4xMyAyNjUuODcgNzAuNTE2IDcwLjUxNiAxNjYuMTUgMTEwLjEzIDI2NS44NyAxMTAuMTMgOTkuNzIzIDAgMTk1LjM2LTM5LjYxNyAyNjUuODctMTEwLjEzIDcwLjUxMi03MC41MTIgMTEwLjEzLTE2Ni4xNSAxMTAuMTMtMjY1Ljg3IDAtOTkuNzE5LTM5LjYxMy0xOTUuMzYtMTEwLjEyLTI2NS44Ny03MC41MTYtNzAuNTE2LTE2Ni4xNS0xMTAuMTMtMjY1Ljg4LTExMC4xM3ptMCA0Mi40NjVjNDMuMzE2IDAgODYuMjA3IDguNjI1IDEyNi4yMyAyNS4zODcgNDAuMDIgMTYuNzYyIDc2LjM3OSA0MS4zMzIgMTA3LjAxIDcyLjMwNXM1NC45MjYgNjcuNzM4IDcxLjUgMTA4LjIxYzE2LjU3OCA0MC40NjUgMjUuMTA1IDgzLjg0IDI1LjEwNSAxMjcuNjQgMCA4OC40NjEtMzQuNzUgMTczLjMtOTYuNjA1IDIzNS44NC02MS44NTkgNjIuNTUxLTE0NS43NSA5Ny42OTEtMjMzLjIzIDk3LjY5MS00My4zMTIgMC04Ni4yMDctOC42MjUtMTI2LjIyLTI1LjM4Ny00MC4wMi0xNi43NjItNzYuMzgzLTQxLjMzMi0xMDcuMDEtNzIuMzAxLTMwLjYyOS0zMC45NzMtNTQuOTI2LTY3Ljc0Mi03MS41MDQtMTA4LjIxLTE2LjU3NC00MC40NjktMjUuMTA1LTgzLjg0LTI1LjEwNS0xMjcuNjRzOC41MzEyLTg3LjE3MiAyNS4xMDUtMTI3LjY0YzE2LjU3OC00MC40NjkgNDAuODcxLTc3LjIzOCA3MS41LTEwOC4yMSAzMC42MjktMzAuOTY5IDY2Ljk5Mi01NS41MzkgMTA3LjAxLTcyLjMwMSA0MC4wMi0xNi43NjIgODIuOTE0LTI1LjM4NyAxMjYuMjMtMjUuMzg3eiIvPgogIDxwYXRoIGQ9Im0zNzYgNTY0LjM4Yy0xLjY1NjIgMC0zLjM1OTQtMC4zNzEwOS00Ljk0MTQtMS4xNjgtMTYyLjU5LTgxLjMwOS0yMDYuNzYtMTk4Ljc0LTE5My44OS0yODEuNTYgNy44MjgxLTUwLjM2MyAzNi44OTUtODYuNjUyIDc0LjA0My05Mi40NjUgNjYuOTIyLTEwLjQ2NSAxMDcuMzYgMzQuNjAyIDEyNC44IDYwLjkzIDE3LjQxOC0yNi4zMTIgNTcuNzAzLTcxLjMzMiAxMjQuNzctNjAuOTMgMzQuNTcgNS40MDIzIDYyLjI0NiAzNy4xMTcgNzIuMjM0IDgyLjc1OCAxNS41NyA3MS4yMTUtMTIuNDYxIDE3Ni45MS0xMzcuODMgMjYwLjAzLTUuMTA1NSAzLjQwMjMtMTEuOTg4IDEuOTg0NC0xNS4zNzUtMy4xMjExLTMuMzkwNi01LjEwNTUtMS45OTYxLTEyLjAwNCAzLjEyMTEtMTUuMzc1IDExNi4wMy03Ni45MjYgMTQyLjQtMTcyLjc1IDEyOC40LTIzNi43OS03Ljg0MzgtMzUuOTM0LTI5LjAzNS02MS42NjgtNTMuOTczLTY1LjU2Mi03Ni4xNzItMTEuODk4LTExMC44IDY0LjkyNi0xMTEuMTYgNjUuNzExLTEuNzYxNyA0LjAyNzMtNS43NTc4IDYuNjI4OS0xMC4xNjggNi42NDQ1aC0wLjAxNTYyNWMtNC4zOTQ1IDAtOC4zNzUtMi42MDU1LTEwLjE2OC02LjYxNzItMS40MDYyLTMuMTY4LTM1LjM1NS03Ny43MTEtMTExLjItNjUuNzM4LTI2Ljk4OCA0LjIxMDktNDkuMzA5IDMzLjkyNi01NS41MzkgNzMuOTMtMTEuNjc2IDc1LjA2MiAyOS45NjkgMTgyLjMzIDE4MS44NiAyNTguMjggNS40OTIyIDIuNzUzOSA3LjcxMDkgOS40MTQxIDQuOTcyNyAxNC44ODctMS45NTMxIDMuOTEwMi01Ljg3NSA2LjE2MDItOS45NDUzIDYuMTYwMnoiIGZpbGw9IiNmZmYiLz4KIDwvZz4KPC9zdmc+Cg==" alt=""></div>
+            <div><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8cGF0aCBkPSJtMzc2IDBjLTQ5LjM3NSAwLTk4LjI3IDkuNzI2Ni0xNDMuODkgMjguNjIxLTQ1LjYyMSAxOC44OTUtODcuMDcgNDYuNTktMTIxLjk4IDgxLjUwOC0zNC45MTggMzQuOTE0LTYyLjYxMyA3Ni4zNjMtODEuNTA4IDEyMS45OC0xOC44OTUgNDUuNjE3LTI4LjYyMSA5NC41MTItMjguNjIxIDE0My44OSAwIDk5LjcyMyAzOS42MTcgMTk1LjM2IDExMC4xMyAyNjUuODcgNzAuNTE2IDcwLjUxNiAxNjYuMTUgMTEwLjEzIDI2NS44NyAxMTAuMTMgOTkuNzIzIDAgMTk1LjM2LTM5LjYxNyAyNjUuODctMTEwLjEzIDcwLjUxMi03MC41MTIgMTEwLjEzLTE2Ni4xNSAxMTAuMTMtMjY1Ljg3IDAtOTkuNzE5LTM5LjYxMy0xOTUuMzYtMTEwLjEyLTI2NS44Ny03MC41MTYtNzAuNTE2LTE2Ni4xNS0xMTAuMTMtMjY1Ljg4LTExMC4xM3ptMCA0Mi40NjVjNDMuMzE2IDAgODYuMjA3IDguNjI1IDEyNi4yMyAyNS4zODcgNDAuMDIgMTYuNzYyIDc2LjM3OSA0MS4zMzIgMTA3LjAxIDcyLjMwNXM1NC45MjYgNjcuNzM4IDcxLjUgMTA4LjIxYzE2LjU3OCA0MC40NjUgMjUuMTA1IDgzLjg0IDI1LjEwNSAxMjcuNjQgMCA4OC40NjEtMzQuNzUgMTczLjMtOTYuNjA1IDIzNS44NC02MS44NTkgNjIuNTUxLTE0NS43NSA5Ny42OTEtMjMzLjIzIDk3LjY5MS00My4zMTIgMC04Ni4yMDctOC42MjUtMTI2LjIyLTI1LjM4Ny00MC4wMi0xNi43NjItNzYuMzgzLTQxLjMzMi0xMDcuMDEtNzIuMzAxLTMwLjYyOS0zMC45NzMtNTQuOTI2LTY3Ljc0Mi03MS41MDQtMTA4LjIxLTE2LjU3NC00MC40NjktMjUuMTA1LTgzLjg0LTI1LjEwNS0xMjcuNjRzOC41MzEyLTg3LjE3MiAyNS4xMDUtMTI3LjY0YzE2LjU3OC00MC40NjkgNDAuODcxLTc3LjIzOCA3MS41LTEwOC4yMSAzMC42MjktMzAuOTY5IDY2Ljk5Mi01NS41MzkgMTA3LjAxLTcyLjMwMSA0MC4wMi0xNi43NjIgODIuOTE0LTI1LjM4NyAxMjYuMjMtMjUuMzg3eiIvPgogIDxwYXRoIGQ9Im01NDYuNDMgMjk3LjJjLTMuOTIxOS0zMS40MTgtMzIuODU1LTU2Ljk5Mi02NC41MTItNTYuOTkyaC0yNC4yODVsMC4wMDM5MDctMTkuNDE4YzAtNDEuMTI5LTMzLjQ3Ny03NC42MDUtNzQuNjA1LTc0LjYwNWgtMTMuNzAzYy00MS4xMjkgMC03NC42MDUgMzMuNDc3LTc0LjYwNSA3NC42MDV2MTkuNDNsLTI0LjI1NCAwLjAwMzkwNmMtMzEuNjcyIDAtNjAuNjA1IDI1LjU3NC02NC41MTIgNTYuOTkybC0zMC45OTIgMjQ4Ljg3Yy0xLjk4NDQgMTUuNzYyIDIuNDU3IDMwLjcwNyAxMi40OTIgNDIuMTA1IDEwLjA0NyAxMS4zNzkgMjQuMzQ0IDE3LjY0MSA0MC4yMzggMTcuNjQxaDI5Ni45NmM2LjEyODkgMCAxMS4wOTgtNC45NzI3IDExLjA5OC0xMS4wOTggMC02LjEyODktNC45NzI3LTExLjA5OC0xMS4wOTgtMTEuMDk4bC0yOTYuOTYtMC4wMDc4MTJjLTkuNDQxNCAwLTE3LjgyLTMuNTk3Ny0yMy41OS0xMC4xMzctNS43NzM0LTYuNTQzLTguMjg5MS0xNS4yODktNy4xMDU1LTI0LjY1NmwzMC45NzctMjQ4Ljg5YzIuNTMxMi0yMC4zNDggMjEuOTkyLTM3LjUzMSA0Mi40ODgtMzcuNTMxaDI0LjI1OHY2NS4zNTVjMCA2LjEyODkgNC45NzI3IDExLjA5OCAxMS4wOTggMTEuMDk4IDYuMTI4OSAwIDExLjA5OC00Ljk3MjcgMTEuMDk4LTExLjA5OGwwLjAwMzkwNi02NS4zNTVoMTE4LjUxdjY1LjM1NWMwIDYuMTI4OSA0Ljk3MjcgMTEuMDk4IDExLjA5OCAxMS4wOTggNi4xMjg5IDAgMTEuMDk4LTQuOTcyNyAxMS4wOTgtMTEuMDk4bDAuMDA3ODEzLTY1LjM1NWgyNC4yODVjMjAuNDk2IDAgMzkuOTU3IDE3LjE4NCA0Mi40ODggMzcuNTMxbDMwLjk4OCAyNDguODljMC43NTM5MSA2LjA5NzcgNi40MDYyIDEwLjQzNCAxMi4zODcgOS42MzI4IDYuMDgyLTAuNzUzOTEgMTAuNDAyLTYuMzA0NyA5LjYzMjgtMTIuMzg3em0tMjI5LjUxLTU2Ljk5MnYtMTkuNDE4YzAtMjguODg3IDIzLjUxNi01Mi40MDYgNTIuNDA2LTUyLjQwNmgxMy43MDNjMjguODg3IDAgNTIuNDA2IDIzLjUxNiA1Mi40MDYgNTIuNDA2djE5LjQzbC0xMTguNTIgMC4wMDM5MDZ6IiBmaWxsPSIjZmZmIi8+CiA8L2c+Cjwvc3ZnPgo=" alt=""></div>
+        </div>
+    </div>
+  </div>
+<div id="option">
+    <div>
+        <div class="trap" id="sale">Sale
+            <div class="sub-menu2">
+                <diV>
+                    <h4> SHOP BY PRODUCT</h4>
+                    <ul>
+                   
+                    <li> <a href="#">SALE View all</a> </li>
+                    <li> <a href="#">SALE New lines added</a> </li>
+                    <li> <a href="#">SALE Tops</a> </li>
+                    <li> <a href="#">SALE Shorts</a> </li>
+                    <li> <a href="#">SALE Swimwear</a> </li>
+                    <li> <a href="#">SALE Flat Sandals</a> </li>
+                    <li> <a href="#">SALE Activewear</a> </li>
+                    <li> <a href="#">SALE Bags & Purses</a> </li>
+                    <li> <a href="#">SALE Coats & Jackets</a> </li>
+                    <li> <a href="#">SALE Designer brands</a> </li>
+                    <li> <a href="#">SALE Dresses</a> </li>
+                    <li> <a href="#">SALE Face + Body</a> </li>
+                    <li> <a href="#">SALE Hoodies & Sweatshirts</a> </li>
+                    <li> <a href="#">SALE Jeans</a> </li>
+                </ul>
+                </diV>
+                <diV>
+                    <h4>SALE Jewellery & Watches </h4>
+                    <ul>
+                    
+                    <li> <a href="#">SALE Jumpers & Cardigans</a> </li>
+                    <li> <a href="#">SALE New lines added</a> </li>
+                    <li> <a href="#">SALE Jumpsuits & Playsuits</a> </li>
+                    <li> <a href="#">SALE Lingerie & Nightwear</a> </li>
+                    <li> <a href="#">SALE Loungewear</a> </li>
+                    <li> <a href="#">SALE Shoes</a> </li>
+                    <li> <a href="#">SALE Skirts</a> </li>
+                    <li> <a href="#">SALE Socks & Tights</a> </li>
+                    <li> <a href="#">SALE Sunglasses</a> </li>
+                    <li> <a href="#">SALE T-shirts & Vests</a> </li>
+                    <li> <a href="#">SALE Trainers</a> </li>
+                    <li> <a href="#">SALE Trousers & Leggings</a> </li>
+                    <li> <a href="#">A-Z of brands</a> </li>
+                </ul>
+                </diV>
+                
+                <diV class="shadow">
+                    <h4> SHOP BY EDIT </h4>
+                    <ul>
+
+                    
+                    <li> <a href="#">Sale under £15</a> </li>
+                    <li> <a href="#">Tops under £15</a> </li>
+                    <li> <a href="#">Dresses under £20</a> </li>
+                    <li> <a href="#">Bottoms under £20r</a> </li>
+
+                    </ul>
+                </diV>
+                <diV  id="circle-img1">
+                    <h4>SHOP SALE BY BODY FIT</h4>
+                    <h1></h1>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZ5zqnUh1f6LHH52dl8JA3w4ML4bgKPaQMQ&usqp=CAU" alt=""> 
+                    <p>ASOS Curve & Plus size</p>
+                </div>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6k6m7ym43SkVmlUiRgFWHatQSfc3kgaW0YA&usqp=CAU" alt=""> 
+                    
+                <p>Maternity</p>
+                </div>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzB4LaPH0wJZP4KotBliE6DY-7HgJHlkuuKQ&usqp=CAU" alt="">
+                    <p>Petite</p>
+                </div>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKpRHtxc-aHFLeT_JizU5rFoqkBbnb37hokA&usqp=CAU" alt="">
+                    <p>Tall</p>
+                </div>
+                </diV>
+            </div>
+        </div>
+        <div id="new">New in
+            <div class="sub-menu3">
+                <diV>
+                    <h4> SHOP BY PRODUCT</h4>
+                    <ul>
+                   
+                    <li> <a href="#">SALE View all</a> </li>
+                    <li> <a href="#">SALE New lines added</a> </li>
+                    <li> <a href="#">SALE Tops</a> </li>
+                    <li> <a href="#">SALE Shorts</a> </li>
+                    <li> <a href="#">SALE Swimwear</a> </li>
+                    <li> <a href="#">SALE Flat Sandals</a> </li>
+                    <li> <a href="#">SALE Activewear</a> </li>
+                    <li> <a href="#">SALE Bags & Purses</a> </li>
+                    <li> <a href="#">SALE Coats & Jackets</a> </li>
+                    <li> <a href="#">SALE Designer brands</a> </li>
+                    <li> <a href="#">SALE Dresses</a> </li>
+                    <li> <a href="#">SALE Face + Body</a> </li>
+                    <li> <a href="#">SALE Hoodies & Sweatshirts</a> </li>
+                    <li> <a href="#">SALE Jeans</a> </li>
+                </ul>
+                </diV>
+                <diV>
+                    <h4>SALE Jewellery & Watches </h4>
+                    <ul>
+                    
+                    <li> <a href="#">SALE Jumpers & Cardigans</a> </li>
+                    <li> <a href="#">SALE New lines added</a> </li>
+                    <li> <a href="#">SALE Jumpsuits & Playsuits</a> </li>
+                    <li> <a href="#">SALE Lingerie & Nightwear</a> </li>
+                    <li> <a href="#">SALE Loungewear</a> </li>
+                    <li> <a href="#">SALE Shoes</a> </li>
+                    <li> <a href="#">SALE Skirts</a> </li>
+                    <li> <a href="#">SALE Socks & Tights</a> </li>
+                    <li> <a href="#">SALE Sunglasses</a> </li>
+                    <li> <a href="#">SALE T-shirts & Vests</a> </li>
+                    <li> <a href="#">SALE Trainers</a> </li>
+                    <li> <a href="#">SALE Trousers & Leggings</a> </li>
+                    <li> <a href="#">A-Z of brands</a> </li>
+                </ul>
+                </diV>
+                
+                <diV class="shadow">
+                    <h4> SHOP BY EDIT </h4>
+                    <ul>
+
+                    
+                    <li> <a href="#">Sale under £15</a> </li>
+                    <li> <a href="#">Tops under £15</a> </li>
+                    <li> <a href="#">Dresses under £20</a> </li>
+                    <li> <a href="#">Bottoms under £20r</a> </li>
+
+                    </ul>
+                </diV>
+                <diV  id="circle-img1">
+                    <h4>SHOP SALE BY BODY FIT</h4>
+                    <h1></h1>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZ5zqnUh1f6LHH52dl8JA3w4ML4bgKPaQMQ&usqp=CAU" alt=""> 
+                    <p>ASOS Curve & Plus size</p>
+                </div>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6k6m7ym43SkVmlUiRgFWHatQSfc3kgaW0YA&usqp=CAU" alt=""> 
+                    
+                <p>Maternity</p>
+                </div>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzB4LaPH0wJZP4KotBliE6DY-7HgJHlkuuKQ&usqp=CAU" alt="">
+                    <p>Petite</p>
+                </div>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKpRHtxc-aHFLeT_JizU5rFoqkBbnb37hokA&usqp=CAU" alt="">
+                    <p>Tall</p>
+                </div>
+                </diV>
+            </div>
+        </div>
+        <div id="clothing">Clothing
+            <div class="sub-menu4">
+                <diV>
+                    <h4> SHOP BY PRODUCT</h4>
+                    <ul>
+                   
+                    <li> <a href="#">SALE View all</a> </li>
+                    <li> <a href="#">SALE New lines added</a> </li>
+                    <li> <a href="#">SALE Tops</a> </li>
+                    <li> <a href="#">SALE Shorts</a> </li>
+                    <li> <a href="#">SALE Swimwear</a> </li>
+                    <li> <a href="#">SALE Flat Sandals</a> </li>
+                    <li> <a href="#">SALE Activewear</a> </li>
+                    <li> <a href="#">SALE Bags & Purses</a> </li>
+                    <li> <a href="#">SALE Coats & Jackets</a> </li>
+                    <li> <a href="#">SALE Designer brands</a> </li>
+                    <li> <a href="#">SALE Dresses</a> </li>
+                    <li> <a href="#">SALE Face + Body</a> </li>
+                    <li> <a href="#">SALE Hoodies & Sweatshirts</a> </li>
+                    <li> <a href="#">SALE Jeans</a> </li>
+                </ul>
+                </diV>
+                <diV>
+                    <h4>SALE Jewellery & Watches </h4>
+                    <ul>
+                    
+                    <li> <a href="#">SALE Jumpers & Cardigans</a> </li>
+                    <li> <a href="#">SALE New lines added</a> </li>
+                    <li> <a href="#">SALE Jumpsuits & Playsuits</a> </li>
+                    <li> <a href="#">SALE Lingerie & Nightwear</a> </li>
+                    <li> <a href="#">SALE Loungewear</a> </li>
+                    <li> <a href="#">SALE Shoes</a> </li>
+                    <li> <a href="#">SALE Skirts</a> </li>
+                    <li> <a href="#">SALE Socks & Tights</a> </li>
+                    <li> <a href="#">SALE Sunglasses</a> </li>
+                    <li> <a href="#">SALE T-shirts & Vests</a> </li>
+                    <li> <a href="#">SALE Trainers</a> </li>
+                    <li> <a href="#">SALE Trousers & Leggings</a> </li>
+                    <li> <a href="#">A-Z of brands</a> </li>
+                </ul>
+                </diV>
+                
+                <diV class="shadow">
+                    <h4> SHOP BY EDIT </h4>
+                    <ul>
+
+                    
+                    <li> <a href="#">Sale under £15</a> </li>
+                    <li> <a href="#">Tops under £15</a> </li>
+                    <li> <a href="#">Dresses under £20</a> </li>
+                    <li> <a href="#">Bottoms under £20r</a> </li>
+
+                    </ul>
+                </diV>
+                <diV  id="circle-img1">
+                    <h4>SHOP SALE BY BODY FIT</h4>
+                    <h1></h1>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZ5zqnUh1f6LHH52dl8JA3w4ML4bgKPaQMQ&usqp=CAU" alt=""> 
+                    <p>ASOS Curve & Plus size</p>
+                </div>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6k6m7ym43SkVmlUiRgFWHatQSfc3kgaW0YA&usqp=CAU" alt=""> 
+                    
+                <p>Maternity</p>
+                </div>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzB4LaPH0wJZP4KotBliE6DY-7HgJHlkuuKQ&usqp=CAU" alt="">
+                    <p>Petite</p>
+                </div>
+                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKpRHtxc-aHFLeT_JizU5rFoqkBbnb37hokA&usqp=CAU" alt="">
+                    <p>Tall</p>
+                </div>
+                </diV>
+            </div>
+        </div>
+        <div>Dresses</div>
+        <div>Shoes</div>
+        <div>Sportswear</div>
+        <div>Acssessories</div>
+        <div>Summer</div>
+        <div>Trending now</div>
+        <div>Topshop</div>
+        <div>Face + body</div>
+        <div>Brands</div>
+        <div class="trap2"> <span>Outlet</span> </div>
+       <div>Marketplace</div>
+    </div>
+</div>
+
+<div id="offerbar">
+    <div>
+        <button>Men</button>
+       <button id="banner"><strong>SALE: UP TO 70% OFF!<br>
+        IT'S CALLED BIG DISCOUNT ENERGY </strong></button>
+        <button>Women</button>
+
+    </div>
+
+    
+</div>
+
+
     
     <div id="top">
         <h1>Men's Sale</h1>
@@ -636,8 +2127,80 @@
 
 
 
+<div id="Main">
+    <div id="social">
+        
+        <div class="icons">
+           
+            <a href="https://www.facebook.com/ASOS/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/asos/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.snapchat.com/add/asosfashion" target="_blank"><i class="fa fa-snapchat-ghost color"></i></a> 
+            
+        </div>
+        <div><i class="vrt"></i> </div>
+        <div>
+           <img src="https://images.asos-media.com/navigation/visa-png">
+           <img src="https://images.asos-media.com/navigation/mastercard-png">
+           <img src="https://images.asos-media.com/navigation/pay-pal-png">
+           <img src="https://images.asos-media.com/navigation/american-express-png">
+           <img src="https://images.asos-media.com/navigation/visa-electron-png">
+        </div>   
+       </div>   
+    <footer class="footer"> 
+        <div class="container">
+      <div class="row">
+<div class="footer-col">
+    <h4>HELP & INFORMATION</h4>
+        <ul><li><a href="https://www.asos.com/customer-care/">Help</a></li>
+            <li><a href="https://my.asos.com/my-account/orders?country=IN&amp;keyStoreDataversion=dup0qtf-35&amp;lang=en-GB&amp;store=ROW&amp;_gl=1*1xzg4jp*_ga*NTUzNjg1NDkuMTY1NTIyOTIwNg..*_ga_1JR0QCFRSY*MTY1NTI3NDM5MS40LjEuMTY1NTI3NDkwNS42MA..*_fplc*SSUyRks0ZTZpZkVmZHhXUlQyejZGZ0RGTGxUSW1IQSUyQkNUNkY2YXI2UDNabnJGTW1sZXh0ZlFXbXQydzdUdkF5Y002byUyQlJKRXZzTmpJdjhiY0o5R0FzVyUyQm9OclF5VFk1R1JLcXhUUmNZMGZvS0lJeW8lM0Q.&amp;_ga=2.80558871.1874551926.1655229206-55368549.1655229206">Track order</a></li>
+            <li><a href="https://www.asos.com/payments-and-deliveries/delivery/">Delivery & return</a></li></ul>
+</div>
+<div class="footer-col">
+    <h4>ABOUT ASOS</h4>
+        <ul><li><a href="https://www.asos.com/about/"  target="_blank">About us</a></li>
+            <li><a href="https://asoscareers.asos.com/" target="_blank">Careers at ASOS</a></li>
+            <li><a href="https://www.asosplc.com/fashion-with-integrity/" target="_blank">Corparate responsibility</a></li>
+            <li><a href="https://www.asosplc.com/" target="_blank">Investor's site</a></li></ul>
+</div>
+<div class="footer-col">
+    <h4>MORE FROM ASOS</h4>
+        <ul><li><a href="https://www.asos.com/discover/our-apps/" >Mobile and ASOS apps</a></li>
+            <li><a href="https://marketplace.asos.com/?ctaref=Global%20footer" target="_blank">ASOS Marketplace</a></li>
+            <li><a href="https://www.asos.com/gift-vouchers/?ctaref=global%20footer|gift%20vouchers">Gift vouchars</a></li>
+            <li><a href="https://www.asos.com/discover/black-friday-cyber-monday-deals/">Black Friday</a></li>
+            <li><a href="https://thrift.plus/pages/get-started-asos" target="_blank">ASOS x Thrift+</a></li></ul>
+</div>
+<div id="last" class="footer-col">
+    <h4>SHOPPING FROM:</h4>
+    <a href="#"> <div id="country"> <ul><li>You're in </li></ul><div><img src="https://assets.asosservices.com/storesa/images/flags/in.png"></div>  <i class="vrt"></i><h4>CHANGE</h4></div></a>
+</div> 
+     </div>
+        </div>
+    </footer>
+        <div class="bottom-details">
+            <div class="bottom-text">
+                <span> &#169; 2022 ASOS</span>
+                 <span class="policy"> <a href="#">privacy & cookies</a> <i class="vr">   </i>
+                <a href="#">Ts&Cs</a> <i class="vr"> </i>
+                <a href="#">Accessibility</a>
+            </span>
+               </div>  
+        </div>   
+</div> 
+
+
+
 
 <script>
+
+
+document.getElementById("payment").addEventListener("click",payment)
+    
+    function payment(){
+    document.getElementById("blur").style.display="flex"
+    
+    
+    }
 
 		function toggleText() {
 
@@ -1708,6 +3271,10 @@
 
     ]
 
+    
+    
+    
+    
     function sortPrice(){
             let selected = document.querySelector("#sort").value;
             if(selected == "high to low"){
