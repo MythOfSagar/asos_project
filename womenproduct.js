@@ -15,6 +15,10 @@ if(logindatafrmls.length == 0){
         })
      });
 }
+document.querySelector("#cart").addEventListener("click",openCart)
+function openCart(){
+    window.location.href="cart.html"
+}
 displayFunction();
 function displayFunction(){
    
