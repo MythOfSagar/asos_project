@@ -1254,14 +1254,40 @@ gap: 50px;
     #main3{
         display: flex;
     }   
- 
+    #option_btn{
+        display: flex;
+        flex-direction: column;
+       background-color:black;
+       width: 50px;
+       height: 50px;
+       gap: 10px;
+       margin-right: -10px;
+       gap: 10px;
+       justify-content: center;
+       align-items: center;
+       display: none;
+       position: absolute;
+       top: 30px;
+       
+    }
+    #option_btn>div{
+     
+        background-color:white ;
+        width: 40px;
+        height: 5px;
+        
+       
+    }
 
     
  
 
 }@media all and (min-width:0px) and (max-width:1110px){
 
-
+    #option_btn{
+        display: flex;
+    }
+    
     #con{
         display: flex;
         margin: auto;
