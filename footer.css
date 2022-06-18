@@ -73,6 +73,7 @@
     border-radius: 50%;
     height: 32px;
     border: 2px solid ;
+    /* margin: auto; */
 
   
 }
@@ -253,13 +254,5 @@ background-color:#ddd;
     opacity: 0.8;
     text-decoration: none;
 }
-#social
-{
-   
-    display: grid;
-    grid-template-columns: repeat(3,30px);
-    padding:0% 10px;
-   border: 1px solid #EEEEEE; ;
 
-}
 }
