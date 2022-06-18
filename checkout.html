@@ -206,12 +206,18 @@
             gap: 10px;
         }
       }
-     
-      
+      #savlatertxt{display: flex;}
+      #topmost{display: flex;
+    margin: auto;}
+      *{font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
     </style>
 </head>
 <body>
-    
+    <div id="topmost">
+        <img src="https://assets.asosservices.com/checkout/2.0.1.8898/images/chrome/asos-logo/asos-logo.svg" alt="">
+        <h1>CHECKOUT</h1>
+        <img src="https://seal.digicert.com/seals/cascade/?tag=dQkJvi0b&referer=secure.asos.com&format=png&lang=en&an=min" alt="">
+    </div>
     <div id="filledcart">
         <div id="otherbag">
             <div>
@@ -314,7 +320,7 @@
             <div id="paymentType">
                  <h4>PAYMENT TYPE</h4>
                  <div id="paymentOptions">
-                    <div>
+                    <div id="creditCard">
                         <img src="https://assets.asosservices.com/asos-finance/images/paymentmethods/card.png" alt="">
                         <h5>ADD CREDIT/DEBIT CARD</h5>
                     </div>
@@ -324,6 +330,7 @@
                         <h5>PAYPAL</h5>
                     </div>
                  </div>
+                 <div id="creditForm"></div>
             </div>
             <div id="weaccept">
                 <h5>WE ACCEPT:</h5>
@@ -338,9 +345,60 @@
             <div id="mainbag"></div>
         </div>
     </div>
+    
 </body>
 </html>
 <script>
+    let cForm=document.querySelector("#creditForm")
+    let cC=document.querySelector("#creditCard")
+    cC.addEventListener("click",apndForm)
+    function apndForm(){
+     document.querySelector("#paymentOptions").innerHTML=""
+     let add=document.createElement("h4")
+     add.innerText="ADD CREDIT/DEBIT CARD"
+     let cardNum=document.createElement("h4")
+     cardNum.innerText="CARD NUMBER"
+     let thecardNum=document.createElement("input")
+     thecardNum.setAttribute("type","number")
+     let expDate=document.createElement("h4")
+     expDate.innerText="EXPIRY DATE"
+     let Months=document.createElement("select")
+     let mnth=document.createElement("option")
+     mnth.innerText="Month"
+     Months.append(mnth)
+             for(let i=1; i<=12; i++){
+             let op=document.createElement("option")
+             op.innerText=i
+             op.setAttribute("value",i)
+             Months.append(op)}
+     let Years=document.createElement("select")
+     let yrs=document.createElement("option")
+     yrs.innerText="Year"
+     Years.append(yrs)
+             for(let i=2022; i<=2032; i++){
+             let yr=document.createElement("option")
+             yr.innerText=i
+             yr.setAttribute("value",i)
+             Years.append(yr)}        
+     let nameCard=document.createElement("h4")
+     let thenameCard=document.createElement("input")
+     thenameCard.setAttribute("type","text")
+     nameCard.innerText="NAME ON CARD"
+     let cvvCard=document.createElement("h4")
+     cvvCard.innerText="CVV"
+     let thecvvCard=document.createElement("input")
+     thecvvCard.setAttribute("type","number")
+     let saveDetails=document.createElement("div")
+     let box=document.createElement("input")
+     box.setAttribute("type","checkbox")
+     let boxtxt=document.createElement("p")
+     boxtxt.innerText="Save card details for next time "
+     saveDetails.setAttribute("id","savlatertxt")
+     saveDetails.append(box,boxtxt)
+     let cardBTN=document.createElement("button")
+     cardBTN.innerText="USE THIS CARD"
+     cForm.append(add,cardNum,thecardNum,expDate,Months,Years,nameCard,thenameCard,cvvCard,thecvvCard,saveDetails,cardBTN)
+    }
     let cbtn=document.querySelector("#codebtn")
     cbtn.addEventListener("click",codeOptions)
     let Q=0
@@ -383,8 +441,29 @@
         i3.append(i3txt)
         codevoucherInput.append(i1,i2,i3)
         cV.append(codeOptionsdisplay,codevoucherInput)
-        code.addEventListener("click",codeChosen)
         cbtn.addEventListener("click",collapse)
+        voucher.addEventListener("click",selfVoucher)
+        function selfVoucher(){
+            voucher.style.borderTop="1px solid teal"
+            voucher.style.borderBottomColor="white"
+            code.style.borderTopColor="white"
+            code.style.borderBottom="1px solid teal"
+            titlecode.innerText="ADD A VOUCHER"
+            titleip.innerText="16-DIGIT VOUCHER CODE:"
+            btn.innerText="APPLY VOUCHER"
+            i3txt.innerText="Got a gift card? Visit My Account to add it to your gift-voucher balance before you can redeem it at checkout"
+            }
+            code.addEventListener("click",selfcode)
+        function selfcode(){
+            code.style.borderTop="1px solid teal"
+            code.style.borderBottomColor="white"
+            voucher.style.borderTopColor="white"
+            voucher.style.borderBottom="1px solid teal"
+            titlecode.innerText="ADD A PROMO/STUDENT CODE"
+            titleip.innerText="PROMO/STUDENT CODE:"
+            btn.innerText="APPLY CODE"
+            i3txt.innerText="You can only use one discount/promo code per order. This applies to our free-delivery codes, too."
+            }    
         function collapse(){if(Q%2===0){cbtn.innerText="V";cV.innerHTML=""}}
     }
     let freeround=document.querySelector("#freebtn")
