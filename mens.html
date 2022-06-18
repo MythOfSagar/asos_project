@@ -1638,7 +1638,7 @@ img+p{
                     <li> <a href="#">SALE Lingerie & Nightwear</a> </li>
                     <li> <a href="#">SALE Loungewear</a> </li>
                     <li> <a href="#">SALE Shoes</a> </li>
-                    <li> <a href="#">SALE Skirts</a> </li>
+                    <li> <a href="men_shirts.html">SALE Shirts</a> </li>
                     <li> <a href="#">SALE Socks & Tights</a> </li>
                     <li> <a href="#">SALE Sunglasses</a> </li>
                     <li> <a href="#">SALE T-shirts & Vests</a> </li>
@@ -1663,19 +1663,14 @@ img+p{
                 <diV  id="circle-img1">
                     <h4>SHOP SALE BY BODY FIT</h4>
                     <h1></h1>
-                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZ5zqnUh1f6LHH52dl8JA3w4ML4bgKPaQMQ&usqp=CAU" alt=""> 
+                   <div> <img src="https://images.asos-media.com/navigation/mw_gbl_sale_plussize_6WL_103921845?&$n_240w$" alt=""> 
                     <p>ASOS Curve & Plus size</p>
                 </div>
-                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6k6m7ym43SkVmlUiRgFWHatQSfc3kgaW0YA&usqp=CAU" alt=""> 
+                   <div> <img src="https://images.asos-media.com/navigation/mw_gbl_sale_tall_6WL_105536032?&$n_240w$" alt=""> 
                     
-                <p>Maternity</p>
+                <p>Paternity</p>
                 </div>
-                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzB4LaPH0wJZP4KotBliE6DY-7HgJHlkuuKQ&usqp=CAU" alt="">
-                    <p>Petite</p>
-                </div>
-                   <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKpRHtxc-aHFLeT_JizU5rFoqkBbnb37hokA&usqp=CAU" alt="">
-                    <p>Tall</p>
-                </div>
+                   
                 </diV>
             </div>
         </div>
@@ -1844,7 +1839,7 @@ img+p{
         <button>Men</button>
        <button id="banner"><strong>SALE: UP TO 70% OFF!<br>
         IT'S CALLED BIG DISCOUNT ENERGY </strong></button>
-        <button>Women</button>
+        <button id="womenLNK">Women</button>
 
     </div>
 
@@ -2192,6 +2187,10 @@ img+p{
 
 
 <script>
+    document.querySelector("#womenLNK").addEventListener("click",womenLNK)
+    function womenLNK(){
+        window.location.href="wemenspage.html"
+    }
   document.getElementById("cart").addEventListener("click",CartFun)
     function CartFun(){
         window.location.href="cart.html"
