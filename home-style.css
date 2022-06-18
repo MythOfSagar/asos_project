@@ -740,7 +740,7 @@ width: fit-content;
 /*  */
 /*  */
 /*  */
-@media all and (max-width: 1000px) and (min-width:770px){
+@media all and (max-width: 900px) and (min-width:770px){
   #body{
   width: 100%;
   margin-top: 0px;
