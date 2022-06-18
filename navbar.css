@@ -236,16 +236,16 @@ button>img:hover{border: 1px solid skyblue;border-radius: 50%;}
 
 #option{
 
-    /* position:fixed; */
+
     display: flex;
     margin: auto;
     background-color:#525050;
     height: 50px;
     width: 100%;
     left: 0px;
-    /* margin-top:90px; */
+ 
     justify-content: space-around;
-    /* display: none; */
+   
     
 }
 .trap{
@@ -264,7 +264,7 @@ button>img:hover{border: 1px solid skyblue;border-radius: 50%;}
    
 }
 #option>div{
-    /* position: fixed; */
+ 
     width: 1300px;
     height: 100%;
     display: grid;
@@ -272,9 +272,7 @@ button>img:hover{border: 1px solid skyblue;border-radius: 50%;}
     grid-template-rows: repeat(1,1fr);
     gap: 10px;
     justify-content: left;
-    /* margin: auto; */
-    /* margin-: 300px; */
-    /* gap: 3px; */
+   
     font-size: 11px;
    
    
