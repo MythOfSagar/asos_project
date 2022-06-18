@@ -5,7 +5,7 @@ form.addEventListener("submit",Getdata);
 
 
  // function to get data from user and set it in the local storage.
- function Getdata(){
+ function Getdata(event){
      event.preventDefault();
      if(form.password.value.length >= 10){
          let signupdataobj = {
@@ -18,6 +18,7 @@ form.addEventListener("submit",Getdata);
      if(checkdata(signupdataobj) == true){
          signupdata.push(signupdataobj)
      localStorage.setItem("SignupDATA",JSON.stringify(signupdata));
+     alert("Sign Up successful");
      window.location.reload();
      window.location.href="login.html"
      }else{

@@ -4,17 +4,20 @@ let form = document.querySelector("form")
 
 
     let logindatatoLS = JSON.parse(localStorage.getItem("loginData")) || [];
-    let signupdatafrmLS = JSON.parse(localStorage.getItem("SignupDATA"));
+    let signupdatafrmLS = JSON.parse(localStorage.getItem("SignupDATA")) || [];
     // function to store login data in local storage
-    function logindata(){
+    function logindata(event){
         event.preventDefault();
         let loginobj = {
             email : form.email.value,
             pasw : form.password.value,
         }
         if(logindatatoLS.length == 0 && checkdata(loginobj) == true){
+           
             logindatatoLS.push(loginobj);
             localStorage.setItem("loginData",JSON.stringify(logindatatoLS));
+            alert("Log In successful")
+            window.location.href = "home.html"
         }else{
             if(checkdata(loginobj) == false){
                 alert("Wrong Email i'd or Password!")
@@ -28,9 +31,11 @@ let form = document.querySelector("form")
 //  function to check data
     function checkdata(loginobj){
  let filter = signupdatafrmLS.filter(function(el){
+      loginobj["name"] = el.name;
       return el.email == loginobj.email && el.pasw == loginobj.pasw;
  })
  if(filter.length > 0){
+  
      return true;
  }else{
      return false;
