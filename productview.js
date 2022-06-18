@@ -1,12 +1,7 @@
 // script for navbar---------------------------------------------------
 let logindatafrmls = JSON.parse(localStorage.getItem("loginData")) || [];
 if(logindatafrmls.length == 0){
-    document.querySelector("#signin").addEventListener("click",function(){
-        window.location.href = "login.html";
-    })
-    document.querySelector("#join").addEventListener("click",function(){
-        window.location.href = "signup.html";
-    })
+  
 }else{
     logindatafrmls.forEach(function(el){
         let name = el.name.split(" ");
@@ -30,9 +25,9 @@ if(logindatafrmls.length == 0){
 displayFunction();
 function displayFunction(){
    
-    let bigImage=JSON.parse(localStorage.getItem("cartSection"));
+    let bigImage=JSON.parse(localStorage.getItem("productPage"));
     bigImage.forEach(function(el){
-        console.log(el.cartName);
+        console.log(el);
     });
     
 }
