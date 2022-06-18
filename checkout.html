@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASOS | Checkout</title>
+    <style>
+        
+        #filledcart{
+            display: grid;
+            grid-template-columns:560px 360px;
+            justify-content: center;
+            gap: 10px;
+        }
+        #otherbag>div:first-child{
+           display: flex;
+           background-color: white;
+           padding: 10px 30px;
+           justify-content: space-between;
+        }
+        #deilvery img{
+            width: 40px;
+            margin-top: 15px;
+        }
+        #otherbag{
+            display: flex;
+            flex-direction: column;
+            gap:10px
+        }
+        #otherbag>div{background-color: white;}
+        #deilvery{
+            display: flex;
+            gap: 30px;
+            padding-left: 30px;
+        background-color: white;}
+        #total>div:nth-child(3) img{
+            width: 10px;
+            height: 10px;
+            padding: 2px;
+             border: 2px solid #9f9f9f;
+             border-radius: 50%;
+             margin-top: 18px;
+        }
+        #total select{
+            width: 100%;
+            border: 0px;
+            color: teal;
+            border-bottom: 1px solid teal;
+            margin-bottom: 20px;
+            padding: 7px;
+        }
+        #total button{
+            width: 100%;
+            border: 0px;
+            color: white;
+            background-color: #018849;
+        }
+        #total>div:nth-child(7) img{
+           width: 65%;
+        }
+        #total{
+            height: fit-content;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 30px;
+        }
+        #total>div:first-child{
+           border-bottom: 1px solid #eeeeee;
+        }
+        #total>div:nth-child(2){
+            display: flex;
+            justify-content: space-between;
+        }
+        #total>div:nth-child(3){
+            display: flex;
+            justify-content: space-between;
+        }
+        #mainbag{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 0px 30px;
+        }
+        #mainbag>div{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            border-bottom: 1px solid #eeeeee;
+        }
+        #mainbag>div>div{
+            display: flex;
+        }
+        #mainbag>div>div>div:nth-child(2)>div:first-child{
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            border: 1px solid red;
+            /* Price section */
+        }
+        #mainbag>div>div>div:nth-child(2)>div:nth-child(3){
+            display: flex;
+            border: 1px solid red;
+            /* color quantity */
+        }
+        #mainbag>div>div>div:nth-child(2)>div:nth-child(4){
+            display: flex;
+            border: 1px solid #eeeeee;
+            /* save for later */
+        }
+       #mbl{display: flex; gap: 14px;}
+       #mbl p{margin-top: 19px;}
+        #mainbag img{
+            width: 100px;
+        }
+        #subtotal{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+       #appendAddress{
+        display: flex;
+        justify-content: space-between;
+       }
+       #deliveryChoice{
+        display:flex ;
+        flex-direction: column;
+        gap: 2px;
+       }
+       #deliveryChoice>div{
+        display: flex;
+        justify-content: center;
+        gap: 22px;}
+
+        #deliveryChoice>div>div:last-child{
+        height: 19px;
+        width: 19px;
+        border: 1px solid gray;
+        border-radius: 50%;
+        margin-top: 50px;}
+       #deliveryChoice>div>div:nth-child(2){
+        width: 70%;
+       }
+       
+        #expressbtn,#freebtn{
+        height: 9px;
+        width: 9px;
+        border: 1px solid red;
+        border-radius: 50%;
+        margin: 4px 0px 0px 4px}
+        #paymentType{display: flex;flex-direction: column;
+              }
+        #paymentOptions>div img{width: 33px; height: 22px;
+            margin-left: 20px;
+        margin-top: 20px;}
+        
+        #paymentOptions>div{
+        display: flex;
+        text-align: center;
+        padding-right: 50px;
+        border: 2px solid lightblue;
+        width: 40%;
+        }
+        #paymentOptions>div:nth-child(2){margin-left: 140px;border: 0px;}
+        #paymentOptions>div:nth-child(3) img{margin-right: 75px}
+        #paymentOptions>div:nth-child(1) img{margin-right: 30px}
+        #weaccept{display: flex;
+                  margin-top: -8px;}
+        #weaccept img{
+            margin: 20px 0px 0px 20px;
+            width: 40%;
+            height: 23px;}
+            #orderTerms{display: flex;flex-direction: column;
+            align-items: center;}
+        #orderTerms button{color: white;
+            border: 0px;
+            width: 480px;
+            margin: auto;
+            background-color: #018849}
+        #subtotal>div:first-child{
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        text-align: center;
+        gap: 155px;
+        }
+        #subtotal>div:first-child h2{margin-right: -45px;}
+        #optionsDisplay{
+            display: flex;
+        }
+        #optionsDisplay>div{width: 50%;
+        display: flex;}
+        #optionsDisplay img{margin: 0px 20px;}
+        #optionsDisplay>div{
+            border: 1px solid teal;
+        }
+        #optionsDisplay>div:first-child{border-bottom: 0px;}
+        #optionsDisplay>div:last-child{border-top: 0px;}
+        #codeVoucher{padding: 15px;}
+      @media only screen and (min-width: 870px) and (max-width: 1024px) {
+        #filledcart{
+            display: grid;
+            grid-template-columns:57% 37%;
+            justify-content: center;
+            gap: 10px;
+        }
+      }
+     
+      
+    </style>
+</head>
+<body>
+    
+    <div id="filledcart">
+        <div id="otherbag">
+            <div>
+                <h3>DELIVERY COUNTRY:</h3>
+                <select id="country"  class="_2CHxSwY _3ps0adE"><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BQ">Bonaire, Sint Eustatius and Saba</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei Darussalam</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island (Australia)</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="CI">Cote d'Ivoire</option><option value="HR">Croatia</option><option value="CW">Curacao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="CD">Democratic Republic of the Congo</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="SZ">Eswatini</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands (Malvinas)</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="VA">Holy See (Vatican City State)</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="INDIA" selected="">India</option><option value="ID">Indonesia</option><option value="IQ">Iraq</option><option value="IE">Ireland, Republic of</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KR">Korea, Republic of (South Korea)</option><option value="XK">Kosovo</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Lao People's Democratic Republic</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia, Federated States of</option><option value="MD">Moldova, Republic of</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MK">North Macedonia</option><option value="MP">Northern Mariana Islands</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestine</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthelemy</option><option value="SH">Saint Helena, Ascension and Tristan da Cunha</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="MF">Saint Martin (French part)</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SX">Sint Maarten (Dutch part)</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="ZA">South Africa</option><option value="GS">South Georgia and the South Sandwich Islands</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania, United Republic of</option><option value="TH">Thailand</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UM">United States Minor Outlying Islands</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands, British</option><option value="VI">Virgin Islands, U.S.</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select>
+            </div>
+            
+            <div id="subtotal">
+                <div>
+                    <h4>PROMO/STUDENT CODE OR VOUCHERS</h4>
+                    <h2 id="codebtn">V</h2>
+                </div>
+                <div id="codeVoucher"></div>
+            </div>
+            
+            <div id="deilvery">
+                <div><h3>EMAIL ADDRESS</h3>
+                     <p>registered mail</p>
+                     </div>
+            </div>
+
+            <div >
+                <h3>DELIVERY ADDRESS</h3>
+                <div id="deliveryaddress">
+                    <div id="refaddress">
+                <h4>ADD ADDRESS</h4>
+                
+                    <label for=""><h4>FIRST NAME :</h4></label><br />
+                    <input id="name" type="text" value="sagar" /><br />
+                    <label for=""><h4>LAST NAME :</h4></label><br />
+                    <input id="lastname" type="text" value="wankhade" /><br />
+                    <label for="" id="mbl"><h4>MOBILE</h4><p>(For delivery updates ):</p></label><br />
+                    <input id="mobile" type="number" placeholder="Enter Mobile number" /><br />
+                    <label for=""><h4>ADDRESS :</h4></label><br />
+                    <input id="address1" type="text" /><br />
+                    <input id="address2" type="text" placeholder="Optional" /><br />
+                    <label for=""><h4>CITY :</h4></label><br />
+                    <input id="city" type="text" /><br />
+                    <label for=""><h4>COUNTRY :</h4></label><br />
+                    <input id="countryname" type="text" placeholder="Optional" /><br />
+                    <label for="" ><h4>POSTCODE :</h4></label><br />
+                    <input id="postcode" type="number"  /><br />
+                    <label for="" ><h4>COUNTRY :</h4></label><br />
+                    <p>India</p><br />
+                     
+                    <button id="addressbtn">DELIVER TO THIS ADDRESS</button>
+                </div>
+                </div> 
+                <div id="appendAddress">
+                    <div id="adrDetails">
+                        <p class="p1"></p>
+                        <p class="p2"></p>
+                        <p class="p3"></p>
+                        <p class="p4"></p>
+                        <p class="p5"></p>
+                        <p class="p6"></p>
+                        <p class="p7"></p>
+                    </div>
+                    <div id="adrBTN1"></div>
+                </div>
+            </div>
+            <div id="deliveryChoice">
+                <h3>DELIVERY OPTIONS</h3>
+                <div id="free">
+                    <h4>FREE</h4>
+                    <div >
+                        <h4>Standard Delivery:</h4>
+                        <p>Delivered on or before Thursday, 30 June, 2022</p>
+                        <p id="freecmprs">No delivery on Public Holidays. Orders are subject to Customs and Duty charges, payable by the recipient and you may be requested to be pay duty charges prior to exportation of your order from the UK by our delivery agent.</p>
+                    </div>
+                    <div ><div id="freebtn"></div></div>
+                </div>
+                <div id="express">
+                    <h4>£20.00</h4>
+                    <div >
+                        <h4>Express Delivery:</h4>
+                        <p>Delivered on or before Thursday, 22 June, 2022</p>
+                        <p id="expresscmprs">No delivery on Public Holidays. All orders are subject to Customs and Duty charges, payable by the recipient of the order.</p>
+                    </div>
+                    <div ><div id="expressbtn"></div></div>
+                </div>
+                <div></div>
+            </div>
+            <div id="paymentBar">
+                <div>
+                    <h3>PAYMENT</h3>
+                    <div>
+                            <h4>BILLING ADDRESS</h4>
+                            <p class="p1"></p>
+                            <p class="p2"></p>
+                            <p class="p3"></p>
+                            <p class="p4"></p>
+                            <p class="p5"></p>
+                            <p class="p6"></p>
+                            <p class="p7"></p>
+                    </div>
+                    <div id="adrBTN2"></div>
+                </div>
+            </div>
+            <div id="paymentType">
+                 <h4>PAYMENT TYPE</h4>
+                 <div id="paymentOptions">
+                    <div>
+                        <img src="https://assets.asosservices.com/asos-finance/images/paymentmethods/card.png" alt="">
+                        <h5>ADD CREDIT/DEBIT CARD</h5>
+                    </div>
+                    <div><h4>OR</h4></div>
+                    <div>
+                        <img src="https://assets.asosservices.com/asos-finance/images/paymentmethods/paypal.png" alt="">
+                        <h5>PAYPAL</h5>
+                    </div>
+                 </div>
+            </div>
+            <div id="weaccept">
+                <h5>WE ACCEPT:</h5>
+                <img src="https://assets.asosservices.com/asos-finance/images/marketing/single.png" alt="">
+            </div>
+            <div id="orderTerms" style="background-color:#eeeeee ;">
+                <button><h3>PLACE ORDER</h3></button>
+                <p>By placing your order you agree to our <a href="https://www.asos.com/terms-and-conditions/">Terms & Conditions</a> , <a href="https://www.asos.com/privacy-policy/">privacy</a>  and <a href="https://www.asos.com/customer-care/returns-refunds/what-is-your-returns-policy/">returns policies</a> . You also consent to some of your data being stored by ASOS, which may be used to make future shopping experiences better for you.</p>
+            </div>
+        </div>
+        <div id="total">
+            <div id="mainbag"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let cbtn=document.querySelector("#codebtn")
+    cbtn.addEventListener("click",codeOptions)
+    let Q=0
+    function codeOptions(){
+        Q++;
+        cbtn.innerText="Λ"
+        let codeOptionsdisplay=document.createElement("div")
+        codeOptionsdisplay.setAttribute("id","optionsDisplay")
+        let code=document.createElement("div")
+        let codeLogo=document.createElement("img")
+        let codetxt=document.createElement("h4")
+        codetxt.innerText="PROMO/STUDENT CODE"
+        codeLogo.setAttribute("src","data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='13.5' cy='6' r='1' fill='%232d2d2d'/%3E%3Cpath d='M11.2 1.5l6.6.5.5 6.7-9.4 9.7-7.2-7.3 9.5-9.6z' fill='none' stroke='%232d2d2d' stroke-width='2'/%3E%3C/svg%3E")
+        code.append(codeLogo,codetxt)
+        let voucher=document.createElement("div")
+        let voucherLogo=document.createElement("img")
+        let vouchertxt=document.createElement("h4")
+        vouchertxt.innerText="VOUCHER"
+        voucherLogo.setAttribute("src","data:image/svg+xml;charset=utf8, %3Csvg width='20' height='16' viewBox='0 0 20 16' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E7FDD0D87-154D-405C-96AC-4F242E7D7CB1%3C/title%3E%3Cdefs%3E%3Cpath id='a' d='M0 2h20v16H0z'/%3E%3Cmask id='b' x='0' y='0' width='20' height='16' fill='%23fff'%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3C/defs%3E%3Cg transform='translate(0 -2)' fill='none' fill-rule='evenodd'%3E%3Cpath opacity='.5' d='M0 0h20v20H0z'/%3E%3Cuse stroke='%232D2D2D' mask='url(%23b)' stroke-width='4' xlink:href='%23a'/%3E%3Cpath fill='%232D2D2D' d='M6 3h2v14H6z'/%3E%3Cpath fill='%232D2D2D' d='M3.922 11.32L7.7 8.457l.957.957-4.7 3.786z'/%3E%3Cpath fill='%232D2D2D' d='M9.734 11.32L5.957 8.457 5 9.414 9.7 13.2z'/%3E%3Cpath fill='%232D2D2D' d='M0 9h20v2H0z'/%3E%3Cellipse fill='%232D2D2D' cx='8.5' cy='9' rx='1.5' ry='1'/%3E%3Cellipse fill='%232D2D2D' cx='5.5' cy='9' rx='1.5' ry='1'/%3E%3C/g%3E%3C/svg%3E")
+        voucher.append(voucherLogo,vouchertxt)
+        codeOptionsdisplay.append(code,voucher)
+        let cV=document.querySelector("#codeVoucher")
+        let codevoucherInput=document.createElement("div")
+        let i1=document.createElement("div")
+        let titlecode=document.createElement("h4")
+        titlecode.innerText="ADD A PROMO/STUDENT CODE"
+        i1.append(titlecode)
+        let i2=document.createElement("div")
+        let titleip=document.createElement("h4")
+        titleip.innerText="PROMO/STUDENT CODE:"
+        let ipbtn=document.createElement("div")
+        let ip=document.createElement("input")
+        let btn=document.createElement("button")
+        btn.innerText="APPLY CODE"
+        ipbtn.append(ip,btn)
+        i2.append(titleip,ipbtn)
+        let i3=document.createElement("div")
+        let i3txt=document.createElement("p")
+        i3txt.innerText="You can only use one discount/promo code per order. This applies to our free-delivery codes, too."
+        i3.append(i3txt)
+        codevoucherInput.append(i1,i2,i3)
+        cV.append(codeOptionsdisplay,codevoucherInput)
+        code.addEventListener("click",codeChosen)
+        cbtn.addEventListener("click",collapse)
+        function collapse(){if(Q%2===0){cbtn.innerText="V";cV.innerHTML=""}}
+    }
+    let freeround=document.querySelector("#freebtn")
+    let expressround=document.querySelector("#expressbtn")
+        document.querySelector("#free").addEventListener("click",zero)
+        function zero(){
+            document.querySelector("#expresscmprs").innerText="No delivery on Public Holidays."
+            document.querySelector("#freecmprs").innerText="No delivery on Public Holidays. Orders are subject to Customs and Duty charges, payable by the recipient and you may be requested to be pay duty charges prior to exportation of your order from the UK by our delivery agent."
+            freeround.style.backgroundColor="black"
+            expressround.style.backgroundColor="white"
+        }
+
+        document.querySelector("#express").addEventListener("click",twenty)
+        function twenty(){
+            let fc=document.querySelector("#freecmprs")
+            document.querySelector("#freecmprs").innerText="No delivery on Public Holidays."
+            document.querySelector("#expresscmprs").innerText="No delivery on Public Holidays. All orders are subject to Customs and Duty charges, payable by the recipient of the order."
+            freeround.style.backgroundColor="white"
+            expressround.style.backgroundColor="black"
+        }
+        
+    let arr=[{imagelink:"https://images.asos-media.com/products/hiit-mesh-overlay-shorts-in-black/24235257-1-black",
+              title:"HIIT mesh overlay shorts in black",
+              price:7.50,
+              previousprice:10.00,
+              itemcolor:"Black",
+            }, {imagelink:"https://images.asos-media.com/products/hiit-mesh-overlay-shorts-in-black/24235257-1-black",
+              title:"HIIT mesh overlay shorts in black",
+              price:7.50,
+              previousprice:10.00,
+              itemcolor:"Black",
+            }]
+          document.querySelector("#addressbtn").addEventListener("click",dispAddress)
+          function dispAddress(){
+           
+            let thename=document.querySelector("#name").value
+            let thelastname=document.querySelector("#lastname").value
+            let P1=document.getElementsByClassName("p1")
+            P1[0].innerText=thename+" "+thelastname
+            P1[1].innerText=thename+" "+thelastname
+
+            let themobile=document.querySelector("#mobile").value
+            let P7=document.getElementsByClassName("p7")
+            P7[0].innerText=themobile
+            P7[1].innerText=themobile
+
+            let theaddtrss1=document.querySelector("#address1").value
+            let theaddtrss2=document.querySelector("#address2").value
+            let P2=document.getElementsByClassName("p2")
+            P2[0].innerText=theaddtrss1+" ,"+theaddtrss2
+            P2[1].innerText=theaddtrss1+" ,"+theaddtrss2
+
+            let thecity=document.querySelector("#city").value
+            let P3=document.getElementsByClassName("p3")
+            P3[0].innerText=thecity
+            P3[1].innerText=thecity
+            
+            let thecountry=document.querySelector("#countryname").value
+            P4=document.getElementsByClassName("p4")
+            P4[0].innerText=thecountry
+            P4[1].innerText=thecountry
+            
+            let thepostcode=document.querySelector("#postcode").value
+            P5=document.getElementsByClassName("p5")
+            P5[0].innerText=thepostcode
+            P5[1].innerText=thepostcode
+
+            let removeaddress=document.querySelector("#deliveryaddress")
+            removeaddress.innerHTML=""
+            let cName=document.querySelector("#country").value
+            P6=document.getElementsByClassName("p6")
+            P6[0].innerText=cName
+            P6[1].innerText=cName
+
+            let adrBTN1=document.querySelector("#adrBTN1")
+            let btn=document.createElement("button")
+            btn.innerText="CHANGE"
+            btn.addEventListener("click",editADR)
+            function editADR(){
+                document.querySelector("#appendAddress").innerHTML="" 
+                window.location.reload()}
+            adrBTN1.append(btn)
+
+            let adrBTN2=document.querySelector("#adrBTN2")
+            let btn2=document.createElement("button")
+            btn2.innerText="CHANGE"
+            btn2.addEventListener("click",editADR1)
+            function editADR1(){
+                adrBTN2.innerHTML=""
+                let btn3=document.createElement("button")
+                btn3.innerText="ADD NEW ADDRESS"
+                let btn4=document.createElement("button")
+                btn4.innerText="CANCEL"
+                
+                btn3.addEventListener("click",editADR)
+              
+                adrBTN2.append(btn3,btn4)
+                }
+            adrBTN2.append(btn2)
+
+          }
+            document.querySelector("body").style.backgroundColor="#eeeeee";
+            let createdbag=document.querySelector("#mainbag")
+          arr.map(wholeBag)
+          function wholeBag(el,index){
+             let singlebag=document.createElement("div")
+             singlebag.setAttribute("id","saved")
+             let detailsimage=document.createElement("div")
+             let image=document.createElement("div")
+             let photo=document.createElement("img")
+             photo.setAttribute("src",el.imagelink)
+             image.append(photo)
+             let details=document.createElement("div")
+             let pricedetails=document.createElement("div")
+             let mainprice=document.createElement("h3")
+             mainprice.innerText="£"+" "+el.price
+             let oldprice=document.createElement("p")
+             oldprice.innerText="£"+" "+el.previousprice
+             pricedetails.append(mainprice,oldprice)
+             let itemname=document.createElement("p")
+             itemname.innerText=el.title
+             let colorquantity=document.createElement("div")
+             let colortype=document.createElement("p")
+             colortype.innerText=el.itemcolor
+             let qt=document.createElement("p")
+             qt.innerText="Qty"
+             
+             colorquantity.append(colortype,qt)
+            
+             details.append(pricedetails,itemname,colorquantity)
+             detailsimage.append(image,details)
+             
+             singlebag.append(detailsimage)
+             createdbag.append(singlebag)
+          }
+</script>

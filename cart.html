@@ -34,6 +34,7 @@
         #emptybag>p:last-of-type{
             width: 48%;
         }
+        #emptybag>a:last-child{color: brown; margin-top: 10px;}
         #filledcart{
             display: grid;
             grid-template-columns:560px 360px;
@@ -46,7 +47,7 @@
            padding: 10px 30px;
            justify-content: space-between;
         }
-        #otherbag>div:nth-child(4) img{
+        #deilvery img{
             width: 40px;
             margin-top: 15px;
         }
@@ -55,7 +56,7 @@
             flex-direction: column;
             gap:10px
         }
-        #otherbag>div:nth-child(4){
+        #deilvery{
             display: flex;
             gap: 30px;
             padding-left: 30px;
@@ -135,11 +136,7 @@
             border: 1px solid #eeeeee;
             /* save for later */
         }
-        #mainbag>div>div>div:nth-child(2)>div:nth-child(4) img{
-            border: 1px solid red;
-            width: 30px;
-            /* heart */
-        }
+       
         #mainbag img{
             width: 100px;
         }
@@ -175,6 +172,7 @@
             gap: 10px;
         }
       }
+      
     </style>
 </head>
 <body>
@@ -182,9 +180,9 @@
         <img src="data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20width%3D%2220px%22%20height%3D%2220px%22%20viewBox%3D%220%200%2020%2020%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cg%20id%3D%22Mobile%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Mobile_bag_empty_recognised_with_saved%22%20transform%3D%22translate(-150.000000%2C%20-164.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M02B_empty_bag_signed_in%22%20transform%3D%22translate(0.000000%2C%20131.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22icon_bag_selected%22%20transform%3D%22translate(138.000000%2C%2021.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Shape%22%20transform%3D%22translate(13.000000%2C%2012.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpolygon%20id%3D%22Rectangle-1176%22%20stroke%3D%22%232D2D2D%22%20stroke-width%3D%222%22%20points%3D%220%2019%201.9793691e-08%206%2017.9999995%206%2018%2018.9866501%22%3E%3C%2Fpolygon%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M5.12601749%2C7%20L3.08295844%2C7%20C3.0283988%2C6.67479153%203%2C6.34071221%203%2C6%20C3%2C2.6862915%205.6862915%2C0%209%2C0%20C12.3137085%2C0%2015%2C2.6862915%2015%2C6%20C15%2C6.34071221%2014.9716012%2C6.67479153%2014.9170416%2C7%20L12.8739825%2C7%20C12.956247%2C6.68038008%2013%2C6.34529957%2013%2C6%20C13%2C3.790861%2011.209139%2C2%209%2C2%20C6.790861%2C2%205%2C3.790861%205%2C6%20C5%2C6.34529957%205.043753%2C6.68038008%205.12601749%2C7%20Z%22%20id%3D%22Oval-146%22%20fill%3D%22%232D2D2D%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E" alt="CartLogo">
         <p>Your bag is empty</p>
         <p>Items remain in your bag for 60 minutes, and then they're moved to your Saved Items.</p>
-        <p>Sign in to see your bag
+        <p id="signtxt">Sign in to see your bag
             and get shopping!</p>
-        <button><p>SIGN IN</p></button>    
+        <button><p id="signbtn">SIGN IN</p></button>    
     </div>
     <div id="filledcart">
         <div id="otherbag">
@@ -197,7 +195,8 @@
                 <p>SUB-TOTAL</p>
                 <p id="finalSum1"></p>
             </div>
-            <div><div><img src="data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20viewBox%3D%220%200%2040%2021%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cdefs%3E%20%20%20%20%20%20%20%20%3Cpolygon%20id%3D%22path-1%22%20points%3D%2232%206%2037%206%2039%2010%2032%2010%22%3E%3C%2Fpolygon%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-2%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%224%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-1%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%20%20%20%20%3Ccircle%20id%3D%22path-3%22%20cx%3D%2214.5%22%20cy%3D%2217.5%22%20r%3D%223.5%22%3E%3C%2Fcircle%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-4%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%227%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-3%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%20%20%20%20%3Ccircle%20id%3D%22path-5%22%20cx%3D%2233.5%22%20cy%3D%2217.5%22%20r%3D%223.5%22%3E%3C%2Fcircle%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-6%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%227%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-5%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%3C%2Fdefs%3E%20%20%20%20%3Cg%20id%3D%22Symbols%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M05_delivery_info%22%20transform%3D%22translate(-36.000000%2C%20-31.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22icon_fastdelivery_normal%22%20transform%3D%22translate(34.000000%2C%2019.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Dev-Guide%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2244%22%20height%3D%2244%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Visual-Guide%22%20x%3D%2212%22%20y%3D%2212%22%20width%3D%2220%22%20height%3D%2220%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Shape%22%20transform%3D%22translate(2.000000%2C%2012.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M12%2C18%20C12.1947494%2C19.7341297%2016.8052506%2C19.7341297%2017%2C18%20L28.3150358%2C18.1274463%20L29.2887828%2C18.1274463%20L30.1651551%2C18.1274463%20C30.3599045%2C19.7341289%2031.7718377%2C21%2033.4272076%2C21%20C35.0825776%2C21%2036.4945107%2C19.7341289%2036.6892601%2C18.1274463%20L40%2C18.1274463%20L40%2C8.99999998%20C40%2C8.99999998%2036.6666667%2C4.65680189%2035%2C1.99999998%20L30.1651554%2C1.99999998%20L29.1651554%2C-2.38433131e-08%20L7%2C-2.38433131e-08%20L8%2C18%20L12%2C18%20Z%20M14.2593079%2C19.2883055%20C13.2268447%2C19.2883055%2012.353222%2C18.4543929%2012.353222%2C17.3822196%20C12.353222%2C16.3100462%2013.1871345%2C15.4761337%2014.2593079%2C15.4761337%20C15.3314812%2C15.4761337%2016.1653938%2C16.3100462%2016.1653938%2C17.3822196%20C16.1653938%2C18.4543929%2015.2917711%2C19.2883055%2014.2593079%2C19.2883055%20L14.2593079%2C19.2883055%20Z%20M33.4272076%2C19.8207637%20C32.2726432%2C19.8207637%2031.2957041%2C18.8882309%2031.2957041%2C17.6892601%20C31.2957041%2C16.4902894%2032.2282369%2C15.5577566%2033.4272076%2C15.5577566%20C34.6261784%2C15.5577566%2035.5587112%2C16.4902894%2035.5587112%2C17.6892601%20C35.5587112%2C18.8882309%2034.5817721%2C19.8207637%2033.4272076%2C19.8207637%20L33.4272076%2C19.8207637%20Z%20M38%2C10%20L38%2C13.1954023%20L38%2C16%20L35%2C16%20C34.8%2C14.5287356%2034.32%2C15%2033%2C15%20C31.7103092%2C15%2031.2187806%2C14.6045949%2031%2C16%20C30.9948584%2C16.0327936%2030.7645923%2C15.9662175%2030.76%2C16%20L30%2C16%20L30%2C4%20L33.8%2C4%20L38%2C10%20Z%20M28%2C2%20L28%2C3.75%20L28%2C16%20L17%2C16%20C16.7692308%2C14.6%2016.5230769%2C15%2015%2C15%20C13.4769231%2C15%2012.2307692%2C14.6%2012%2C16%20L10%2C16%20L9%2C2%20L28%2C2%20Z%22%20fill%3D%22%232D2D2D%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%220%22%20y%3D%225%22%20width%3D%2215%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%226%22%20y%3D%229%22%20width%3D%228%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%223%22%20y%3D%229%22%20width%3D%222%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%225%22%20y%3D%2213%22%20width%3D%227%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Rectangle-581%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-2)%22%20stroke-width%3D%222%22%20xlink%3Ahref%3D%22%23path-1%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Oval-71%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-4)%22%20stroke-width%3D%224%22%20xlink%3Ahref%3D%22%23path-3%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Oval-71%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-6)%22%20stroke-width%3D%224%22%20xlink%3Ahref%3D%22%23path-5%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E" alt="deliverytruck"></div>
+            
+            <div id="deilvery"><div><img src="data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20viewBox%3D%220%200%2040%2021%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cdefs%3E%20%20%20%20%20%20%20%20%3Cpolygon%20id%3D%22path-1%22%20points%3D%2232%206%2037%206%2039%2010%2032%2010%22%3E%3C%2Fpolygon%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-2%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%224%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-1%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%20%20%20%20%3Ccircle%20id%3D%22path-3%22%20cx%3D%2214.5%22%20cy%3D%2217.5%22%20r%3D%223.5%22%3E%3C%2Fcircle%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-4%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%227%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-3%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%20%20%20%20%3Ccircle%20id%3D%22path-5%22%20cx%3D%2233.5%22%20cy%3D%2217.5%22%20r%3D%223.5%22%3E%3C%2Fcircle%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-6%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%227%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-5%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%3C%2Fdefs%3E%20%20%20%20%3Cg%20id%3D%22Symbols%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M05_delivery_info%22%20transform%3D%22translate(-36.000000%2C%20-31.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22icon_fastdelivery_normal%22%20transform%3D%22translate(34.000000%2C%2019.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Dev-Guide%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2244%22%20height%3D%2244%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Visual-Guide%22%20x%3D%2212%22%20y%3D%2212%22%20width%3D%2220%22%20height%3D%2220%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Shape%22%20transform%3D%22translate(2.000000%2C%2012.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M12%2C18%20C12.1947494%2C19.7341297%2016.8052506%2C19.7341297%2017%2C18%20L28.3150358%2C18.1274463%20L29.2887828%2C18.1274463%20L30.1651551%2C18.1274463%20C30.3599045%2C19.7341289%2031.7718377%2C21%2033.4272076%2C21%20C35.0825776%2C21%2036.4945107%2C19.7341289%2036.6892601%2C18.1274463%20L40%2C18.1274463%20L40%2C8.99999998%20C40%2C8.99999998%2036.6666667%2C4.65680189%2035%2C1.99999998%20L30.1651554%2C1.99999998%20L29.1651554%2C-2.38433131e-08%20L7%2C-2.38433131e-08%20L8%2C18%20L12%2C18%20Z%20M14.2593079%2C19.2883055%20C13.2268447%2C19.2883055%2012.353222%2C18.4543929%2012.353222%2C17.3822196%20C12.353222%2C16.3100462%2013.1871345%2C15.4761337%2014.2593079%2C15.4761337%20C15.3314812%2C15.4761337%2016.1653938%2C16.3100462%2016.1653938%2C17.3822196%20C16.1653938%2C18.4543929%2015.2917711%2C19.2883055%2014.2593079%2C19.2883055%20L14.2593079%2C19.2883055%20Z%20M33.4272076%2C19.8207637%20C32.2726432%2C19.8207637%2031.2957041%2C18.8882309%2031.2957041%2C17.6892601%20C31.2957041%2C16.4902894%2032.2282369%2C15.5577566%2033.4272076%2C15.5577566%20C34.6261784%2C15.5577566%2035.5587112%2C16.4902894%2035.5587112%2C17.6892601%20C35.5587112%2C18.8882309%2034.5817721%2C19.8207637%2033.4272076%2C19.8207637%20L33.4272076%2C19.8207637%20Z%20M38%2C10%20L38%2C13.1954023%20L38%2C16%20L35%2C16%20C34.8%2C14.5287356%2034.32%2C15%2033%2C15%20C31.7103092%2C15%2031.2187806%2C14.6045949%2031%2C16%20C30.9948584%2C16.0327936%2030.7645923%2C15.9662175%2030.76%2C16%20L30%2C16%20L30%2C4%20L33.8%2C4%20L38%2C10%20Z%20M28%2C2%20L28%2C3.75%20L28%2C16%20L17%2C16%20C16.7692308%2C14.6%2016.5230769%2C15%2015%2C15%20C13.4769231%2C15%2012.2307692%2C14.6%2012%2C16%20L10%2C16%20L9%2C2%20L28%2C2%20Z%22%20fill%3D%22%232D2D2D%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%220%22%20y%3D%225%22%20width%3D%2215%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%226%22%20y%3D%229%22%20width%3D%228%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%223%22%20y%3D%229%22%20width%3D%222%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%225%22%20y%3D%2213%22%20width%3D%227%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Rectangle-581%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-2)%22%20stroke-width%3D%222%22%20xlink%3Ahref%3D%22%23path-1%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Oval-71%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-4)%22%20stroke-width%3D%224%22%20xlink%3Ahref%3D%22%23path-3%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Oval-71%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-6)%22%20stroke-width%3D%224%22%20xlink%3Ahref%3D%22%23path-5%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E" alt="deliverytruck"></div>
                 <div><p>FREE* STANDARD DELIVERY</p>
                      <p>Faster delivery options available to most countries.</p>
                      <p><a href="https://www.asos.com/payments-and-deliveries/delivery/">More info</a></p></div>
@@ -222,18 +221,7 @@
 </body>
 </html>
 <script>
-    let arr=[{imagelink:"https://images.asos-media.com/products/hiit-mesh-overlay-shorts-in-black/24235257-1-black",
-              title:"HIIT mesh overlay shorts in black",
-              price:7.50,
-              previousprice:10.00,
-              itemcolor:"Black",
-            }, {imagelink:"https://images.asos-media.com/products/hiit-mesh-overlay-shorts-in-black/24235257-1-black",
-              title:"HIIT mesh overlay shorts in black",
-              price:7.50,
-              previousprice:10.00,
-              itemcolor:"Black",
-            }]
-
+    let arr=[]
           if(arr.length>0){
             document.querySelector("#emptybag").innerHTML="";
             document.querySelector("body").style.backgroundColor="#eeeeee";
@@ -243,6 +231,7 @@
           arr.map(wholeBag)
           function wholeBag(el,index){
              let singlebag=document.createElement("div")
+             singlebag.setAttribute("id","saved")
              let detailsimage=document.createElement("div")
              let image=document.createElement("div")
              let photo=document.createElement("img")
@@ -272,11 +261,25 @@
              quantity.addEventListener("change",function (){
                 totalprice(quantity,index)
              })
-             
              colorquantity.append(colortype,qt,quantity)
              let forlater=document.createElement("div")
              let heart=document.createElement("img")
-             heart.setAttribute("src","data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20width%3D%2214px%22%20height%3D%2213px%22%20viewBox%3D%22-1%20-1%2015%2015%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cg%20id%3D%22Desktop%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Desktop_bag%22%20transform%3D%22translate(-302.000000%2C%20-716.000000)%22%20stroke%3D%22%232D2D2D%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M02_your_items%22%20transform%3D%22translate(132.000000%2C%20315.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22product_2%22%20transform%3D%22translate(30.000000%2C%20280.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Save%22%20transform%3D%22translate(130.000000%2C%20112.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M16.4971144%2C10.1751535%20C15.8069078%2C9.45246798%2014.8600012%2C9.0058477%2013.8150562%2C9.00719656%20C11.7057556%2C9.00959452%209.99817292%2C10.8348926%2010.0000015%2C13.0823817%20C10.0060497%2C18.2466909%2016.5093516%2C21%2016.5093516%2C21%20C16.5093516%2C21%2023.0070272%2C18.2300551%2022.9999943%2C13.064397%20C22.9973218%2C10.816758%2021.2855194%2C8.99745484%2019.1756561%2C9.00000267%20C18.1318365%2C9.00075204%2017.1856331%2C9.44992014%2016.4971144%2C10.1751535%20Z%22%20id%3D%22Shape-Copy-7%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E")
+             heart.style.width="16px"
+             heart.style.height="16px"
+             heart.setAttribute("src","https://i.ibb.co/1LwdzVx/white-Heart.png")
+             heart.addEventListener("mouseenter",likeFunction);
+             function likeFunction(){
+    
+     heart.src="https://i.ibb.co/4mzHFh3/white-Heart.png";
+}
+             heart.addEventListener("mouseleave",likeleave);
+             function likeleave(){
+    
+    heart.src="https://i.ibb.co/1LwdzVx/white-Heart.png";
+}
+             heart.addEventListener("click", function (){
+                replaceit(index)
+             })
              let sl=document.createElement("p")
              sl.innerText="Save for later"
              forlater.append(heart,sl)
@@ -325,9 +328,36 @@
               window.location.reload()
            }
            }
-
+           function replaceit(index){
+            let dd=document.createElement("h4")
+            dd.style.margin="auto"
+            dd.style.marginTop="70px"
+            dd.style.marginBottom="70px"
+            dd.innerText="Item Saved for Later"
+            document.querySelector("#saved").innerHTML=""
+            document.querySelector("#saved").append(dd)
+            setTimeout(del, 1900)
+            function del(){
+            console.log(69)
+            document.querySelector("#saved").append(dd)
+            createdbag.innerHTML=""
+               arr.splice(index,1)
+               arr.map(wholeBag)
+               if(arr.length==0){
+              window.location.reload()
+           }}
+           } 
            }
-     else if(arr.length==0){document.querySelector("#filledcart").innerHTML="";}
+     else if(arr.length==0){
+     document.querySelector("#filledcart").innerHTML="";
+     if(3>2){document.querySelector("#signtxt").innerHTML="";
+             document.querySelector("#signbtn").innerText="VIEW SAVED ITEMS"
+            let lnk=document.createElement("a")
+            lnk.setAttribute("href","www.google.com")
+            lnk.innerText="Continue Shopping"
+            document.querySelector("#emptybag").append(lnk)
+            }
+    }
           
 
 </script>
