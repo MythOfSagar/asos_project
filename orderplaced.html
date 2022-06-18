@@ -6,103 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASOS | Checkout</title>
     <style>
-        #emptybag p{
-            text-align: center;
-            color: #2d2d2d;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        #emptybag button{
-            width: 80%;
-            background-color: #018849;
-            color: white;
-            border: 0px;
-        }
-        #emptybag button p{color: white;font-weight: bold;letter-spacing: 2px;}
-        #emptybag img+p{
-            font-size: 18px;
-          letter-spacing: 3px;
-          font-weight: bolder;
-        }
-        #emptybag{
-            margin: auto;
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 100px;
-        }
-        #emptybag>p:last-of-type{
-            width: 48%;
-        }
-        #emptybag>a:last-child{color: brown; margin-top: 10px;}
+       
+        
         #filledcart{
             display: grid;
             grid-template-columns:560px 360px;
             justify-content: center;
             gap: 10px;
         }
-        #otherbag>div:first-child{
-           display: flex;
-           background-color: white;
-           padding: 10px 30px;
-           justify-content: space-between;
-        }
-        #deilvery img{
-            width: 40px;
-            margin-top: 15px;
-        }
+        
+        
         #otherbag{
             display: flex;
             flex-direction: column;
             gap:10px
         }
-        #deilvery{
-            display: flex;
-            gap: 30px;
-            padding-left: 30px;
-        background-color: white;}
-        #total>div:nth-child(3) img{
-            width: 10px;
-            height: 10px;
-            padding: 2px;
-             border: 2px solid #9f9f9f;
-             border-radius: 50%;
-             margin-top: 18px;
-        }
-        #total select{
-            width: 100%;
-            border: 0px;
-            color: teal;
-            border-bottom: 1px solid teal;
-            margin-bottom: 20px;
-            padding: 7px;
-        }
-        #total button{
-            width: 100%;
-            border: 0px;
-            color: white;
-            background-color: #018849;
-        }
-        #total>div:nth-child(7) img{
-           width: 65%;
-        }
-        #total{
-            height: fit-content;
+        
+        #total{display: flex;
+        flex-direction: column;}
+        #total>div:last-child img{width: 360px;}
+        #total>div:nth-child(2){display: flex;
+        flex-direction: column;
+        align-items: center;
+         justify-content:center ;}
+         #total>div:first-child{display: flex;
+            background-color: lightblue;
+        flex-direction: column;
+         align-items: center;
+        text-align: center;}
+        #total>div:first-child p{width:240px}
+        #total>div:first-child button{
             background-color: white;
-            display: flex;
-            flex-direction: column;
-            padding: 10px 30px;
-        }
-        #total>div:first-child{
-           border-bottom: 1px solid #eeeeee;
-        }
-        #total>div:nth-child(2){
-            display: flex;
-            justify-content: space-between;
-        }
-        #total>div:nth-child(3){
-            display: flex;
-            justify-content: space-between;
+            border: 1px solid cyan;
+            width: 280px;
+            margin-bottom: 20px;
         }
         #mainbag{
             display: flex;
@@ -142,11 +79,12 @@
         }
         #subtotal{
             display: flex;
-            justify-content: right;
-            gap: 40px;
+            align-items: center;
+            gap: 10px;
             background-color: white;
             padding: 5px 30px;
         }
+        #subtotal img{height: 25px;}
         @media only screen and (min-width: 515px) and (max-width: 869px) {
         #filledcart{
             width: 95%;
@@ -180,7 +118,30 @@
     }
     #topmost img{width: 100px; height: 40px; margin-bottom: -20px;}
       *{font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
-   
+      #delivery button{
+        background-color: black;
+        color: white;
+        padding: 0px 140px;
+      }
+      #delivery{margin: auto;}
+      #Links{
+        padding-left: 25px;
+        margin-top: -11px;
+        background-color: white;}
+        #orderDetails{
+            padding-left: 25px;
+            background-color: white;}
+        #orderDetails>div{
+            display: flex;
+        }
+        #orderDetails>div>div:first-child{width: 150px;
+        margin-right: 140px;}
+        #orderDetails>div>div:last-child{
+            display: flex;
+            flex-direction: column;
+            width: 220px;} 
+        #otherbag>div:nth-child(2){background-color: white;padding-left: 25px;
+        margin-bottom: -9px;}
     </style>
 </head>
 <body>
@@ -189,36 +150,54 @@
         <h1>CHECKOUT</h1>
         <img src="https://i.ibb.co/YfTDbhc/digiii.png" alt="">
     </div>
-    <div id="emptybag">
-        <img src="data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20width%3D%2220px%22%20height%3D%2220px%22%20viewBox%3D%220%200%2020%2020%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cg%20id%3D%22Mobile%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Mobile_bag_empty_recognised_with_saved%22%20transform%3D%22translate(-150.000000%2C%20-164.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M02B_empty_bag_signed_in%22%20transform%3D%22translate(0.000000%2C%20131.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22icon_bag_selected%22%20transform%3D%22translate(138.000000%2C%2021.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Shape%22%20transform%3D%22translate(13.000000%2C%2012.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpolygon%20id%3D%22Rectangle-1176%22%20stroke%3D%22%232D2D2D%22%20stroke-width%3D%222%22%20points%3D%220%2019%201.9793691e-08%206%2017.9999995%206%2018%2018.9866501%22%3E%3C%2Fpolygon%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M5.12601749%2C7%20L3.08295844%2C7%20C3.0283988%2C6.67479153%203%2C6.34071221%203%2C6%20C3%2C2.6862915%205.6862915%2C0%209%2C0%20C12.3137085%2C0%2015%2C2.6862915%2015%2C6%20C15%2C6.34071221%2014.9716012%2C6.67479153%2014.9170416%2C7%20L12.8739825%2C7%20C12.956247%2C6.68038008%2013%2C6.34529957%2013%2C6%20C13%2C3.790861%2011.209139%2C2%209%2C2%20C6.790861%2C2%205%2C3.790861%205%2C6%20C5%2C6.34529957%205.043753%2C6.68038008%205.12601749%2C7%20Z%22%20id%3D%22Oval-146%22%20fill%3D%22%232D2D2D%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E" alt="CartLogo">
-        <p>Your bag is empty</p>
-        <p>Items remain in your bag for 60 minutes, and then they're moved to your Saved Items.</p>
-        <p id="signtxt">Sign in to see your bag
-            and get shopping!</p>
-        <button><p id="signbtn">SIGN IN</p></button>    
-    </div>
+    
     <div id="filledcart">
         <div id="otherbag">
-            <div>
-                <p>MY BAG</p>
-                <p>Items are reserved for 60 minutes</p>
+            <div id="orderDetails">
+                <h3>THANK YOU FOR YPUR ORDER</h3>
+                <p>Please check your inbox as a confirmation email is on it's way.</p>
+                <div>
+                    <div>
+                        <h3>ORDER TOTAL:</h3>
+                        <h3>ORDER REFERENCE:</h3>
+                        <h3>DELIVERY:</h3>
+                        <h3>ORDER STATUS:</h3>
+                    </div>
+                    <div>
+                        <p>price</p>
+                        <p>IND778MAH989AMT</p>
+                        <p>Delivery on or before</p>
+                        <p>Received</p>
+                    </div>
+                </div>
             </div>
+            <div><h3 id="noItems"></h3></div>
             <div id="mainbag"></div>
+            <div id="Links">
+                <a href="https://www.asos.com/customer-care/returns-refunds/"><p>Cancel this Order</p></a>
+                <a href="home.html"><p>My Account</p></a>
+                <a href="https://www.asos.com/customer-care/returns-refunds/what-is-your-returns-policy/"><p>Returns Policy</p></a>
+            </div>
             <div id="subtotal">
-                <p>SUB-TOTAL</p>
-                <p id="finalSum1"></p>
+                <img src="https://i.ibb.co/hBkzBJV/re-Cycle-Logo.png" alt="">
+                <p>Our plastic bag and cardboard are 100% recyclable</p>
             </div>
             
-            <div id="deilvery"><div><img src="data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20viewBox%3D%220%200%2040%2021%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cdefs%3E%20%20%20%20%20%20%20%20%3Cpolygon%20id%3D%22path-1%22%20points%3D%2232%206%2037%206%2039%2010%2032%2010%22%3E%3C%2Fpolygon%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-2%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%224%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-1%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%20%20%20%20%3Ccircle%20id%3D%22path-3%22%20cx%3D%2214.5%22%20cy%3D%2217.5%22%20r%3D%223.5%22%3E%3C%2Fcircle%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-4%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%227%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-3%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%20%20%20%20%3Ccircle%20id%3D%22path-5%22%20cx%3D%2233.5%22%20cy%3D%2217.5%22%20r%3D%223.5%22%3E%3C%2Fcircle%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-6%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%227%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-5%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%3C%2Fdefs%3E%20%20%20%20%3Cg%20id%3D%22Symbols%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M05_delivery_info%22%20transform%3D%22translate(-36.000000%2C%20-31.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22icon_fastdelivery_normal%22%20transform%3D%22translate(34.000000%2C%2019.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Dev-Guide%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2244%22%20height%3D%2244%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Visual-Guide%22%20x%3D%2212%22%20y%3D%2212%22%20width%3D%2220%22%20height%3D%2220%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Shape%22%20transform%3D%22translate(2.000000%2C%2012.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M12%2C18%20C12.1947494%2C19.7341297%2016.8052506%2C19.7341297%2017%2C18%20L28.3150358%2C18.1274463%20L29.2887828%2C18.1274463%20L30.1651551%2C18.1274463%20C30.3599045%2C19.7341289%2031.7718377%2C21%2033.4272076%2C21%20C35.0825776%2C21%2036.4945107%2C19.7341289%2036.6892601%2C18.1274463%20L40%2C18.1274463%20L40%2C8.99999998%20C40%2C8.99999998%2036.6666667%2C4.65680189%2035%2C1.99999998%20L30.1651554%2C1.99999998%20L29.1651554%2C-2.38433131e-08%20L7%2C-2.38433131e-08%20L8%2C18%20L12%2C18%20Z%20M14.2593079%2C19.2883055%20C13.2268447%2C19.2883055%2012.353222%2C18.4543929%2012.353222%2C17.3822196%20C12.353222%2C16.3100462%2013.1871345%2C15.4761337%2014.2593079%2C15.4761337%20C15.3314812%2C15.4761337%2016.1653938%2C16.3100462%2016.1653938%2C17.3822196%20C16.1653938%2C18.4543929%2015.2917711%2C19.2883055%2014.2593079%2C19.2883055%20L14.2593079%2C19.2883055%20Z%20M33.4272076%2C19.8207637%20C32.2726432%2C19.8207637%2031.2957041%2C18.8882309%2031.2957041%2C17.6892601%20C31.2957041%2C16.4902894%2032.2282369%2C15.5577566%2033.4272076%2C15.5577566%20C34.6261784%2C15.5577566%2035.5587112%2C16.4902894%2035.5587112%2C17.6892601%20C35.5587112%2C18.8882309%2034.5817721%2C19.8207637%2033.4272076%2C19.8207637%20L33.4272076%2C19.8207637%20Z%20M38%2C10%20L38%2C13.1954023%20L38%2C16%20L35%2C16%20C34.8%2C14.5287356%2034.32%2C15%2033%2C15%20C31.7103092%2C15%2031.2187806%2C14.6045949%2031%2C16%20C30.9948584%2C16.0327936%2030.7645923%2C15.9662175%2030.76%2C16%20L30%2C16%20L30%2C4%20L33.8%2C4%20L38%2C10%20Z%20M28%2C2%20L28%2C3.75%20L28%2C16%20L17%2C16%20C16.7692308%2C14.6%2016.5230769%2C15%2015%2C15%20C13.4769231%2C15%2012.2307692%2C14.6%2012%2C16%20L10%2C16%20L9%2C2%20L28%2C2%20Z%22%20fill%3D%22%232D2D2D%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%220%22%20y%3D%225%22%20width%3D%2215%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%226%22%20y%3D%229%22%20width%3D%228%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%223%22%20y%3D%229%22%20width%3D%222%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%225%22%20y%3D%2213%22%20width%3D%227%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Rectangle-581%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-2)%22%20stroke-width%3D%222%22%20xlink%3Ahref%3D%22%23path-1%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Oval-71%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-4)%22%20stroke-width%3D%224%22%20xlink%3Ahref%3D%22%23path-3%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Oval-71%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-6)%22%20stroke-width%3D%224%22%20xlink%3Ahref%3D%22%23path-5%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E" alt="deliverytruck"></div>
-                <div><p>FREE* STANDARD DELIVERY</p>
-                     <p>Faster delivery options available to most countries.</p>
-                     <p><a href="https://www.asos.com/payments-and-deliveries/delivery/">More info</a></p></div>
+            <div id="delivery">
+                <a href="home.html"><button><h3>CONTINUE SHOPPING</h3></button></a>
             </div>
         </div>
         <div id="total">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+                <h3>HAVE YOUR SAY</h3>
+                <p>Take our two minute survey and tell us what you think:</p>
+                <button><h3>LET'S GO</h3></button>
+            </div>
+            <div>
+                <h3>GET MORE ASOS ON:</h3>
+                <img src="https://i.ibb.co/xSgLxj2/social-Logos.png" alt="">
+            </div>
+            <div><img src="https://marketplace-images.asos.com/cms/3-2016/mp-asos-confirmation-page-desktop-female-193621.jpg" alt=""></div>
         </div>
     </div>
 </body>
@@ -235,8 +214,9 @@
               previousprice:10.00,
               itemcolor:"Black",
             }]
+            document.querySelector("#noItems").innerText=arr.length+" "+"ITEMS"
           if(arr.length>0){
-            document.querySelector("#emptybag").innerHTML="";
+            
             document.querySelector("body").style.backgroundColor="#eeeeee";
             let createdbag=document.querySelector("#mainbag")
             let f1=document.querySelector("#finalSum1")
@@ -306,16 +286,7 @@
          
            
            }
-     else if(arr.length==0){
-     document.querySelector("#filledcart").innerHTML="";
-     if(3>2){document.querySelector("#signtxt").innerHTML="";
-             document.querySelector("#signbtn").innerText="VIEW SAVED ITEMS"
-            let lnk=document.createElement("a")
-            lnk.setAttribute("href","www.google.com")
-            lnk.innerText="Continue Shopping"
-            document.querySelector("#emptybag").append(lnk)
-            }
-    }
+    
           
 
 </script>
