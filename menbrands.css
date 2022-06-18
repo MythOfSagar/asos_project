@@ -1,0 +1,122 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+                     /* first child */
+.main>div:nth-child(1)
+{
+    width: 100%;
+    display: grid;
+    border: 1px solid;
+    grid-template-columns: repeat(3,1fr );
+    padding: 10px 0px;
+    gap: 15%;
+    background-color: red;
+}
+#red>div
+{
+    margin: auto;
+}
+#red>div>button
+{
+   width: 80px;
+   height: 30px;
+   background-color: transparent; 
+  
+}
+#red>div:nth-child(2)
+{
+    width: 90%;
+    text-align: center;
+  
+}
+                        /* second child */
+.main>div:nth-child(2)
+{
+    width: 90%;
+    margin: auto; 
+}
+#list ol
+{
+display: flex;
+margin: 20px;
+list-style-type: none;
+}
+#list a
+{
+    text-decoration: none;
+
+    color: #2D2D2D
+}
+#list li:last-child>a
+{
+    color: #767676 
+}
+#list span
+{
+    padding: 0px 11px 0px 14px;
+    color: #767676;
+    font-size: 20px;
+}
+                           /* third child */
+.main>div:nth-child(3)
+{
+    width:90%;
+    margin: auto;
+   display: grid;
+   grid-row: repeat(100,30px);
+   
+   
+}
+.main>div:nth-child(3)>div:nth-child(1)
+{
+    width:100%;
+    margin: auto;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 2px;
+    background-color: #EEEEEE;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+.Alpha
+{
+    width:100%;
+    margin: auto;
+    margin-bottom: 2px;
+    height: 10px;
+    background-color:#EEEEEE;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+                            /* Different brands section */
+.main>div:nth-child(3) div
+{
+    width:100%;
+    margin: auto;
+    padding: 24px 16px;
+    height: 25px;
+    box-shadow: rgba(134, 134, 137, 0.1) 0px 1px 0px;
+}
+.main>div:nth-child(3) a
+{
+    text-decoration: none;
+    color: #2D2D2D;
+}
+
+                           /* Last child section */
+.main>div:nth-child(3)>div:last-child
+{
+    width:100%;
+    margin: auto;
+    height: 50px;
+    background-color: #EEEEEE;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+   
+}
+
+a>div:hover
+{
+    width: 100%;
+    background-color: rgb(241, 238, 244);
+}

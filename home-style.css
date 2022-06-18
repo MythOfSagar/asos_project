@@ -740,11 +740,14 @@ width: fit-content;
 /*  */
 /*  */
 /*  */
-@media all and (max-width: 1000px) and (min-width:770px){
+@media all and (max-width: 900px) and (min-width:770px){
   #body{
   width: 100%;
   margin-top: 0px;
 }
+  #main{
+    display : none;
+  }
 #bottom{
   width: 100%;
   grid-template-columns: repeat(2,30%);
@@ -777,6 +780,9 @@ width: fit-content;
         width: 100%;
         margin-top: 0px;
       }
+   #main{
+    display : none;
+  }
 #text>h2{
   font-size: 30px;
   font-weight: 800;

@@ -42,15 +42,12 @@
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(3,32px);
-    grid-template-rows:  22px;
-    justify-content: space-between;
-    margin: auto;
-    text-align: center;
-    line-height: 30px;
-    gap: 50px;
-   
+     grid-template-columns: repeat(3,35px);
+    grid-template-rows:  auto;
+    justify-content: space-evenly;
+    gap: 40px;
 }
+
 #social div:nth-child(2)
 {
     margin: auto;
@@ -66,43 +63,22 @@
     margin: auto;
     gap: 30px;
 }
-#social>.icons>a:nth-child(1)
+ #social>.icons>a 
 {       
-    color:white;
-    background-color: navy;
     border-radius: 50%;
     height: 32px;
-    border: 2px solid ;
-
-  
+  border: 1px solid white;
+  margin-top: 15px;
 }
-#social>.icons>a:nth-child(2)
+
+#social>.icons>a img
 {
-    background-color:blueviolet ;
-    color: white;
+    padding: 2px;
     border-radius: 50%;
-    border: none;
-    border: 2px solid ;
-    height: 32px;
-  
-    
-}
-
-#social>.icons>a:nth-child(3)
-{
-    color: white; 
-     background-color: yellow;
-   border-radius: 50%;
-   border: none;
-    height: 32px;
-    border: 2px solid white ;
-    
 }
 #social>.icons>a:hover
 {
-  border: 2px solid blue;
- 
-
+  border: 1px solid blue;
 }
 a:hover
 {
@@ -253,13 +229,5 @@ background-color:#ddd;
     opacity: 0.8;
     text-decoration: none;
 }
-#social
-{
-   
-    display: grid;
-    grid-template-columns: repeat(3,30px);
-    padding:0% 10px;
-   border: 1px solid #EEEEEE; ;
 
-}
 }
