@@ -1,5 +1,21 @@
 // script for navbar
+document.getElementById("payment").addEventListener("click",payment)
+    
+    function payment(){
+    document.getElementById("blur").style.display="flex"
+    
+    
+    }
 
+document.querySelector("#btn1").addEventListener("click",function(){
+    console.log("prateek");
+})
+document.querySelector("#btn2").addEventListener("click",function(){
+    console.log("prateek");
+})
+
+
+// script for home page
 let logindatafrmls = JSON.parse(localStorage.getItem("loginData")) || [];
 if(logindatafrmls.length == 0){
     document.querySelector("#signin").addEventListener("click",function(){
