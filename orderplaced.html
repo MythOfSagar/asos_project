@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASOS | Checkout</title>
+    <style>
+       
+        
+        #filledcart{
+            display: grid;
+            grid-template-columns:560px 360px;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        
+        #otherbag{
+            display: flex;
+            flex-direction: column;
+            gap:10px
+        }
+        
+        #total{display: flex;
+        flex-direction: column;}
+        #total>div:last-child img{width: 360px;}
+        #total>div:nth-child(2){display: flex;
+        flex-direction: column;
+        align-items: center;
+         justify-content:center ;}
+         #total>div:first-child{display: flex;
+            background-color: lightblue;
+        flex-direction: column;
+         align-items: center;
+        text-align: center;}
+        #total>div:first-child p{width:240px}
+        #total>div:first-child button{
+            background-color: white;
+            border: 1px solid cyan;
+            width: 280px;
+            margin-bottom: 20px;
+        }
+        #mainbag{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 0px 30px;
+        }
+        #mainbag>div{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            border-bottom: 1px solid #eeeeee;
+        }
+        #mainbag>div>div{
+            display: flex;
+        }
+        #mainbag>div>div>div:nth-child(2)>div:first-child{
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            border: 1px solid red;
+            /* Price section */
+        }
+        #mainbag>div>div>div:nth-child(2)>div:nth-child(3){
+            display: flex;
+            border: 1px solid red;
+            /* color quantity */
+        }
+        #mainbag>div>div>div:nth-child(2)>div:nth-child(4){
+            display: flex;
+            border: 1px solid #eeeeee;
+            /* save for later */
+        }
+       
+        #mainbag img{
+            width: 100px;
+        }
+        #subtotal{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: white;
+            padding: 5px 30px;
+        }
+        #subtotal img{height: 25px;}
+        @media only screen and (min-width: 515px) and (max-width: 869px) {
+        #filledcart{
+            width: 95%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+      }
+      @media only screen and (min-width: 870px) and (max-width: 1024px) {
+        #filledcart{
+            display: grid;
+            grid-template-columns:57% 37%;
+            justify-content: center;
+            gap: 10px;
+        }
+      }
+      @media only screen and (min-width: 1px) and (max-width: 514px) {
+        #filledcart{
+            display: grid;
+            grid-template-columns:470px;
+            justify-content: center;
+            gap: 10px;
+        }
+      }
+      #topmost{
+        display: flex;
+        gap: 220px;
+        justify-content: center;
+        align-items: center;
+    }
+    #topmost img{width: 100px; height: 40px; margin-bottom: -20px;}
+      *{font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+      #delivery button{
+        background-color: black;
+        color: white;
+        padding: 0px 140px;
+      }
+      #delivery{margin: auto;}
+      #Links{
+        padding-left: 25px;
+        margin-top: -11px;
+        background-color: white;}
+        #orderDetails{
+            padding-left: 25px;
+            background-color: white;}
+        #orderDetails>div{
+            display: flex;
+        }
+        #orderDetails>div>div:first-child{width: 150px;
+        margin-right: 140px;}
+        #orderDetails>div>div:last-child{
+            display: flex;
+            flex-direction: column;
+            width: 220px;} 
+        #otherbag>div:nth-child(2){background-color: white;padding-left: 25px;
+        margin-bottom: -9px;}
+    </style>
+</head>
+<body>
+    <div id="topmost">
+        <img src="https://assets.asosservices.com/checkout/2.0.1.8898/images/chrome/asos-logo/asos-logo.svg" alt="">
+        <h1>CHECKOUT</h1>
+        <img src="https://i.ibb.co/YfTDbhc/digiii.png" alt="">
+    </div>
+    
+    <div id="filledcart">
+        <div id="otherbag">
+            <div id="orderDetails">
+                <h3>THANK YOU FOR YPUR ORDER</h3>
+                <p>Please check your inbox as a confirmation email is on it's way.</p>
+                <div>
+                    <div>
+                        <h3>ORDER TOTAL:</h3>
+                        <h3>ORDER REFERENCE:</h3>
+                        <h3>DELIVERY:</h3>
+                        <h3>ORDER STATUS:</h3>
+                    </div>
+                    <div>
+                        <p>price</p>
+                        <p>IND778MAH989AMT</p>
+                        <p>Delivery on or before</p>
+                        <p>Received</p>
+                    </div>
+                </div>
+            </div>
+            <div><h3 id="noItems"></h3></div>
+            <div id="mainbag"></div>
+            <div id="Links">
+                <a href="https://www.asos.com/customer-care/returns-refunds/"><p>Cancel this Order</p></a>
+                <a href="home.html"><p>My Account</p></a>
+                <a href="https://www.asos.com/customer-care/returns-refunds/what-is-your-returns-policy/"><p>Returns Policy</p></a>
+            </div>
+            <div id="subtotal">
+                <img src="https://i.ibb.co/hBkzBJV/re-Cycle-Logo.png" alt="">
+                <p>Our plastic bag and cardboard are 100% recyclable</p>
+            </div>
+            
+            <div id="delivery">
+                <a href="index.html"><button><h3>CONTINUE SHOPPING</h3></button></a>
+            </div>
+        </div>
+        <div id="total">
+            <div>
+                <h3>HAVE YOUR SAY</h3>
+                <p>Take our two minute survey and tell us what you think:</p>
+                <a href="https://feedback.inmoment.eu/websurvey/2/execute?_g=NDY%3DX&_s=f687d441-906f-4e13-bd8c-d8986d2a304c#!/1"><button><h3>LET'S GO</h3></button></a>
+            </div>
+            <div>
+                <h3>GET MORE ASOS ON:</h3>
+                <a href="https://www.facebook.com/ASOS"><img src="https://i.ibb.co/xSgLxj2/social-Logos.png" alt=""></a>
+            </div>
+            <div><img src="https://marketplace-images.asos.com/cms/3-2016/mp-asos-confirmation-page-desktop-female-193621.jpg" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let arr=[{imagelink:"https://images.asos-media.com/products/hiit-mesh-overlay-shorts-in-black/24235257-1-black",
+              title:"HIIT mesh overlay shorts in black",
+              price:7.50,
+              previousprice:10.00,
+              itemcolor:"Black",
+            }, {imagelink:"https://images.asos-media.com/products/hiit-mesh-overlay-shorts-in-black/24235257-1-black",
+              title:"HIIT mesh overlay shorts in black",
+              price:7.50,
+              previousprice:10.00,
+              itemcolor:"Black",
+            }]
+            document.querySelector("#noItems").innerText=arr.length+" "+"ITEMS"
+          if(arr.length>0){
+            
+            document.querySelector("body").style.backgroundColor="#eeeeee";
+            let createdbag=document.querySelector("#mainbag")
+            let f1=document.querySelector("#finalSum1")
+            let f2=document.querySelector("#finalSum2")
+          arr.map(wholeBag)
+          function wholeBag(el,index){
+             let singlebag=document.createElement("div")
+             singlebag.setAttribute("id","saved")
+             let detailsimage=document.createElement("div")
+             let image=document.createElement("div")
+             let photo=document.createElement("img")
+             photo.setAttribute("src",el.imagelink)
+             image.append(photo)
+             let details=document.createElement("div")
+             let pricedetails=document.createElement("div")
+             let mainprice=document.createElement("h3")
+             mainprice.innerText="£"+" "+el.price
+             
+             pricedetails.append(mainprice)
+             let itemname=document.createElement("p")
+             itemname.innerText=el.title
+             let colorquantity=document.createElement("div")
+             let colortype=document.createElement("p")
+             colortype.innerText=el.itemcolor
+             let qt=document.createElement("p")
+             qt.innerText="Qty"
+             
+             colorquantity.append(colortype,qt)
+             let forlater=document.createElement("div")
+ 
+             let sl=document.createElement("p")
+             sl.innerText="Save for later"
+             forlater.append(sl)
+             details.append(pricedetails,itemname,colorquantity,forlater)
+             detailsimage.append(image,details)
+            
+             singlebag.append(detailsimage)
+             createdbag.append(singlebag)
+          }
+            let countArr=[]
+            for(let m=0;  m<arr.length; m++){
+             countArr.push(1)
+            }
+            let sum=0;
+            for(let q=0; q<arr.length; q++){
+                sum=sum+((arr[q].price))
+            }
+            localStorage.setItem("thesum",sum)
+            console.log(sum)
+          function totalprice(quantity,index){
+            countArr[index]=quantity.value
+            let sum=0;
+            for(let q=0; q<arr.length; q++){
+                sum=sum+((arr[q].price)*(countArr[q]))
+            }
+            localStorage.setItem("thesum",sum)
+            let finalTotal=localStorage.getItem("thesum")
+            f1.innerText="£"+" "+finalTotal
+            f2.innerText="£"+" "+finalTotal
+          }
+          let finalTotal=localStorage.getItem("thesum")
+          
+           f1.innerText="£"+" "+finalTotal
+           f2.innerText="£"+" "+finalTotal
+
+
+         
+           
+           }
+    
+          
+
+</script>

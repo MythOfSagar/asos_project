@@ -1,0 +1,129 @@
+body{
+    background-color: #eeeeee;
+}
+#signup{
+    width: 40%;
+    margin: auto;
+    font-family: futura-pt,Tahoma,Geneva,Verdana,Arial,sans-serif;
+   margin-top: 70px;
+   padding-top: 30px;
+   background-color: white;
+}
+#signup>p{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+#img{
+display: grid;
+justify-content: center;
+margin-top: 50px;
+}
+#signup>form>label{
+font-family: sans-serif;
+font-size:  15px; 
+}
+#signup>div>div{
+font-weight: 700;
+font-family: sans-serif;
+letter-spacing: 2px;
+cursor: pointer;
+padding:0px 30px;
+}
+#signup>div>:first-child{
+text-align: center;
+border-bottom: 2px solid rgb(22, 22, 194);
+}
+#signup>div>:nth-child(2)>p>a{
+    color: #696767;
+}
+#signup>div>:last-child{
+text-align: center;
+}
+#signup>div>div>p>a{
+text-decoration: none;
+color: black;
+}
+#signup>div{
+display: grid;
+justify-content: space-around;
+grid-template-columns: repeat(2,45%);
+}
+#signup>div>p:nth-child(3)>a{
+text-decoration: none;
+color: black;
+}
+#signup>form{
+width: 60%;
+margin:60px auto;
+}
+#signup>form>input{
+margin-top: 20px;
+margin-bottom: 20px;
+width: 100%;
+height: 50px;
+font-size: 30px;
+
+}
+#signup>form>label{
+letter-spacing: 2px;
+color: rgb(86, 85, 85);
+
+}
+form>p{
+font-size: 10px;
+letter-spacing: 2px;
+}
+form>div{
+margin-top: 10px;
+width: 100% ;
+height: 50px;
+display: grid;
+grid-template-columns: 20% 50% 20%;
+grid-column-gap: 5%;
+}
+form>p{
+margin-bottom: 60px;
+}
+#submit{
+width: 100%;
+color: white;
+background-color: #2d2d2d;
+border: none;
+cursor: pointer;
+letter-spacing: 3px;
+
+}
+#bottom{
+display: flex;
+font-family: sans-serif;
+font-size: 10px;
+justify-content: center;
+margin: auto;
+width: 40%;
+
+margin-top: 20px;
+
+
+}
+#bottom>a:first-child{
+color: black;
+border-right: 0.2px solid;
+padding-right: 5px ;
+letter-spacing: 2px;
+}
+#bottom>a:last-child{
+color: black;
+padding-left: 5px;
+letter-spacing: 2px;
+}
+#submit:hover{
+    background-color: #444343;
+}
+@media all and (max-width: 1000px) {
+    
+  #signup{
+    margin: 50px 0%;
+    width: 100%;
+  }
+}

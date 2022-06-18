@@ -1,8 +1,15 @@
+Asos Website Project
+
+Members:-
 1. Sagar Wankhade
 2. Rohit Yadav
-3.Vijay Handal
-4.Pratyay Chakraborty
+3. Vijay Handal
+4. Pratyay Chakraborty
 5. Chinni Jagdeesh
+<<<<<<< HEAD
+6. Prateek Chauhan
+=======
 6. Prateek Chauhan
 
-Extra member
+   Extra member
+>>>>>>> 3a1c4815161b8df465aedb2d84eb89bdff3a1556
