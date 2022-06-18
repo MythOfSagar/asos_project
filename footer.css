@@ -4,13 +4,10 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
+                                                  /* main section */
 #Main
-{
-   
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-   
+{  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position:fixed;
     bottom: 0px;
     width: 100%;
     line-height: 2;
@@ -20,15 +17,13 @@
     width: 100%;
     height: 60px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-olumns: repeat(3,1fr);
     padding:0%  30%;
     background-color: white;
     justify-content: space-evenly;
     gap: 40px;
     border: 1px solid #EEEEEE; 
-    
-
-}
+    }
 
 
 #social img
