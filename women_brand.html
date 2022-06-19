@@ -1336,9 +1336,7 @@ img+p{
     justify-content: space-evenly;
     gap: 40px;
     border: 1px solid #EEEEEE; 
-    
-
-}
+    }
 
 
 #social img
@@ -1352,15 +1350,12 @@ img+p{
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(3,32px);
-    grid-template-rows:  22px;
-    justify-content: space-between;
-    margin: auto;
-    text-align: center;
-    line-height: 30px;
-    gap: 50px;
-   
+     grid-template-columns: repeat(3,35px);
+    grid-template-rows:  auto;
+    justify-content: space-evenly;
+    gap: 40px;
 }
+
 #social div:nth-child(2)
 {
     margin: auto;
@@ -1376,43 +1371,22 @@ img+p{
     margin: auto;
     gap: 30px;
 }
-#social>.icons>a:nth-child(1)
+ #social>.icons>a 
 {       
-    color:white;
-    background-color: navy;
     border-radius: 50%;
     height: 32px;
-    border: 2px solid ;
-
-  
+  border: 1px solid white;
+  margin-top: 15px;
 }
-#social>.icons>a:nth-child(2)
+
+#social>.icons>a img
 {
-    background-color:blueviolet ;
-    color: white;
+    padding: 2px;
     border-radius: 50%;
-    border: none;
-    border: 2px solid ;
-    height: 32px;
-  
-    
-}
-
-#social>.icons>a:nth-child(3)
-{
-    color: white; 
-     background-color: yellow;
-   border-radius: 50%;
-   border: none;
-    height: 32px;
-    border: 2px solid white ;
-    
 }
 #social>.icons>a:hover
 {
-  border: 2px solid blue;
- 
-
+  border: 1px solid blue;
 }
 a:hover
 {
@@ -1729,7 +1703,7 @@ background-color:#ddd;
                 <a href="wemenspage.html"><div>WOMEN</div></a>
                 <a href="menspage.html"><div>MEN</div></a>
             </div>
-                <div><div><input type="text" placeholder="Search for items and brand"><img src="https://cdn-icons.flaticon.com/png/128/2801/premium/2801881.png?token=exp=1655200307~hmac=a1de287c0a5836d115b6c87356d43744" alt=""> </div></div>
+                <div><div><input type="text" placeholder="Search for items and brand"><img src="https://static.thenounproject.com/png/629578-200.png" alt=""> </div></div>
                 
             <div>
                 <div><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8cGF0aCBkPSJtMzc2IDBjLTQ5LjM3NSAwLTk4LjI3IDkuNzI2Ni0xNDMuODkgMjguNjIxLTQ1LjYyMSAxOC44OTUtODcuMDcgNDYuNTktMTIxLjk4IDgxLjUwOC0zNC45MTggMzQuOTE0LTYyLjYxMyA3Ni4zNjMtODEuNTA4IDEyMS45OC0xOC44OTUgNDUuNjE3LTI4LjYyMSA5NC41MTItMjguNjIxIDE0My44OSAwIDk5LjcyMyAzOS42MTcgMTk1LjM2IDExMC4xMyAyNjUuODcgNzAuNTE2IDcwLjUxNiAxNjYuMTUgMTEwLjEzIDI2NS44NyAxMTAuMTMgOTkuNzIzIDAgMTk1LjM2LTM5LjYxNyAyNjUuODctMTEwLjEzIDcwLjUxMi03MC41MTIgMTEwLjEzLTE2Ni4xNSAxMTAuMTMtMjY1Ljg3IDAtOTkuNzE5LTM5LjYxMy0xOTUuMzYtMTEwLjEyLTI2NS44Ny03MC41MTYtNzAuNTE2LTE2Ni4xNS0xMTAuMTMtMjY1Ljg4LTExMC4xM3ptMCA0Mi40NjVjNDMuMzE2IDAgODYuMjA3IDguNjI1IDEyNi4yMyAyNS4zODcgNDAuMDIgMTYuNzYyIDc2LjM3OSA0MS4zMzIgMTA3LjAxIDcyLjMwNXM1NC45MjYgNjcuNzM4IDcxLjUgMTA4LjIxYzE2LjU3OCA0MC40NjUgMjUuMTA1IDgzLjg0IDI1LjEwNSAxMjcuNjQgMCA4OC40NjEtMzQuNzUgMTczLjMtOTYuNjA1IDIzNS44NC02MS44NTkgNjIuNTUxLTE0NS43NSA5Ny42OTEtMjMzLjIzIDk3LjY5MS00My4zMTIgMC04Ni4yMDctOC42MjUtMTI2LjIyLTI1LjM4Ny00MC4wMi0xNi43NjItNzYuMzgzLTQxLjMzMi0xMDcuMDEtNzIuMzAxLTMwLjYyOS0zMC45NzMtNTQuOTI2LTY3Ljc0Mi03MS41MDQtMTA4LjIxLTE2LjU3NC00MC40NjktMjUuMTA1LTgzLjg0LTI1LjEwNS0xMjcuNjRzOC41MzEyLTg3LjE3MiAyNS4xMDUtMTI3LjY0YzE2LjU3OC00MC40NjkgNDAuODcxLTc3LjIzOCA3MS41LTEwOC4yMSAzMC42MjktMzAuOTY5IDY2Ljk5Mi01NS41MzkgMTA3LjAxLTcyLjMwMSA0MC4wMi0xNi43NjIgODIuOTE0LTI1LjM4NyAxMjYuMjMtMjUuMzg3eiIvPgogIDxwYXRoIGQ9Im00ODAuODkgMzI5LjM3YzguODUxNi0xNi42MjEgMTMuODk4LTM1LjUzNSAxMy44OTgtNTUuNjMzIDAtNjUuNTA0LTUzLjI5My0xMTguNzktMTE4Ljc4LTExOC43OS02NS41MTYgMC0xMTguODEgNTMuMjkzLTExOC44MSAxMTguNzkgMCAyMC4wOTggNS4wNjI1IDM5LjAyNyAxMy44OTggNTUuNjMzLTQ1LjY3MiA3LjEwNTUtNzEuNDk2IDQwLjM4Ny03MS40OTYgOTMuOTE4djExMC44MmMwIDM0LjcxOSAyOC4yMzggNjIuOTU3IDYyLjk1NyA2Mi45NTdoMjI2Ljg5YzYuMTI4OSAwIDExLjA5OC00Ljk3MjcgMTEuMDk4LTExLjA5OCAwLTYuMTI4OS00Ljk3MjctMTEuMDk4LTExLjA5OC0xMS4wOThsLTIyNi44OS0wLjAwMzkwNmMtMjIuNDggMC00MC43NTgtMTguMjc3LTQwLjc1OC00MC43NTh2LTExMC44MmMwLTQ2LjcyMyAyMS41MzEtNzEuMDUxIDYzLjYwOS03Mi44NzEgMjEuODEyIDI1LjcyMyA1NC4zMTIgNDIuMTE3IDkwLjYwMiA0Mi4xMTcgMzYuMjg5IDAgNjguNzczLTE2LjM5OCA5MC41ODYtNDIuMTE3IDQyLjA1OSAxLjgwNDcgNjMuNjA5IDI2LjE1MiA2My42MDkgNzIuODcxdjExMC44MmMwIDYuMTI4OSA0Ljk3MjcgMTEuMDk4IDExLjA5OCAxMS4wOTggNi4xMjg5IDAgMTEuMDk4LTQuOTcyNyAxMS4wOTgtMTEuMDk4di0xMTAuODJjMC01My41MjctMjUuODI0LTg2LjgxMi03MS41MDgtOTMuOTE4em0tMTA0Ljg5IDQwLjk2NWMtNTMuMjc3IDAtOTYuNjA5LTQzLjMzMi05Ni42MDktOTYuNTk4IDAtNTMuMjYyIDQzLjM0OC05Ni41OTQgOTYuNjA5LTk2LjU5NHM5Ni41ODIgNDMuMzMyIDk2LjU4MiA5Ni41OThjMCA1My4yNjItNDMuMzE2IDk2LjU5NC05Ni41ODIgOTYuNTk0eiIgZmlsbD0iI2ZmZiIvPgogPC9nPgo8L3N2Zz4K" alt="">
@@ -2147,10 +2121,9 @@ background-color:#ddd;
         <div id="social">
             
             <div class="icons">
-               
-                <a href="https://www.facebook.com/ASOS/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/asos/" target="_blank"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.snapchat.com/add/asosfashion" target="_blank"><i class="fa fa-snapchat-ghost color"></i></a> 
+        <a href="" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb3-ekCXQyRdygRUsiq7-4bFBqZG6JnLU7Uw&usqp=CAU"></a>
+     <a href="" target="_blank"><img src="https://tse4.mm.bing.net/th?id=OIP.TxVY_Guy5LPYqKN5wJ7SsQHaHa&pid=Api&P=0&w=163&h=163"></a>
+     <a href="" target="_blank"><img src="https://tse2.mm.bing.net/th?id=OIP.XbBJ8fDnYwZKyW5fbpVA7wHaHa&pid=Api&P=0&w=179&h=179"></a> 
                 
             </div>
             <div><i class="vrt"></i> </div>
@@ -2237,7 +2210,7 @@ document.querySelector("#asos").addEventListener("click",openlnk)
         catagory: "Outwear",
         responsible: "recycled",
         bodyfit: "Extra Wide Fit",
-        img: "https://images.asos-media.com/products/a-star-is-born-bridal-embellished-skater-dress-in-ecru/201581480-1-ecru?$n_320w$&wid=317&fit=constrain",
+        img: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16723126/2022/2/7/46a8dcd3-5937-4690-98ea-09f750f703781644248032248-Tokyo-Talkies-Mauve-Bodycon-Mini-Dress-91644248031768-5.jpg",
     },
 
     {

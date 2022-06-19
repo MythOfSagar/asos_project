@@ -19,6 +19,21 @@
            padding: 10px 30px;
            justify-content: space-between;
         }
+        
+        #IMP{
+            padding-right: 20px;
+            padding-left: 25px;}
+        #IMP input,#paymentType input{
+            width: 300px;height: 50px;
+        margin-top: -240px;}
+        #IMP button,#paymentBar button{
+        margin-left: 15px;
+        height:40px;
+        
+        width: 200px;
+        color: white;
+        background-color: black;
+    }
         #deilvery img{
             width: 40px;
             margin-top: 15px;
@@ -56,8 +71,8 @@
             color: white;
             background-color: #018849;
         }
-        #total>div:nth-child(7) img{
-           width: 65%;
+        #total>div:last-child{
+           display: flex;
         }
         #total{
             height: fit-content;
@@ -67,12 +82,15 @@
             padding: 10px 30px;
         }
         #total>div:first-child{
+            display: flex;
+            justify-content: space-between;
            border-bottom: 1px solid #eeeeee;
         }
         #total>div:nth-child(2){
             display: flex;
             justify-content: space-between;
         }
+        #total a{margin-top: 17px;}
         #total>div:nth-child(3){
             display: flex;
             justify-content: space-between;
@@ -81,37 +99,30 @@
             display: flex;
             flex-direction: column;
             background-color: white;
-            padding: 0px 30px;
         }
+
         #mainbag>div{
             display: flex;
-            justify-content: space-between;
             margin-top: 20px;
             border-bottom: 1px solid #eeeeee;
         }
+        #mainbag>div>div>div:nth-child(2) p{
+            font-size: 14px;
+         }
         #mainbag>div>div{
             display: flex;
         }
-        #mainbag>div>div>div:nth-child(2)>div:first-child{
-            display: flex;
-            width: 50%;
-            justify-content: space-between;
-            border: 1px solid red;
-            /* Price section */
+        #mainbag>div>div>div:nth-child(2){
+            
+            margin-top: -22px;
+            display: grid;
+            grid-template-rows: repeat(4,35px);
         }
-        #mainbag>div>div>div:nth-child(2)>div:nth-child(3){
-            display: flex;
-            border: 1px solid red;
-            /* color quantity */
-        }
-        #mainbag>div>div>div:nth-child(2)>div:nth-child(4){
-            display: flex;
-            border: 1px solid #eeeeee;
-            /* save for later */
-        }
+        
        #mbl{display: flex; gap: 14px;}
        #mbl p{margin-top: 19px;}
         #mainbag img{
+            margin-right: 15px;
             width: 100px;
         }
         #subtotal{
@@ -166,6 +177,7 @@
         #paymentOptions>div:nth-child(3) img{margin-right: 75px}
         #paymentOptions>div:nth-child(1) img{margin-right: 30px}
         #weaccept{display: flex;
+            padding-left: 25px;
                   margin-top: -8px;}
         #weaccept img{
             margin: 20px 0px 0px 20px;
@@ -180,12 +192,10 @@
             background-color: #018849}
         #subtotal>div:first-child{
         display: flex;
-        margin: auto;
+        padding: 0px 25px;
         justify-content: space-between;
-        text-align: center;
-        gap: 155px;
         }
-        #subtotal>div:first-child h2{margin-right: -45px;}
+        
         #optionsDisplay{
             display: flex;
         }
@@ -214,7 +224,27 @@
         align-items: center;
     }
     #topmost img{width: 100px; height: 40px; margin-bottom: -20px;}
-      *{font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+    #BTN{
+        margin-left: 15px;
+        height:40px;
+
+        width: 200px;
+        color: white;
+        background-color: black;
+    }
+    #IP{
+        height:40px;
+    }
+    #paymentBar{
+        padding-left: 25px;
+    }
+    #paymentType{padding-left: 25px;}
+    #paymentType
+    
+    
+    #deliveryChoice>h3:first-child{margin-left: 25px;}
+    #creditForm select{height:50px;width: 147px;margin-right: 15px;}
+    *{font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
     </style>
 </head>
 <body>
@@ -241,20 +271,20 @@
             
             <div id="deilvery">
                 <div><h3>EMAIL ADDRESS</h3>
-                     <p>registered mail</p>
+                     <p id="EMAIL">registered mail</p>
                      </div>
             </div>
 
-            <div >
+            <div id="IMP">
                 <h3>DELIVERY ADDRESS</h3>
                 <div id="deliveryaddress">
                     <div id="refaddress">
                 <h4>ADD ADDRESS</h4>
                 
                     <label for=""><h4>FIRST NAME :</h4></label><br />
-                    <input id="name" type="text" value="sagar" /><br />
+                    <input id="name" type="text" value="" /><br />
                     <label for=""><h4>LAST NAME :</h4></label><br />
-                    <input id="lastname" type="text" value="wankhade" /><br />
+                    <input id="lastname" type="text" value="" /><br />
                     <label for="" id="mbl"><h4>MOBILE</h4><p>(For delivery updates ):</p></label><br />
                     <input id="mobile" type="number" placeholder="Enter Mobile number" /><br />
                     <label for=""><h4>ADDRESS :</h4></label><br />
@@ -348,18 +378,23 @@
             </div>
         </div>
         <div id="total">
+            <div>
+                <h4 id="noItems">hi</h4>
+                <a href="cart.html">Edit</a>
+            </div>
             <div id="mainbag"></div>
+            <div><h4>TOTAL TO PAY</h4>
+                <h4 id="ttP"></h4>
+            </div>
         </div>
     </div>
     
 </body>
 </html>
 <script>
-    let orderbtn=document.querySelector("#placeOrder")
-    orderbtn.addEventListener("click",orderPage)
-    function orderPage(){
-        document.querySelector("#placeOrderlink").setAttribute("href","orderplaced.html")
-    }
+    let obb=JSON.parse(localStorage.getItem("SignupDATA"))
+    document.querySelector("#EMAIL").innerText=obb[0].email
+    document.querySelector("#ttP").innerText=localStorage.getItem("thesum")
     let cForm=document.querySelector("#creditForm")
     let cC=document.querySelector("#creditCard")
     cC.addEventListener("click",apndForm)
@@ -373,6 +408,7 @@
      thecardNum.setAttribute("type","number")
      let expDate=document.createElement("h4")
      expDate.innerText="EXPIRY DATE"
+     let DATE=document.createElement("div")
      let Months=document.createElement("select")
      let mnth=document.createElement("option")
      mnth.innerText="Month"
@@ -390,7 +426,8 @@
              let yr=document.createElement("option")
              yr.innerText=i
              yr.setAttribute("value",i)
-             Years.append(yr)}        
+             Years.append(yr)}  
+             DATE.append(Months,Years)              
      let nameCard=document.createElement("h4")
      let thenameCard=document.createElement("input")
      thenameCard.setAttribute("type","text")
@@ -408,8 +445,18 @@
      saveDetails.append(box,boxtxt)
      let cardBTN=document.createElement("button")
      cardBTN.innerText="USE THIS CARD"
-     cForm.append(add,cardNum,thecardNum,expDate,Months,Years,nameCard,thenameCard,cvvCard,thecvvCard,saveDetails,cardBTN)
+     cForm.append(add,cardNum,thecardNum,expDate,DATE,nameCard,thenameCard,cvvCard,thecvvCard)
+     let orderbtn=document.querySelector("#placeOrder")
+    orderbtn.addEventListener("click",orderPage)
+    function orderPage(){
+        if((thecardNum.value=="000000000000" || thecardNum.value=="888888888888") && thenameCard.value.length>0 && thecvvCard.value>99 && thecvvCard.value<9999 && Months.value>0 && Years.value>0){
+            window.location.href="orderplaced.html"
+        }
+        
+        // document.querySelector("#placeOrderlink").setAttribute("href","orderplaced.html")
     }
+    }
+    
     let cbtn=document.querySelector("#codebtn")
     cbtn.addEventListener("click",codeOptions)
     let Q=0
@@ -442,7 +489,9 @@
         titleip.innerText="PROMO/STUDENT CODE:"
         let ipbtn=document.createElement("div")
         let ip=document.createElement("input")
+        ip.setAttribute("id","IP")
         let btn=document.createElement("button")
+        btn.setAttribute("id","BTN")
         btn.innerText="APPLY CODE"
         ipbtn.append(ip,btn)
         i2.append(titleip,ipbtn)
@@ -462,6 +511,7 @@
             titlecode.innerText="ADD A VOUCHER"
             titleip.innerText="16-DIGIT VOUCHER CODE:"
             btn.innerText="APPLY VOUCHER"
+            
             i3txt.innerText="Got a gift card? Visit My Account to add it to your gift-voucher balance before you can redeem it at checkout"
             }
             code.addEventListener("click",selfcode)
@@ -480,7 +530,13 @@
     let freeround=document.querySelector("#freebtn")
     let expressround=document.querySelector("#expressbtn")
         document.querySelector("#free").addEventListener("click",zero)
+        let rK=localStorage.getItem("refrK")
         function zero(){
+
+            let SUM1=localStorage.getItem("thesum")
+            if(rK>0){SUM1=SUM1-20}
+            localStorage.setItem("thesum",SUM1)
+            document.querySelector("#ttP").innerText=localStorage.getItem("thesum")
             document.querySelector("#expresscmprs").innerText="No delivery on Public Holidays."
             document.querySelector("#freecmprs").innerText="No delivery on Public Holidays. Orders are subject to Customs and Duty charges, payable by the recipient and you may be requested to be pay duty charges prior to exportation of your order from the UK by our delivery agent."
             freeround.style.backgroundColor="black"
@@ -489,6 +545,10 @@
 
         document.querySelector("#express").addEventListener("click",twenty)
         function twenty(){
+            let SUM2=localStorage.getItem("thesum")
+            if(rK<=0){SUM2=+(SUM2)+(20)}
+            localStorage.setItem("thesum",SUM2)
+            document.querySelector("#ttP").innerText=localStorage.getItem("thesum")
             let fc=document.querySelector("#freecmprs")
             document.querySelector("#freecmprs").innerText="No delivery on Public Holidays."
             document.querySelector("#expresscmprs").innerText="No delivery on Public Holidays. All orders are subject to Customs and Duty charges, payable by the recipient of the order."
@@ -496,18 +556,12 @@
             expressround.style.backgroundColor="black"
         }
         
-    let arr=[{imagelink:"https://images.asos-media.com/products/hiit-mesh-overlay-shorts-in-black/24235257-1-black",
-              title:"HIIT mesh overlay shorts in black",
-              price:7.50,
-              previousprice:10.00,
-              itemcolor:"Black",
-            }, {imagelink:"https://images.asos-media.com/products/hiit-mesh-overlay-shorts-in-black/24235257-1-black",
-              title:"HIIT mesh overlay shorts in black",
-              price:7.50,
-              previousprice:10.00,
-              itemcolor:"Black",
-            }]
-          document.querySelector("#addressbtn").addEventListener("click",dispAddress)
+        if(rK>0){twenty()}
+        else if(rK<=0){zero()}
+        let arr=JSON.parse(localStorage.getItem("cartSection")) || [];
+        arr.splice(2,arr.length-1)
+        let sixteen=+(16)
+         document.querySelector("#addressbtn").addEventListener("click",dispAddress)
           function dispAddress(){
            
             let thename=document.querySelector("#name").value
@@ -585,26 +639,35 @@
              let detailsimage=document.createElement("div")
              let image=document.createElement("div")
              let photo=document.createElement("img")
-             photo.setAttribute("src",el.imagelink)
+             photo.setAttribute("src",el.cartimg)
              image.append(photo)
              let details=document.createElement("div")
              let pricedetails=document.createElement("div")
-             let mainprice=document.createElement("h3")
-             mainprice.innerText="£"+" "+el.price
-             let oldprice=document.createElement("p")
-             oldprice.innerText="£"+" "+el.previousprice
-             pricedetails.append(mainprice,oldprice)
+
+             let N=JSON.parse(localStorage.getItem("counts"))
+             let fC= N.reduce(function(el,acc){
+                return +(el)+(+(acc))
+             })
+             localStorage.setItem("totalCOUNT",fC)
+             N.splice(2,N.length-1)
+             document.querySelector("#noItems").innerText=fC+" "+"ITEMS"
+             let mainprice=document.createElement("h4")
+             let X=+(el.carPrice)
+             mainprice.innerText="£"+" "+(X*(N[index]))
+            
+             pricedetails.append(mainprice)
              let itemname=document.createElement("p")
-             itemname.innerText=el.title
+             itemname.innerText=el.cartName.slice(0,44)
              let colorquantity=document.createElement("div")
-             let colortype=document.createElement("p")
-             colortype.innerText=el.itemcolor
-             let qt=document.createElement("p")
-             qt.innerText="Qty"
+             let colortype=document.createElement("h5")
+             colortype.innerText="RESEDA"
+             
+             let qt=document.createElement("h5")
+             qt.innerText="Qty:"+"  "+N[index]
              
              colorquantity.append(colortype,qt)
             
-             details.append(pricedetails,itemname,colorquantity)
+             details.append(pricedetails,itemname,colortype,colorquantity)
              detailsimage.append(image,details)
              
              singlebag.append(detailsimage)
