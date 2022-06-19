@@ -1,4 +1,7 @@
-/* navbar----------------------------------------------------------------------------------------- */
+
+/* for navbar--------------------------------------------------------------------- */
+
+
 
 #AlL>*{
     box-sizing: border-box;
@@ -169,12 +172,12 @@
     width: 20px;
     height: 100%;
   } */
-  button:hover{border: skyblue;}
-  button>img{
+  #payment:hover{border: skyblue;}
+  #payment>img{
     width: 60%;
     height: 80%;
   }
-  button>img:hover{border: 1px solid skyblue;border-radius: 50%;}
+  #payment>img:hover{border: 1px solid skyblue;border-radius: 50%;}
   .sub-menu{
    
     display:none ;
@@ -374,12 +377,12 @@
   
   
   }
-  img+p{
+  /* img+p{
     text-align: left;
     margin-top: 10px;
     line-height: 10px;
     justify-content: center;
-  }
+  } */
   .sub-menu2>div>ul>li>a:hover{
   color: skyblue
   
@@ -399,12 +402,12 @@
   
   
   }
-  img+p{
+  /* img+p{
     text-align: left;
     margin-top: 10px;
     line-height: 10px;
     justify-content: center;
-  }
+  } */
   .sub-menu3>div>ul>li>a:hover{
   color: skyblue
   
@@ -1046,7 +1049,8 @@
     
     }
 
-/* footer------------------------------------------------------------------------ */
+
+/* for footer----------------------------------------------------------------------------------------- */
 *
 {
     /* margin: 0px; */
@@ -1326,7 +1330,7 @@ background-color:#ddd;
     margin: auto;
     /* border: 1px solid; */
     display: flex;
-    
+    margin-top: 30px;
     gap: 10px;
 }#detail{
     display: grid;
@@ -1352,8 +1356,9 @@ background-color:#ddd;
     /* border: 1px solid; */
     /* margin-left: -150px; */
 }#bigimg{
-    width: 370px;
+    width: 600px;
     position: relative;
+    /* border: 1px solid; */
 
 }#bigimg>button{
     position: absolute;
@@ -1415,6 +1420,7 @@ background-color:#ddd;
     border: transparent;
     letter-spacing: 1.5px;
     width: 76%;
+    height: 50px;
     font-weight: bold;
 }#like{
     width: 50px;
@@ -1461,7 +1467,7 @@ width: 100%;
     color: black;
     font-size: 12px;
 }#share>img{
-    width: 20px;
+    width: 30px;
 }#share{
     /* width: 100px;
     /* height: 100px; */
@@ -1474,10 +1480,12 @@ width: 100%;
 }
 #deliverytruck{
     width: 20px;
+    height: 20px;
+    margin-top: 6px;
     margin-right: 10px;
 }#smallimg>div{
     position: absolute;
-    top: 475px;
+    top: 695px;
     left: 220px;
     background-color: white;
     display: grid;
