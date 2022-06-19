@@ -94,16 +94,16 @@ function addedFunction(event){
 document.querySelector("#like").addEventListener("mouseenter",likeFunction);
 function likeFunction(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2814/premium/2814310.png?token=exp=1655583832~hmac=d1b69aeab6e27dd72802dd220a35ffa7";
+    document.querySelector("#like>img").src="https://cdn-icons-png.flaticon.com/512/1077/1077086.png";
 }
 document.querySelector("#like").addEventListener("click",likeF);
 function likeF(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2814/premium/2814310.png?token=exp=1655583832~hmac=d1b69aeab6e27dd72802dd220a35ffa7";
+    document.querySelector("#like>img").src="https://cdn-icons-png.flaticon.com/512/1077/1077086.png";
     document.querySelector("#like").addEventListener("mouseleave",likeleave);
 function likeleave(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2814/premium/2814310.png?token=exp=1655583832~hmac=d1b69aeab6e27dd72802dd220a35ffa7";
+    document.querySelector("#like>img").src="https://cdn-icons-png.flaticon.com/512/1077/1077086.png";
 }
  let objData={
         cartimg:document.querySelector("#changeimg").src,
@@ -118,7 +118,7 @@ function likeleave(event){
 document.querySelector("#like").addEventListener("mouseleave",likeleave);
 function likeleave(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2961/premium/2961957.png?token=exp=1655583030~hmac=cd7010bea10f84e3e8a6cf1e877208ee";
+    document.querySelector("#like>img").src="https://icon-library.com/images/heart-icon-transparent/heart-icon-transparent-1.jpg";
 }
 
 document.querySelector("#smallimg>img:nth-child(1)").addEventListener("click",imgFunction);
