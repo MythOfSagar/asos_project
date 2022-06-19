@@ -449,7 +449,7 @@
      let orderbtn=document.querySelector("#placeOrder")
     orderbtn.addEventListener("click",orderPage)
     function orderPage(){
-        if((thecardNum.value=="1786779917867799" || thecardNum.value=="7799178677991786") && thenameCard.value.length>0 && thecvvCard.value>99 && thecvvCard.value<9999 && Months.value>0 && Years.value>0){
+        if((thecardNum.value=="000000000000" || thecardNum.value=="888888888888") && thenameCard.value.length>0 && thecvvCard.value>99 && thecvvCard.value<9999 && Months.value>0 && Years.value>0){
             window.location.href="orderplaced.html"
         }
         
@@ -652,7 +652,8 @@
              N.splice(2,N.length-1)
              document.querySelector("#noItems").innerText=fC+" "+"ITEMS"
              let mainprice=document.createElement("h4")
-             mainprice.innerText="£"+" "+(+(sixteen)*(N[index]))
+             let X=+(el.carPrice)
+             mainprice.innerText="£"+" "+(X*(N[index]))
             
              pricedetails.append(mainprice)
              let itemname=document.createElement("p")

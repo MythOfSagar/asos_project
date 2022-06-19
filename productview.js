@@ -40,7 +40,7 @@ function displayFunction(){
     let show=bigImage[bigImage.length-1];
     console.log(show.price);
         document.querySelector("#imgName").innerText=show.name;
-        document.querySelector("#price").innerText="£"+show.price;
+        document.querySelector("#price").innerText=show.price;
         document.querySelector("#color").innerText="COLOR: "+show.color;
         if(show.img!="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/12318240/2021/2/27/b7f27330-eb9b-4cd8-9d2d-64239c4a5adb1614428943368-Calvin-Klein-Jeans-Men-Tshirts-2101614428942578-1.jpg"){
         document.querySelector("#changeimg").src=show.img;

@@ -15,6 +15,7 @@ if(logindatafrmls.length == 0){
         })
      });
 }
+
 displayFunction();
 function displayFunction(){
    
@@ -23,7 +24,7 @@ function displayFunction(){
     let show=bigImage[bigImage.length-1];
     console.log(show);
         document.querySelector("#imgName").innerText=show.name;
-        document.querySelector("#price").innerText="£"+show.price;
+        document.querySelector("#price").innerText=show.price;
         document.querySelector("#color").innerText="COLOR: "+show.color;
         if(show.img!="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16723126/2022/2/7/46a8dcd3-5937-4690-98ea-09f750f703781644248032248-Tokyo-Talkies-Mauve-Bodycon-Mini-Dress-91644248031768-5.jpg"){
         document.querySelector("#changeimg").src=show.img;
@@ -239,4 +240,7 @@ buttons[1].addEventListener("click",function(){
     buttons[1].addEventListener("mouseleave",function(){
         buttons[1].style.boxShadow="";
     });
-
+document.querySelector("#cart").addEventListener("click",opn)
+function opn(){
+    window.location.href="cart.html"
+}
