@@ -15,23 +15,26 @@ if(logindatafrmls.length == 0){
         })
      });
 }
-document.querySelector("#cart").addEventListener("click",openCart)
-function openCart(){
-    window.location.href="cart.html"
-}
 displayFunction();
 function displayFunction(){
    
-    let bigImage=JSON.parse(localStorage.getItem("cartSection"));
-    bigImage.forEach(function(el){
-        console.log(el.cartName);
-    });
-    
+    let bigImage=JSON.parse(localStorage.getItem("productPage"));
+    console.log(bigImage);
+    let show=bigImage[bigImage.length-1];
+    console.log(show);
+        document.querySelector("#imgName").innerText=show.name;
+        document.querySelector("#price").innerText="£"+show.price;
+        document.querySelector("#color").innerText="COLOR: "+show.color;
+        if(show.img!="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16723126/2022/2/7/46a8dcd3-5937-4690-98ea-09f750f703781644248032248-Tokyo-Talkies-Mauve-Bodycon-Mini-Dress-91644248031768-5.jpg"){
+        document.querySelector("#changeimg").src=show.img;
+        document.querySelector("#smi1").src=show.img;
+        document.querySelector("#smi2").src=show.img;
+        document.querySelector("#smi3").src=show.img;
+        document.querySelector("#smi4").src=show.img;
 }
-document.querySelector("#asos").addEventListener("click",openlnk)
-    function openlnk(){
-        window.location.href="index.html"
-    }
+
+}
+
 
 document.querySelector("#Addcart").addEventListener("mouseenter",myFunction);
 function myFunction(event){
@@ -55,8 +58,13 @@ function mouseleave(event){
 
     document.querySelector("#Addcart").style.backgroundColor="#018849";
     
-}document.querySelector("#Addcart").addEventListener("click",addedFunction);
+}
+
+let test=document.querySelector("#Addcart").innerHTML;
+if(test =="ADD TO BAG"){
+document.querySelector("#Addcart").addEventListener("click",addedFunction);
 let cartData=JSON.parse(localStorage.getItem("cartSection"))||[];
+
 function addedFunction(event){
     event.preventDefault();
     let input=document.querySelector("#select").value;
@@ -67,6 +75,7 @@ function addedFunction(event){
         document.querySelector("#select").style.border="solid black";
         document.querySelector("#select").style.boxShadow="#528cfc 0px 0px 0px 0px";
         document.querySelector("#Addcart").innerHTML="&#x2714; ADDED";
+        // document.querySelector("#Addcart").value="A";
         let objData={
             cartimg:document.querySelector("#changeimg").src,
             cartName:document.querySelector("#imgName").innerHTML,
@@ -76,22 +85,25 @@ function addedFunction(event){
         cartData.push(objData);
         localStorage.setItem("cartSection",JSON.stringify(cartData));
     }
+}
     
+}else{
+    alert("Hello! I am an alert box!!");
 }
 
 document.querySelector("#like").addEventListener("mouseenter",likeFunction);
 function likeFunction(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916769.svg?token=exp=1655354846~hmac=77d7b9ff21015aaa7d21f596f565df09";
+    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2814/premium/2814310.png?token=exp=1655583832~hmac=d1b69aeab6e27dd72802dd220a35ffa7";
 }
 document.querySelector("#like").addEventListener("click",likeF);
 function likeF(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916769.svg?token=exp=1655354846~hmac=77d7b9ff21015aaa7d21f596f565df09";
+    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2814/premium/2814310.png?token=exp=1655583832~hmac=d1b69aeab6e27dd72802dd220a35ffa7";
     document.querySelector("#like").addEventListener("mouseleave",likeleave);
 function likeleave(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916769.svg?token=exp=1655354846~hmac=77d7b9ff21015aaa7d21f596f565df09";
+    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2814/premium/2814310.png?token=exp=1655583832~hmac=d1b69aeab6e27dd72802dd220a35ffa7";
 }
  let objData={
         cartimg:document.querySelector("#changeimg").src,
@@ -106,7 +118,7 @@ function likeleave(event){
 document.querySelector("#like").addEventListener("mouseleave",likeleave);
 function likeleave(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916767.svg?token=exp=1655356392~hmac=9e9d5a5ada8bb686a74d0a31495ba871";
+    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2961/premium/2961957.png?token=exp=1655583030~hmac=cd7010bea10f84e3e8a6cf1e877208ee";
 }
 
 document.querySelector("#smallimg>img:nth-child(1)").addEventListener("click",imgFunction);

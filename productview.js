@@ -1,13 +1,13 @@
-document.querySelector("#like").addEventListener("mouseenter",likeFunction);
-function likeFunction(event){
-    event.preventDefault();
-    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916769.svg?token=exp=1655354846~hmac=77d7b9ff21015aaa7d21f596f565df09";
-}
-document.querySelector("#like").addEventListener("mouseleave",likeleave);
-function likeleave(event){
-    event.preventDefault();
-    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916767.svg?token=exp=1655356392~hmac=9e9d5a5ada8bb686a74d0a31495ba871";
-}
+// document.querySelector("#like").addEventListener("mouseenter",likeFunction);
+// function likeFunction(event){
+//     event.preventDefault();
+//     document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916769.svg?token=exp=1655354846~hmac=77d7b9ff21015aaa7d21f596f565df09";
+// }
+// document.querySelector("#like").addEventListener("mouseleave",likeleave);
+// function likeleave(event){
+//     event.preventDefault();
+//     document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916767.svg?token=exp=1655356392~hmac=9e9d5a5ada8bb686a74d0a31495ba871";
+// }
 
 let logindatafrmls = JSON.parse(localStorage.getItem("loginData")) || [];
 if(logindatafrmls.length == 0){
@@ -36,10 +36,20 @@ displayFunction();
 function displayFunction(){
    
     let bigImage=JSON.parse(localStorage.getItem("productPage"));
-    bigImage.forEach(function(el){
-        console.log(el);
-    });
-    
+    console.log(bigImage);
+    let show=bigImage[bigImage.length-1];
+    console.log(show.price);
+        document.querySelector("#imgName").innerText=show.name;
+        document.querySelector("#price").innerText="£"+show.price;
+        document.querySelector("#color").innerText="COLOR: "+show.color;
+        if(show.img!="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/12318240/2021/2/27/b7f27330-eb9b-4cd8-9d2d-64239c4a5adb1614428943368-Calvin-Klein-Jeans-Men-Tshirts-2101614428942578-1.jpg"){
+        document.querySelector("#changeimg").src=show.img;
+        document.querySelector("#smi1").src=show.img;
+        document.querySelector("#smi2").src=show.img;
+        document.querySelector("#smi3").src=show.img;
+        document.querySelector("#smi4").src=show.img;
+}
+
 }
 
 
@@ -65,7 +75,10 @@ function mouseleave(event){
 
     document.querySelector("#Addcart").style.backgroundColor="#018849";
     
-}document.querySelector("#Addcart").addEventListener("click",addedFunction);
+}
+let test=document.querySelector("#Addcart").innerHTML;
+if(test =="ADD TO BAG"){
+document.querySelector("#Addcart").addEventListener("click",addedFunction);
 let cartData=JSON.parse(localStorage.getItem("cartSection"))||[];
 function addedFunction(event){
     event.preventDefault();
@@ -86,40 +99,37 @@ function addedFunction(event){
         cartData.push(objData);
         localStorage.setItem("cartSection",JSON.stringify(cartData));
     }
-    
+}
 }
 
 document.querySelector("#like").addEventListener("mouseenter",likeFunction);
 function likeFunction(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916769.svg?token=exp=1655354846~hmac=77d7b9ff21015aaa7d21f596f565df09";
+    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2814/premium/2814310.png?token=exp=1655583832~hmac=d1b69aeab6e27dd72802dd220a35ffa7";
 }
 document.querySelector("#like").addEventListener("click",likeF);
 function likeF(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916769.svg?token=exp=1655354846~hmac=77d7b9ff21015aaa7d21f596f565df09";
+    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2814/premium/2814310.png?token=exp=1655583832~hmac=d1b69aeab6e27dd72802dd220a35ffa7";
     document.querySelector("#like").addEventListener("mouseleave",likeleave);
 function likeleave(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916769.svg?token=exp=1655354846~hmac=77d7b9ff21015aaa7d21f596f565df09";
+    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2814/premium/2814310.png?token=exp=1655583832~hmac=d1b69aeab6e27dd72802dd220a35ffa7";
 }
-let objData={
-    cartimg:document.querySelector("#changeimg").src,
-    cartName:document.querySelector("#imgName").innerHTML,
-    carPrice:document.querySelector("#price").innerHTML,
-    cartColor:document.querySelector("#color").innerHTML,
-}
-document.querySelector("#asos").addEventListener("click",openlnk)
-    function openlnk(){
-        window.location.href="index.html"
+ let objData={
+        cartimg:document.querySelector("#changeimg").src,
+        cartName:document.querySelector("#imgName").innerHTML,
+        carPrice:document.querySelector("#price").innerHTML,
+        cartColor:document.querySelector("#color").innerHTML,
     }
-cartData.push(objData);
-localStorage.setItem("cartSection",JSON.stringify(cartData));
+    cartData.push(objData);
+    localStorage.setItem("cartSection",JSON.stringify(cartData));
 }
+
 document.querySelector("#like").addEventListener("mouseleave",likeleave);
 function likeleave(event){
     event.preventDefault();
-    document.querySelector("#like>img").src="https://www.flaticon.com/svg/vstatic/svg/3916/3916767.svg?token=exp=1655356392~hmac=9e9d5a5ada8bb686a74d0a31495ba871";
+    document.querySelector("#like>img").src="https://cdn-icons.flaticon.com/png/512/2961/premium/2961957.png?token=exp=1655583030~hmac=cd7010bea10f84e3e8a6cf1e877208ee";
 }
 
 document.querySelector("#smallimg>img:nth-child(1)").addEventListener("click",imgFunction);
