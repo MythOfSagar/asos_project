@@ -393,7 +393,7 @@
 </html>
 <script>
     let obb=JSON.parse(localStorage.getItem("SignupDATA"))
-    document.querySelector("#EMAIL").innerText=obb[0].email
+    document.querySelector("#EMAIL").innerText=obb[0].email || ""
     document.querySelector("#ttP").innerText=localStorage.getItem("thesum")
     let cForm=document.querySelector("#creditForm")
     let cC=document.querySelector("#creditCard")
@@ -523,6 +523,7 @@
             titlecode.innerText="ADD A PROMO/STUDENT CODE"
             titleip.innerText="PROMO/STUDENT CODE:"
             btn.innerText="APPLY CODE"
+            
             i3txt.innerText="You can only use one discount/promo code per order. This applies to our free-delivery codes, too."
             }    
         function collapse(){if(Q%2===0){cbtn.innerText="V";cV.innerHTML=""}}
@@ -660,7 +661,7 @@
              itemname.innerText=el.cartName.slice(0,44)
              let colorquantity=document.createElement("div")
              let colortype=document.createElement("h5")
-             colortype.innerText="RESEDA"
+             colortype.innerText=(el.cartColor).slice(6,18)
              
              let qt=document.createElement("h5")
              qt.innerText="Qty:"+"  "+N[index]

@@ -784,7 +784,7 @@ display: none;
 
 
 
-@media all and (min-width:0px) and (max-width:1380px){
+@media all and (min-width:0px) and (max-width:900px){
 
 
     #con{
@@ -1291,7 +1291,7 @@ gap: 50px;
     
  
 
-}@media all and (min-width:0px) and (max-width:1110px){
+}@media all and (min-width:0px) and (max-width:900px){
 
     #option_btn{
         display: flex;
@@ -1651,7 +1651,7 @@ color: #666666;
     text-decoration: none;
 }
 
-@media all and (min-width:720px) and (max-width:1000px)
+@media all and (min-width:720px) and (max-width:900px)
 
 {  
     
