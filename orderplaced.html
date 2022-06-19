@@ -56,13 +56,16 @@
         #mainbag>div>div{
             display: flex;
         }
-        #mainbag>div>div>div:nth-child(2)>div:first-child{
+        #mainbag>div>div>div:nth-child(2){
             display: flex;
-            width: 50%;
-            justify-content: space-between;
+            
+            margin-top: -18px;
+            width: 90%;
+            flex-direction: column;}
+            #mainbag>div>div>div:nth-child(2) p{
+            margin: -10px 0px;}
             
             /* Price section */
-        }
         #mainbag>div>div>div:nth-child(2)>div:nth-child(3){
             display: flex;
             
@@ -165,9 +168,9 @@
                         <h3>ORDER STATUS:</h3>
                     </div>
                     <div>
-                        <p>price</p>
+                        <p id="PRICE"></p>
                         <p>IND778MAH989AMT</p>
-                        <p>Delivery on or before</p>
+                        <p>Delivery on or before 30 June</p>
                         <p>Received</p>
                     </div>
                 </div>
@@ -204,24 +207,15 @@
 </body>
 </html>
 <script>
-    let arr=[{imagelink:"https://images.asos-media.com/products/hiit-mesh-overlay-shorts-in-black/24235257-1-black",
-              title:"HIIT mesh overlay shorts in black",
-              price:7.50,
-              previousprice:10.00,
-              itemcolor:"Black",
-            }, {imagelink:"https://images.asos-media.com/products/hiit-mesh-overlay-shorts-in-black/24235257-1-black",
-              title:"HIIT mesh overlay shorts in black",
-              price:7.50,
-              previousprice:10.00,
-              itemcolor:"Black",
-            }]
-            document.querySelector("#noItems").innerText=arr.length+" "+"ITEMS"
+           document.querySelector("#PRICE").innerText=localStorage.getItem("thesum")
+           let arr=JSON.parse(localStorage.getItem("cartSection"))
+           
+            document.querySelector("#noItems").innerText=localStorage.getItem("totalCOUNT")+" "+"ITEMS"
           if(arr.length>0){
-            
+            let N=JSON.parse(localStorage.getItem("counts"))
+            let sixteen=16
             document.querySelector("body").style.backgroundColor="#eeeeee";
             let createdbag=document.querySelector("#mainbag")
-            let f1=document.querySelector("#finalSum1")
-            let f2=document.querySelector("#finalSum2")
           arr.map(wholeBag)
           function wholeBag(el,index){
              let singlebag=document.createElement("div")
@@ -229,63 +223,32 @@
              let detailsimage=document.createElement("div")
              let image=document.createElement("div")
              let photo=document.createElement("img")
-             photo.setAttribute("src",el.imagelink)
+             photo.setAttribute("src",el.cartimg)
              image.append(photo)
              let details=document.createElement("div")
              let pricedetails=document.createElement("div")
              let mainprice=document.createElement("h3")
-             mainprice.innerText="£"+" "+el.price
+             mainprice.innerText="£"+" "+sixteen
              
              pricedetails.append(mainprice)
              let itemname=document.createElement("p")
-             itemname.innerText=el.title
+             itemname.innerText=el.cartName.slice(0,70)
              let colorquantity=document.createElement("div")
-             let colortype=document.createElement("p")
-             colortype.innerText=el.itemcolor
-             let qt=document.createElement("p")
-             qt.innerText="Qty"
+             let colortype=document.createElement("h4")
+             colortype.innerText="RESEDA"
+             colortype.style.marginRight="15px"
+             let qt=document.createElement("h4")
+             qt.innerText="Qty"+":"+" "+N[index]
              
              colorquantity.append(colortype,qt)
-             let forlater=document.createElement("div")
- 
-             let sl=document.createElement("p")
-             sl.innerText="Save for later"
-             forlater.append(sl)
-             details.append(pricedetails,itemname,colorquantity,forlater)
+             
+             details.append(pricedetails,itemname,colorquantity)
              detailsimage.append(image,details)
             
              singlebag.append(detailsimage)
              createdbag.append(singlebag)
           }
-            let countArr=[]
-            for(let m=0;  m<arr.length; m++){
-             countArr.push(1)
-            }
-            let sum=0;
-            for(let q=0; q<arr.length; q++){
-                sum=sum+((arr[q].price))
-            }
-            localStorage.setItem("thesum",sum)
-            console.log(sum)
-          function totalprice(quantity,index){
-            countArr[index]=quantity.value
-            let sum=0;
-            for(let q=0; q<arr.length; q++){
-                sum=sum+((arr[q].price)*(countArr[q]))
-            }
-            localStorage.setItem("thesum",sum)
-            let finalTotal=localStorage.getItem("thesum")
-            f1.innerText="£"+" "+finalTotal
-            f2.innerText="£"+" "+finalTotal
-          }
-          let finalTotal=localStorage.getItem("thesum")
           
-           f1.innerText="£"+" "+finalTotal
-           f2.innerText="£"+" "+finalTotal
-
-
-         
-           
            }
     
           

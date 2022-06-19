@@ -102,6 +102,8 @@
             padding: 10px 30px;
         }
         #total>div:first-child{
+            margin-top: 15px;
+            padding-bottom: 25px;
            border-bottom: 1px solid #eeeeee;
         }
         #total>div:nth-child(2){
@@ -122,6 +124,7 @@
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+            padding-bottom: 15px;
             border-bottom: 1px solid #eeeeee;
         }
         #mainbag>div>div{
@@ -136,17 +139,38 @@
         }
         #mainbag>div>div>div:nth-child(2)>div:nth-child(3){
             display: flex;
-           
+            gap:15px;
+            color: #2d2d2d;
+            margin-bottom: 7px;
             /* color quantity */
+        }
+        #mainbag>div>div>div:nth-child(2)>div:nth-child(3) select{
+           border: 0px;
+            /* selecr quantity */
+        }
+        #mainbag>div>div>div:nth-child(2)>div:nth-child(3) p:nth-child(2){
+           border-left:2px solid #eeeeee ;
+           border-right:2px solid #eeeeee ;
+           padding: 0px 10px;
+            /* selecr quantity */
         }
         #mainbag>div>div>div:nth-child(2)>div:nth-child(4){
             display: flex;
+            width: 50%;
+            padding: 7px;
+            align-items: center;
+            justify-content: center;
             border: 1px solid #eeeeee;
             /* save for later */
+        }
+        #mainbag>div>div>div:nth-child(2)>div:nth-child(4) p{
+            margin: -2px 0px 0px 9px;
+            /* save for later p */
         }
        
         #mainbag img{
             width: 100px;
+            margin-right: 15px;
         }
         #subtotal{
             display: flex;
@@ -1803,31 +1827,31 @@ background-color:#ddd;
     <div id="filledcart">
         <div id="otherbag">
             <div>
-                <p>MY BAG</p>
+                <h3>MY BAG</h3>
                 <p>Items are reserved for 60 minutes</p>
             </div>
             <div id="mainbag"></div>
             <div id="subtotal">
-                <p>SUB-TOTAL</p>
-                <p id="finalSum1"></p>
+                <h5>SUB-TOTAL</h5>
+                <h5 id="finalSum1"></h5>
             </div>
             
             <div id="deilvery"><div><img src="data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20viewBox%3D%220%200%2040%2021%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cdefs%3E%20%20%20%20%20%20%20%20%3Cpolygon%20id%3D%22path-1%22%20points%3D%2232%206%2037%206%2039%2010%2032%2010%22%3E%3C%2Fpolygon%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-2%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%224%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-1%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%20%20%20%20%3Ccircle%20id%3D%22path-3%22%20cx%3D%2214.5%22%20cy%3D%2217.5%22%20r%3D%223.5%22%3E%3C%2Fcircle%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-4%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%227%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-3%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%20%20%20%20%3Ccircle%20id%3D%22path-5%22%20cx%3D%2233.5%22%20cy%3D%2217.5%22%20r%3D%223.5%22%3E%3C%2Fcircle%3E%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22mask-6%22%20maskContentUnits%3D%22userSpaceOnUse%22%20maskUnits%3D%22objectBoundingBox%22%20x%3D%220%22%20y%3D%220%22%20width%3D%227%22%20height%3D%227%22%20fill%3D%22white%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23path-5%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%3C%2Fmask%3E%20%20%20%20%3C%2Fdefs%3E%20%20%20%20%3Cg%20id%3D%22Symbols%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M05_delivery_info%22%20transform%3D%22translate(-36.000000%2C%20-31.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22icon_fastdelivery_normal%22%20transform%3D%22translate(34.000000%2C%2019.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Dev-Guide%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2244%22%20height%3D%2244%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Visual-Guide%22%20x%3D%2212%22%20y%3D%2212%22%20width%3D%2220%22%20height%3D%2220%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Shape%22%20transform%3D%22translate(2.000000%2C%2012.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M12%2C18%20C12.1947494%2C19.7341297%2016.8052506%2C19.7341297%2017%2C18%20L28.3150358%2C18.1274463%20L29.2887828%2C18.1274463%20L30.1651551%2C18.1274463%20C30.3599045%2C19.7341289%2031.7718377%2C21%2033.4272076%2C21%20C35.0825776%2C21%2036.4945107%2C19.7341289%2036.6892601%2C18.1274463%20L40%2C18.1274463%20L40%2C8.99999998%20C40%2C8.99999998%2036.6666667%2C4.65680189%2035%2C1.99999998%20L30.1651554%2C1.99999998%20L29.1651554%2C-2.38433131e-08%20L7%2C-2.38433131e-08%20L8%2C18%20L12%2C18%20Z%20M14.2593079%2C19.2883055%20C13.2268447%2C19.2883055%2012.353222%2C18.4543929%2012.353222%2C17.3822196%20C12.353222%2C16.3100462%2013.1871345%2C15.4761337%2014.2593079%2C15.4761337%20C15.3314812%2C15.4761337%2016.1653938%2C16.3100462%2016.1653938%2C17.3822196%20C16.1653938%2C18.4543929%2015.2917711%2C19.2883055%2014.2593079%2C19.2883055%20L14.2593079%2C19.2883055%20Z%20M33.4272076%2C19.8207637%20C32.2726432%2C19.8207637%2031.2957041%2C18.8882309%2031.2957041%2C17.6892601%20C31.2957041%2C16.4902894%2032.2282369%2C15.5577566%2033.4272076%2C15.5577566%20C34.6261784%2C15.5577566%2035.5587112%2C16.4902894%2035.5587112%2C17.6892601%20C35.5587112%2C18.8882309%2034.5817721%2C19.8207637%2033.4272076%2C19.8207637%20L33.4272076%2C19.8207637%20Z%20M38%2C10%20L38%2C13.1954023%20L38%2C16%20L35%2C16%20C34.8%2C14.5287356%2034.32%2C15%2033%2C15%20C31.7103092%2C15%2031.2187806%2C14.6045949%2031%2C16%20C30.9948584%2C16.0327936%2030.7645923%2C15.9662175%2030.76%2C16%20L30%2C16%20L30%2C4%20L33.8%2C4%20L38%2C10%20Z%20M28%2C2%20L28%2C3.75%20L28%2C16%20L17%2C16%20C16.7692308%2C14.6%2016.5230769%2C15%2015%2C15%20C13.4769231%2C15%2012.2307692%2C14.6%2012%2C16%20L10%2C16%20L9%2C2%20L28%2C2%20Z%22%20fill%3D%22%232D2D2D%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%220%22%20y%3D%225%22%20width%3D%2215%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%226%22%20y%3D%229%22%20width%3D%228%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%223%22%20y%3D%229%22%20width%3D%222%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle-1564%22%20fill%3D%22%232D2D2D%22%20x%3D%225%22%20y%3D%2213%22%20width%3D%227%22%20height%3D%222%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Rectangle-581%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-2)%22%20stroke-width%3D%222%22%20xlink%3Ahref%3D%22%23path-1%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Oval-71%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-4)%22%20stroke-width%3D%224%22%20xlink%3Ahref%3D%22%23path-3%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20id%3D%22Oval-71%22%20stroke%3D%22%232D2D2D%22%20mask%3D%22url(%23mask-6)%22%20stroke-width%3D%224%22%20xlink%3Ahref%3D%22%23path-5%22%3E%3C%2Fuse%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E" alt="deliverytruck"></div>
-                <div><p>FREE* STANDARD DELIVERY</p>
+                <div><h4>FREE* STANDARD DELIVERY</>
                      <p>Faster delivery options available to most countries.</p>
                      <p><a href="https://www.asos.com/payments-and-deliveries/delivery/">More info</a></p></div>
             </div>
         </div>
         <div id="total">
-            <div><p>TOTAL</p></div>
-            <div><p>Sub-total</p><p id="finalSum2"></p></div>
-            <div><p>Delivery</p><img src="https://i.ibb.co/XYDDK0Z/iiiiiiiiiiiiiiiiii.png" alt="ibutton"></div>
+            <div><h3>TOTAL</h3></div>
+            <div><h4>Sub-total</h4><p id="finalSum2"></p></div>
+            <div><h4>Delivery</h4><img src="https://i.ibb.co/XYDDK0Z/iiiiiiiiiiiiiiiiii.png" alt="ibutton"></div>
             <div><select name="" id="deliveryoption">
-                <option value="freedel">Standard Delivery (Free)</option>
-                <option value="">Express Delivery (£20.00)</option>
+                <option value="0">Standard Delivery (Free)</option>
+                <option value="20">Express Delivery (£20.00)</option>
             </select></div>
-            <div><button><p>CHECKOUT</p></button></div>
-            <div><p>WE ACCEPT:</p></div>
+            <div><button id="checkOUT"><p>CHECKOUT</p></button></div>
+            <div><h4>WE ACCEPT:</h4></div>
             <div>
                 <img src="https://assets.asosservices.com/asos-finance/images/marketing/single.png" alt="">
             </div>
@@ -1897,6 +1921,12 @@ background-color:#ddd;
 </body>
 </html>
 <script>
+    let K=0;
+    localStorage.setItem("refrK",K)
+    document.querySelector("#checkOUT").addEventListener("click",opencheck)
+    function opencheck(){
+        window.location.href="checkout.html"
+    }
     document.querySelector("#asos").addEventListener("click",openlnk)
     function openlnk(){
         window.location.href="index.html"
@@ -1923,12 +1953,14 @@ background-color:#ddd;
              let details=document.createElement("div")
              let pricedetails=document.createElement("div")
              let mainprice=document.createElement("h3")
+             mainprice.style.marginBottom="7px"
              mainprice.innerText="£"+" "+sixteen
-             let oldprice=document.createElement("p")
-             oldprice.innerText="£"+" "+twenty
-             pricedetails.append(mainprice,oldprice)
+             pricedetails.append(mainprice)
              let itemname=document.createElement("p")
              itemname.innerText=el.cartName
+             itemname.style.marginBottom="7px"
+             itemname.style.color="#2d2d2d"
+             itemname.style.width="75%"
              let colorquantity=document.createElement("div")
              let colortype=document.createElement("p")
              colortype.innerText="RESEDA"
@@ -1944,23 +1976,27 @@ background-color:#ddd;
              quantity.addEventListener("change",function (){
                 totalprice(quantity,index)
              })
+             colorquantity.setAttribute("id","clrqt")
              colorquantity.append(colortype,qt,quantity)
              let forlater=document.createElement("div")
+             forlater.addEventListener
              let heart=document.createElement("img")
              heart.style.width="16px"
              heart.style.height="16px"
              heart.setAttribute("src","https://i.ibb.co/1LwdzVx/white-Heart.png")
-             heart.addEventListener("mouseenter",likeFunction);
+             
+             forlater.addEventListener("mouseenter",likeFunction)
              function likeFunction(){
     
      heart.src="https://i.ibb.co/4mzHFh3/white-Heart.png";
 }
-             heart.addEventListener("mouseleave",likeleave);
+            
+             forlater.addEventListener("mouseleave",likeleave);
              function likeleave(){
     
     heart.src="https://i.ibb.co/1LwdzVx/white-Heart.png";
 }
-             heart.addEventListener("click", function (){
+            forlater.addEventListener("click", function (){
                 replaceit(index)
              })
              let sl=document.createElement("p")
@@ -1980,6 +2016,7 @@ background-color:#ddd;
             for(let m=0;  m<arr.length; m++){
              countArr.push(1)
             }
+            localStorage.setItem("counts",JSON.stringify(countArr))
             let sum=0;
             for(let q=0; q<arr.length; q++){
                 sum=sum+(sixteen)
@@ -1988,6 +2025,7 @@ background-color:#ddd;
             console.log(sum)
           function totalprice(quantity,index){
             countArr[index]=quantity.value
+            localStorage.setItem("counts",JSON.stringify(countArr))
             let sum=0;
             for(let q=0; q<arr.length; q++){
                 sum=sum+((sixteen)*(countArr[q]))
@@ -1997,8 +2035,31 @@ background-color:#ddd;
             f1.innerText="£"+" "+finalTotal
             f2.innerText="£"+" "+finalTotal
           }
-          let finalTotal=localStorage.getItem("thesum")
+          let delOP=document.querySelector("#deliveryoption")
+          delOP.addEventListener("change",delValue)
           
+          function delValue(){
+            if(delOP.value==20){
+                K++;
+                localStorage.setItem("refrK",K)
+                let zero=localStorage.getItem("thesum")
+                zero=+(zero)+20
+                f1.innerText="£"+" "+zero
+                f2.innerText="£"+" "+zero
+                localStorage.setItem("thesum",zero)
+            }
+            else if(delOP.value==0){
+                K--;
+                localStorage.setItem("refrK",K)
+                let zero=localStorage.getItem("thesum")
+                zero=+(zero)-20
+                f1.innerText="£"+" "+zero
+                f2.innerText="£"+" "+zero
+                localStorage.setItem("thesum",zero)
+            }
+            
+          }
+          let finalTotal=localStorage.getItem("thesum")
            f1.innerText="£"+" "+finalTotal
            f2.innerText="£"+" "+finalTotal
 
