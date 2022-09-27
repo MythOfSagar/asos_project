@@ -38,3 +38,12 @@
      <h3>Checkout page (https://stirring-marzipan-5d4585.netlify.app/cart.html) :</h3>
      <p></p>
      <img src="https://user-images.githubusercontent.com/105979795/192557588-c0c0e85a-2d71-48df-85bd-be2419a4d483.png" />
+     <h3>Team Members / Contributors</h3>
+     <p>
+     1. Pratyay Chakraborty https://github.com/PratyayChakraborty <br>
+     2. Chinni Jagadeesh https://github.com/chinnijagadeesh <br>
+     3. Sagar https://github.com/Sagar1079 <br>
+     4. Rohit Yadav https://github.com/Rohit94yadav <br>
+     5. Vijay Handal https://github.com/vijay9969 <br>
+     6. Prateek chauhan(me) https://github.com/PRA3EEK <br>
+     </p>
